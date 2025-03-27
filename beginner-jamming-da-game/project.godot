@@ -13,3 +13,13 @@ config_version=5
 config/name="beginner jamming da game"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://audio/": "yellow",
+"res://rescources/": "green",
+"res://scenes/": "blue",
+"res://scripts/": "pink"
+}
