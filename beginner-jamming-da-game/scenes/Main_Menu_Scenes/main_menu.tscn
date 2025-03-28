@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://24twytnbv31q"]
+[gd_scene load_steps=7 format=3 uid="uid://24twytnbv31q"]
 
-[ext_resource type="Script" uid="uid://lixdoy0yi7tc" path="res://Menu_Assets/main_menu.gd" id="1_ldf05"]
-[ext_resource type="Texture2D" uid="uid://ch6qdh4bge82a" path="res://Menu_Assets/2DPNGS/titlescreen.png" id="1_yhk5k"]
-[ext_resource type="FontFile" uid="uid://dnxj807oj4r1x" path="res://Menu_Assets/Fonts/CarltineBold-BWxy8.ttf" id="3_xe4cg"]
+[ext_resource type="Script" uid="uid://lixdoy0yi7tc" path="res://Menu_Assets/main_menu_scripts/main_menu.gd" id="1_8snvm"]
+[ext_resource type="Texture2D" uid="uid://ch6qdh4bge82a" path="res://Menu_Assets/2DPNGS/titlescreen.png" id="2_qndy7"]
+[ext_resource type="FontFile" uid="uid://dnxj807oj4r1x" path="res://Menu_Assets/Fonts/CarltineBold-BWxy8.ttf" id="3_s5lis"]
+[ext_resource type="AudioStream" uid="uid://xjkedf6ow117" path="res://Menu_Assets/Sounds/menutrack.mp3" id="4_s5lis"]
+[ext_resource type="AudioStream" uid="uid://bohx7wnnjth0e" path="res://Menu_Assets/Sounds/166186__drminky__menu-screen-mouse-over.wav" id="5_wtnj8"]
+[ext_resource type="PackedScene" uid="uid://cgid5iavpfbnn" path="res://scenes/Main_Menu_Scenes/options_menu.tscn" id="6_wtnj8"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -11,7 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ldf05")
+script = ExtResource("1_8snvm")
 
 [node name="bckground" type="TextureRect" parent="."]
 layout_mode = 1
@@ -23,8 +26,11 @@ offset_right = 1.0
 offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_yhk5k")
+texture = ExtResource("2_qndy7")
 expand_mode = 1
+
+[node name="Options_Menu" parent="." instance=ExtResource("6_wtnj8")]
+layout_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -46,34 +52,40 @@ theme_override_constants/separation = 100
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xe4cg")
+theme_override_fonts/font = ExtResource("3_s5lis")
 theme_override_font_sizes/font_size = 60
 text = "Uncle Detective"
 
 [node name="Start_Game" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xe4cg")
+theme_override_fonts/font = ExtResource("3_s5lis")
 theme_override_font_sizes/font_size = 60
 text = "Play"
 
 [node name="Options_Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xe4cg")
+theme_override_fonts/font = ExtResource("3_s5lis")
 theme_override_font_sizes/font_size = 60
 text = "Options"
 
 [node name="Credits" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xe4cg")
+theme_override_fonts/font = ExtResource("3_s5lis")
 theme_override_font_sizes/font_size = 60
 text = "Credits"
 
 [node name="Exit_Game" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xe4cg")
+theme_override_fonts/font = ExtResource("3_s5lis")
 theme_override_font_sizes/font_size = 60
 text = "Exit"
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_s5lis")
+volume_db = -15.0
+autoplay = true
+bus = &"Music"
 
-[node name="Hoversfx" type="AudioStreamPlayer" parent="."]
+[node name="hoversfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_wtnj8")
+bus = &"SFX"
