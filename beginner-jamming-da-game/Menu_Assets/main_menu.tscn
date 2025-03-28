@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://24twytnbv31q"]
+
+[ext_resource type="Script" uid="uid://lixdoy0yi7tc" path="res://Menu_Assets/main_menu.gd" id="1_ldf05"]
+[ext_resource type="Texture2D" uid="uid://ch6qdh4bge82a" path="res://Menu_Assets/2DPNGS/titlescreen.png" id="1_yhk5k"]
+[ext_resource type="FontFile" uid="uid://dnxj807oj4r1x" path="res://Menu_Assets/Fonts/CarltineBold-BWxy8.ttf" id="3_xe4cg"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ldf05")
+
+[node name="bckground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_right = 1.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yhk5k")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 150
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/separation = 100
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xe4cg")
+theme_override_font_sizes/font_size = 60
+text = "Uncle Detective"
+
+[node name="Start_Game" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xe4cg")
+theme_override_font_sizes/font_size = 60
+text = "Play"
+
+[node name="Options_Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xe4cg")
+theme_override_font_sizes/font_size = 60
+text = "Options"
+
+[node name="Credits" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xe4cg")
+theme_override_font_sizes/font_size = 60
+text = "Credits"
+
+[node name="Exit_Game" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xe4cg")
+theme_override_font_sizes/font_size = 60
+text = "Exit"
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+
+[node name="Hoversfx" type="AudioStreamPlayer" parent="."]
