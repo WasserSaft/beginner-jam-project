@@ -14,6 +14,10 @@ config/name="beginner jamming da game"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout=""
+
 [display]
 
 window/size/viewport_width=1980
@@ -27,6 +31,5 @@ folder_colors={
 "res://assets/": "red",
 "res://audio/": "yellow",
 "res://rescources/": "green",
-"res://scenes/": "blue",
 "res://scripts/": "pink"
 }
