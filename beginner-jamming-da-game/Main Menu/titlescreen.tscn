@@ -1,11 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwpdvbsmx4nfv"]
+[gd_scene load_steps=3 format=3 uid="uid://bwpdvbsmx4nfv"]
 
 [ext_resource type="PackedScene" uid="uid://dv1ifjoimgy6w" path="res://Main Menu/menu_scenes/main_menu.tscn" id="1_x6qfa"]
+[ext_resource type="AudioStream" uid="uid://bcw85ryx1hw4q" path="res://Main Menu/sounds/MenuMaster.mp3" id="2_c2n7m"]
 
 [node name="Main_Menu" instance=ExtResource("1_x6qfa")]
 
 [node name="BGM" parent="." index="2"]
-bus = &"Master"
-
-[node name="Hoversfx" parent="." index="3"]
-bus = &"Master"
+stream = ExtResource("2_c2n7m")
+volume_db = 0.0

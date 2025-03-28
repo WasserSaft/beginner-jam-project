@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dq87r4vhinqqi"]
+[gd_scene load_steps=5 format=3 uid="uid://dq87r4vhinqqi"]
 
 [ext_resource type="Script" uid="uid://bwc4v38o8iaw0" path="res://Main Menu/menu_scripts/options_menu.gd" id="1_a4uof"]
 [ext_resource type="FontFile" uid="uid://b8igig0eal0nx" path="res://Main Menu/Fonts/CarltineSemiBold-2O9Xe.ttf" id="2_wdnow"]
 [ext_resource type="PackedScene" uid="uid://cmltpj2det61n" path="res://Main Menu/menu_scenes/settings_tab_container.tscn" id="3_3i7ix"]
+[ext_resource type="FontFile" uid="uid://dnxj807oj4r1x" path="res://Main Menu/Fonts/CarltineBold-BWxy8.ttf" id="4_vxmr7"]
 
 [node name="Options_Menu" type="Control"]
 layout_mode = 3
@@ -49,5 +50,6 @@ size_flags_vertical = 3
 [node name="exit_button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("4_vxmr7")
 theme_override_font_sizes/font_size = 40
 text = "Exit"

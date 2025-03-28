@@ -7,7 +7,7 @@ extends Control
 
 @export_enum("Master", "Music", "SFX") var bus_name : String
 
-var bus_index : int = 0
+var bus_index : int = 1
 
 
 func _ready():
@@ -15,6 +15,8 @@ func _ready():
 	get_bus_name_by_index()
 	set_name_label_text()
 	set_slider_value()
+
+
 
 func set_name_label_text() -> void:
 	audio_name_lbl.text = str(bus_name) + " Volume"
