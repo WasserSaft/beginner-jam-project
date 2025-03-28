@@ -33,3 +33,26 @@ folder_colors={
 "res://rescources/": "green",
 "res://scripts/": "pink"
 }
+
+[input]
+
+move_up={
+"deadzone": 0.5,
+"events": []
+}
+move_left={
+"deadzone": 0.5,
+"events": []
+}
+move_down={
+"deadzone": 0.5,
+"events": []
+}
+move_right={
+"deadzone": 0.5,
+"events": []
+}
+jump={
+"deadzone": 0.5,
+"events": []
+}
