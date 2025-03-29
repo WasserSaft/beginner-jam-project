@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cpfubyy2yei2p"]
 
-[ext_resource type="Script" uid="uid://b84ntdvtcd5vd" path="res://CG_Section/CG_scripts/dialog_ui.gd" id="1_0iihk"]
+[ext_resource type="Script" uid="uid://b84ntdvtcd5vd" path="res://scripts/CG_scripts/dialog_ui.gd" id="1_0iihk"]
 [ext_resource type="FontFile" uid="uid://cbx217xlme7nl" path="res://Resources/Fonts/CarltineMedium-MVnzn.ttf" id="1_by2i2"]
 [ext_resource type="FontFile" uid="uid://dnxj807oj4r1x" path="res://Resources/Fonts/CarltineBold-BWxy8.ttf" id="1_cacg0"]
 

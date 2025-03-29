@@ -29,9 +29,9 @@ mouse_cursor/custom_image="uid://bdx7l7tos42xy"
 [file_customization]
 
 folder_colors={
-"res://CG_Section/": "red",
 "res://Main Menu/": "red",
 "res://Resources/": "green",
+"res://Scenes/": "purple",
 "res://assets/": "red",
 "res://audio/": "yellow",
 "res://scripts/": "pink"
