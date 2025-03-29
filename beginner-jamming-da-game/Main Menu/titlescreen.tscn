@@ -8,3 +8,7 @@
 [node name="BGM" parent="." index="2"]
 stream = ExtResource("2_c2n7m")
 volume_db = 0.0
+bus = &"Music"
+
+[node name="Hoversfx" parent="." index="3"]
+bus = &"SFX"
