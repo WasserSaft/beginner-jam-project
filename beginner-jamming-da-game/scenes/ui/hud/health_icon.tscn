@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwuqicawtbrxd"]
+
+[ext_resource type="Texture2D" uid="uid://byx41s5ll08m0" path="res://icon.svg" id="1_0qpy0"]
+
+[node name="panel" type="Panel"]
+custom_minimum_size = Vector2(128, 128)
+offset_right = 128.0
+offset_bottom = 128.0
+size_flags_vertical = 4
+
+[node name="sprite2D" type="Sprite2D" parent="."]
+position = Vector2(65, 64)
+texture = ExtResource("1_0qpy0")

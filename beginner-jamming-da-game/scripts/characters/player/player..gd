@@ -1,5 +1,7 @@
 extends CharacterBody3D
 @export var stats: Resource
+@onready var hud: Control = $CanvasLayer/Hud
+
 enum states {
 	GROUNDED, 
 	LAUNCH,
@@ -16,11 +18,18 @@ func _physics_process(delta: float) -> void:
 	movement()
 	move_and_slide()
 
+
+
 func _input(event):
+	#camera movment
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * stats.sensitivity)
 		camera.rotate_x(-event.relative.y * stats.sensitivity)
 		camera.rotation.x = clamp(camera.rotation.x, -1.5, 1.5)
+		# take damage
+	if Input.is_action_just_pressed("r"):
+		print("R")
+		take_damage(1)
 
 func switch_state(old_state, new_state):
 	exit_state(old_state)
@@ -70,3 +79,10 @@ func movement():
 	velocity.x -= velocity.x * stats.friction
 	velocity.z += move_vec.z * stats.move_speed * get_process_delta_time()
 	velocity.z -= velocity.z * stats.friction
+
+func take_damage(damage):
+	stats.hp -= damage
+	if stats.hp <= 0:
+		print("dead")
+	else:
+		hud.display_hp()
