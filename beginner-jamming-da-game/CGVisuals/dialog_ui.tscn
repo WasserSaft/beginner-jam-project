@@ -1,0 +1,101 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpfubyy2yei2p"]
+
+[ext_resource type="Script" uid="uid://b84ntdvtcd5vd" path="res://CGVisuals/dialog_ui.gd" id="1_0iihk"]
+[ext_resource type="FontFile" uid="uid://cbx217xlme7nl" path="res://Main Menu/Fonts/CarltineMedium-MVnzn.ttf" id="1_by2i2"]
+[ext_resource type="FontFile" uid="uid://dnxj807oj4r1x" path="res://Main Menu/Fonts/CarltineBold-BWxy8.ttf" id="1_cacg0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ob2i"]
+bg_color = Color(0.109804, 0.109804, 0.109804, 0.901961)
+border_width_top = 4
+
+[sub_resource type="Theme" id="Theme_cacg0"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_4ob2i")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_by2i2"]
+bg_color = Color(0.118581, 0.118581, 0.118581, 1)
+corner_radius_top_right = 210
+corner_detail = 1
+
+[node name="DialogUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0iihk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -275.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DialogBox" type="PanelContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(0, 275)
+layout_mode = 2
+theme = SubResource("Theme_cacg0")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/DialogBox"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 60
+
+[node name="DialogLine" type="RichTextLabel" parent="MarginContainer/DialogBox/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("1_by2i2")
+theme_override_fonts/bold_font = ExtResource("1_cacg0")
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "Lorem ipsum blah blah blah blah"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="VBoxContainer"]
+position = Vector2(-18, -16)
+polygon = PackedVector2Array(0, 0, 50, 25, 0, 50)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 160.0
+offset_right = 250.0
+offset_bottom = 262.0
+grow_vertical = 2
+
+[node name="SpeakerBox" type="PanelContainer" parent="VBoxContainer2"]
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_by2i2")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer2/SpeakerBox"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="SpeakerName" type="Label" parent="VBoxContainer2/SpeakerBox/MarginContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cacg0")
+theme_override_font_sizes/font_size = 40
+text = "NAME"

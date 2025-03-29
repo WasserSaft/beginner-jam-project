@@ -1,10 +1,10 @@
 extends Control
 class_name main_menu
 
-
 @onready var start_game: Button = $MarginContainer/VBoxContainer/Start_Game
 @onready var options_button: Button = $MarginContainer/VBoxContainer/Options_Button
 @onready var exit_game: Button = $MarginContainer/VBoxContainer/Exit_Game
+@onready var start_level = preload("res://scenes/important scenes/template.tscn") as PackedScene
 @onready var options_menu = $Options_Menu as OptionsMenu
 @onready var margin_container = $MarginContainer as MarginContainer
 @onready var hoversfx: AudioStreamPlayer = $Hoversfx
@@ -24,7 +24,7 @@ func handle_connecting_signals():
 	options_menu.exit_options_menu.connect(on_exit_options_menu)
 
 func on_start_pressed() -> void:
-	pass
+	get_tree().change_scene_to_packed(start_level)
 
 func on_options_pressed() -> void:
 	margin_container.visible = false
