@@ -11,17 +11,13 @@ config_version=5
 [application]
 
 config/name="beginner jamming da game"
-run/main_scene="res://scenes/important scenes/main_scene.tscn"
+run/main_scene="res://Main Menu/titlescreen.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [audio]
 
 buses/default_bus_layout="uid://ovlouoiwfk4h"
-
-[autoload]
-
-SignalBus="*res://scripts/globals/signal bus.gd"
 
 [display]
 
