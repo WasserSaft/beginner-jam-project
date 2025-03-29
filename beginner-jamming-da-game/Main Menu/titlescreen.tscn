@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwpdvbsmx4nfv"]
+[gd_scene load_steps=4 format=3 uid="uid://bwpdvbsmx4nfv"]
 
 [ext_resource type="PackedScene" uid="uid://dv1ifjoimgy6w" path="res://Main Menu/menu_scenes/main_menu.tscn" id="1_x6qfa"]
 [ext_resource type="AudioStream" uid="uid://bcw85ryx1hw4q" path="res://Main Menu/sounds/MenuMaster.mp3" id="2_c2n7m"]
+[ext_resource type="PackedScene" uid="uid://br5l58hi6kvfl" path="res://scenes/important scenes/template.tscn" id="2_krfyd"]
 
 [node name="Main_Menu" instance=ExtResource("1_x6qfa")]
+start_level = ExtResource("2_krfyd")
 
 [node name="BGM" parent="." index="2"]
 stream = ExtResource("2_c2n7m")

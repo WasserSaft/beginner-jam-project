@@ -32,7 +32,7 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_vsd10")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/panel = SubResource("StyleBoxFlat_vsd10")
-current_tab = 1
+current_tab = 2
 tabs_rearrange_group = 0
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
@@ -78,6 +78,7 @@ layout_mode = 2
 bus_name = "SFX"
 
 [node name="Graphics" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -114,7 +115,6 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Controls" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 

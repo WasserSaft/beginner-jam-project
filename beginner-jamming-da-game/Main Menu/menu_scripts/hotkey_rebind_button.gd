@@ -67,6 +67,7 @@ func _unhandled_key_input(event):
 	button.button_pressed = false
 
 func rebind_action_key(event) -> void:
+	print(action_name)
 	InputMap.action_erase_events(action_name)
 	InputMap.action_add_event(action_name, event)
 	
