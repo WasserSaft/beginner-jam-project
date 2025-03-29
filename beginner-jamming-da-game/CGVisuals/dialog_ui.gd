@@ -16,6 +16,7 @@ func _process(delta):
 			current_visible_characters += ANIMATION_SPEED * delta
 			dialog_line.visible_characters = int(current_visible_characters)
 		else:
+			dialog_line.visible_characters = dialog_line.text.length()
 			animate_text = false
 
 func change_line(speaker: String, line: String):

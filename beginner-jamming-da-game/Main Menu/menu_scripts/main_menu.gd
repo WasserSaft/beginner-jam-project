@@ -4,7 +4,7 @@ class_name main_menu
 @onready var start_game: Button = $MarginContainer/VBoxContainer/Start_Game
 @onready var options_button: Button = $MarginContainer/VBoxContainer/Options_Button
 @onready var exit_game: Button = $MarginContainer/VBoxContainer/Exit_Game
-@onready var start_level = preload("res://CGVisuals/main_scene.tscn") as PackedScene
+@onready var start_level = preload("res://scenes/important scenes/template.tscn") as PackedScene
 @onready var options_menu = $Options_Menu as OptionsMenu
 @onready var margin_container = $MarginContainer as MarginContainer
 @onready var hoversfx: AudioStreamPlayer = $Hoversfx
