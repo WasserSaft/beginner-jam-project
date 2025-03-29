@@ -1,7 +1,8 @@
-[gd_scene load_steps=20 format=4 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=21 format=4 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" path="res://scripts/characters/player/player..gd" id="1_2w2fw"]
 [ext_resource type="Resource" uid="uid://caat3hlelfvhr" path="res://Resources/player_stats.tres" id="2_7lxbb"]
+[ext_resource type="PackedScene" uid="uid://bwpdvbsmx4nfv" path="res://scenes/important scenes/titlescreen.tscn" id="3_0u6h2"]
 [ext_resource type="Texture2D" uid="uid://d3kxo4b37s8xi" path="res://Resources/Models/FPSView/UncleFPSHands_ColorPalette.jpg" id="3_hss88"]
 [ext_resource type="Texture2D" uid="uid://bauja2ixb7f2k" path="res://Resources/Models/FPSView/UncleFPSHands_ColorPalette_1.jpg" id="4_qd3e3"]
 [ext_resource type="PackedScene" uid="uid://ksm5338r2sd8" path="res://scenes/ui/hud/hud.tscn" id="5_35au1"]
@@ -3811,6 +3812,7 @@ _data = {
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_2w2fw")
 stats = ExtResource("2_7lxbb")
+death_screen = ExtResource("3_0u6h2")
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
@@ -5425,7 +5427,7 @@ bones/226/rotation = Quaternion(0.821076, 6.6397e-09, 0.105084, 0.561063)
 bones/226/scale = Vector3(1, 1, 1)
 
 [node name="Bat" type="BoneAttachment3D" parent="Head/Camera3D/UncleFPSHands/rig/Skeleton3D"]
-transform = Transform3D(0.00319686, -0.0416285, 0.0806988, -0.0136888, 0.079605, 0.0416066, -0.0897655, -0.0136219, -0.00347083, -0.179323, 1.78551, 0.560427)
+transform = Transform3D(0.00319685, -0.0416285, 0.0806988, -0.0136888, 0.079605, 0.0416066, -0.0897655, -0.0136219, -0.00347084, -0.179323, 1.78551, 0.560427)
 bone_name = "Bat"
 bone_idx = 224
 

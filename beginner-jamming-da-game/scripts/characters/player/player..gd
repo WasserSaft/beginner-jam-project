@@ -1,7 +1,8 @@
 extends CharacterBody3D
 @export var stats: Resource
+@export var death_screen: PackedScene
 @onready var hud: Control = $CanvasLayer/Hud
-
+const DEATH_SCREEN = preload("res://scenes/important scenes/death_screen.tscn")
 enum states {
 	GROUNDED, 
 	LAUNCH,
@@ -28,7 +29,6 @@ func _input(event):
 		camera.rotation.x = clamp(camera.rotation.x, -1.5, 1.5)
 		# take damage
 	if Input.is_action_just_pressed("r"):
-		print("R")
 		take_damage(1)
 
 func switch_state(old_state, new_state):
@@ -66,7 +66,7 @@ func apply_gravity():
 func movement():
 	var movement_direction = Vector3.ZERO
 	movement_direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
-	movement_direction.z = Input.get_action_strength("move_back") - Input.get_action_strength("move_up")
+	movement_direction.z = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 # Get camera's basis to rotate movement direction
 	var camera_basis = camera.global_transform.basis
 # Convert movement direction to match the camera's rotation
@@ -83,6 +83,7 @@ func movement():
 func take_damage(damage):
 	stats.hp -= damage
 	if stats.hp <= 0:
-		print("dead")
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		get_tree().change_scene_to_packed(DEATH_SCREEN)
 	else:
 		hud.display_hp()
