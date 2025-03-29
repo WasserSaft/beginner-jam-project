@@ -2,27 +2,24 @@ extends Control
 
 @onready var dialog_line: RichTextLabel = $MarginContainer/DialogBox/MarginContainer/DialogLine
 @onready var speaker_name: Label = $VBoxContainer2/SpeakerBox/MarginContainer2/SpeakerName
+@onready var type_timer: Timer = $TypeTimer
 
-const ANIMATION_SPEED : int = 30
-var animate_text : bool = false
-var current_visible_characters : int = 0
+var full_text: String = ""
+var char_index: int = 0
 
 func _ready():
-	pass
-
-func _process(delta):
-	if animate_text:
-		if current_visible_characters < dialog_line.text.length():
-			current_visible_characters += ANIMATION_SPEED * delta
-			dialog_line.visible_characters = int(current_visible_characters)
-		else:
-			dialog_line.visible_characters = dialog_line.text.length()
-			animate_text = false
+	type_timer.timeout.connect(_on_type_timer_timeout)
 
 func change_line(speaker: String, line: String):
 	speaker_name.text = speaker
-	current_visible_characters = 0
-	dialog_line.text = line
-	dialog_line.visible_characters = 0
-	dialog_line.visible_ratio = 0 
-	animate_text = true
+	full_text = line
+	char_index = 0
+	dialog_line.text = ""
+	type_timer.start()
+
+func _on_type_timer_timeout():
+	if char_index < full_text.length():
+		dialog_line.text += full_text[char_index]
+		char_index += 1
+	else:
+		type_timer.stop()

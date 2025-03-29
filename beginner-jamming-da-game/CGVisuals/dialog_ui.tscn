@@ -25,6 +25,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0iihk")
 
+[node name="TypeTimer" type="Timer" parent="."]
+wait_time = 0.07
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 12
