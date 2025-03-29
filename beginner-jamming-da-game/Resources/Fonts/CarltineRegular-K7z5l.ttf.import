@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cssk1x0tgddot"
-path="res://.godot/imported/CarltineExtraLight-Yz784.ttf-98d4b76303ed3d1e6a849ce22d1a7dba.fontdata"
+uid="uid://pgw5y61lbcx1"
+path="res://.godot/imported/CarltineRegular-K7z5l.ttf-0291544e3a336a04e3ede6bf10be5ee7.fontdata"
 
 [deps]
 
-source_file="res://Main Menu/Fonts/CarltineExtraLight-Yz784.ttf"
-dest_files=["res://.godot/imported/CarltineExtraLight-Yz784.ttf-98d4b76303ed3d1e6a849ce22d1a7dba.fontdata"]
+source_file="res://Resources/Fonts/CarltineRegular-K7z5l.ttf"
+dest_files=["res://.godot/imported/CarltineRegular-K7z5l.ttf-0291544e3a336a04e3ede6bf10be5ee7.fontdata"]
 
 [params]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://t0q6v7i1s238" path="res://Main Menu/menu_scenes/options_display_button.tscn" id="1_xwwn6"]
 [ext_resource type="Script" uid="uid://dk5pncf4ewe8h" path="res://Main Menu/menu_scenes/resolution_mode_button.gd" id="2_57grv"]
-[ext_resource type="FontFile" uid="uid://cbx217xlme7nl" path="res://Main Menu/Fonts/CarltineMedium-MVnzn.ttf" id="3_xv4xf"]
+[ext_resource type="FontFile" uid="uid://cbx217xlme7nl" path="res://Resources/Fonts/CarltineMedium-MVnzn.ttf" id="3_xv4xf"]
 
 [node name="Resolution_Mode_Button" instance=ExtResource("1_xwwn6")]
 script = ExtResource("2_57grv")

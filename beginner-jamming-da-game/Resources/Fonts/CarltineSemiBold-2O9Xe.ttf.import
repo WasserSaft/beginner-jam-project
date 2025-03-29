@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bpjdq3cm4nw36"
-path="res://.godot/imported/CarltineLight-rgjVL.ttf-adea51f92b0d234b2522d8ef3f633143.fontdata"
+uid="uid://b8igig0eal0nx"
+path="res://.godot/imported/CarltineSemiBold-2O9Xe.ttf-e79b1ed64d838631a78b106f3f2e7833.fontdata"
 
 [deps]
 
-source_file="res://Main Menu/Fonts/CarltineLight-rgjVL.ttf"
-dest_files=["res://.godot/imported/CarltineLight-rgjVL.ttf-adea51f92b0d234b2522d8ef3f633143.fontdata"]
+source_file="res://Resources/Fonts/CarltineSemiBold-2O9Xe.ttf"
+dest_files=["res://.godot/imported/CarltineSemiBold-2O9Xe.ttf-e79b1ed64d838631a78b106f3f2e7833.fontdata"]
 
 [params]
 

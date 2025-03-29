@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://4vki6nqheck2"
-path="res://.godot/imported/CarltineExtraBold-8MoWJ.ttf-aa886fb75b2646286cc91f7c16ec37db.fontdata"
+uid="uid://c4o1qneo6infj"
+path="res://.godot/imported/CarltineBlack-RpYz6.ttf-4380130f6d152c39446c6ef9ab2038e8.fontdata"
 
 [deps]
 
-source_file="res://Main Menu/Fonts/CarltineExtraBold-8MoWJ.ttf"
-dest_files=["res://.godot/imported/CarltineExtraBold-8MoWJ.ttf-aa886fb75b2646286cc91f7c16ec37db.fontdata"]
+source_file="res://Resources/Fonts/CarltineBlack-RpYz6.ttf"
+dest_files=["res://.godot/imported/CarltineBlack-RpYz6.ttf-4380130f6d152c39446c6ef9ab2038e8.fontdata"]
 
 [params]
 

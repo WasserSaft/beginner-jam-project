@@ -29,11 +29,11 @@ mouse_cursor/custom_image="uid://bdx7l7tos42xy"
 [file_customization]
 
 folder_colors={
-"res://CGVisuals/": "red",
+"res://CG_Section/": "red",
 "res://Main Menu/": "red",
+"res://Resources/": "green",
 "res://assets/": "red",
 "res://audio/": "yellow",
-"res://rescources/": "green",
 "res://scripts/": "pink"
 }
 

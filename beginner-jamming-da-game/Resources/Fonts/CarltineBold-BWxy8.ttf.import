@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cbx217xlme7nl"
-path="res://.godot/imported/CarltineMedium-MVnzn.ttf-408814028de42fcabd41256041716e99.fontdata"
+uid="uid://dnxj807oj4r1x"
+path="res://.godot/imported/CarltineBold-BWxy8.ttf-36c1db4ba7850f2e869d6a25caa62ee9.fontdata"
 
 [deps]
 
-source_file="res://Main Menu/Fonts/CarltineMedium-MVnzn.ttf"
-dest_files=["res://.godot/imported/CarltineMedium-MVnzn.ttf-408814028de42fcabd41256041716e99.fontdata"]
+source_file="res://Resources/Fonts/CarltineBold-BWxy8.ttf"
+dest_files=["res://.godot/imported/CarltineBold-BWxy8.ttf-36c1db4ba7850f2e869d6a25caa62ee9.fontdata"]
 
 [params]
 

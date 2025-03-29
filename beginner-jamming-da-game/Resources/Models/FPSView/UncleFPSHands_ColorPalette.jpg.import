@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bauja2ixb7f2k"
-path.s3tc="res://.godot/imported/UncleFPSHands_ColorPalette_1.jpg-92b8d915cf0d28c62a6221576c64611f.s3tc.ctex"
+uid="uid://d3kxo4b37s8xi"
+path.s3tc="res://.godot/imported/UncleFPSHands_ColorPalette.jpg-bd6954139d76473ccbb7ab1f931192a5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://rescources/Models/FPSView/UncleFPSHands_ColorPalette_1.jpg"
-dest_files=["res://.godot/imported/UncleFPSHands_ColorPalette_1.jpg-92b8d915cf0d28c62a6221576c64611f.s3tc.ctex"]
+source_file="res://Resources/Models/FPSView/UncleFPSHands_ColorPalette.jpg"
+dest_files=["res://.godot/imported/UncleFPSHands_ColorPalette.jpg-bd6954139d76473ccbb7ab1f931192a5.s3tc.ctex"]
 
 [params]
 

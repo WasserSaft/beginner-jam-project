@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c5yvbdoab7506"
-path="res://.godot/imported/UncleFPSHands.glb-733e5e097aff744bbd09869660167601.scn"
+path="res://.godot/imported/UncleFPSHands.glb-034a8e2375bffe4b75b4bea1805c1b5e.scn"
 
 [deps]
 
-source_file="res://rescources/Models/FPSView/UncleFPSHands.glb"
-dest_files=["res://.godot/imported/UncleFPSHands.glb-733e5e097aff744bbd09869660167601.scn"]
+source_file="res://Resources/Models/FPSView/UncleFPSHands.glb"
+dest_files=["res://.godot/imported/UncleFPSHands.glb-034a8e2375bffe4b75b4bea1805c1b5e.scn"]
 
 [params]
 

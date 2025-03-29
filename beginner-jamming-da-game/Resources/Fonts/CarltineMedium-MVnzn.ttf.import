@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b8igig0eal0nx"
-path="res://.godot/imported/CarltineSemiBold-2O9Xe.ttf-4de0b6b5e7c08d6986cfe4a88e54c50e.fontdata"
+uid="uid://cbx217xlme7nl"
+path="res://.godot/imported/CarltineMedium-MVnzn.ttf-ab16996ec3c72fec7afac55fe50e2a31.fontdata"
 
 [deps]
 
-source_file="res://Main Menu/Fonts/CarltineSemiBold-2O9Xe.ttf"
-dest_files=["res://.godot/imported/CarltineSemiBold-2O9Xe.ttf-4de0b6b5e7c08d6986cfe4a88e54c50e.fontdata"]
+source_file="res://Resources/Fonts/CarltineMedium-MVnzn.ttf"
+dest_files=["res://.godot/imported/CarltineMedium-MVnzn.ttf-ab16996ec3c72fec7afac55fe50e2a31.fontdata"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://t0q6v7i1s238"]
 
-[ext_resource type="FontFile" uid="uid://dnxj807oj4r1x" path="res://Main Menu/Fonts/CarltineBold-BWxy8.ttf" id="1_va743"]
+[ext_resource type="FontFile" uid="uid://dnxj807oj4r1x" path="res://Resources/Fonts/CarltineBold-BWxy8.ttf" id="1_va743"]
 
 [node name="Window_Mode_Button" type="Control"]
 layout_mode = 3

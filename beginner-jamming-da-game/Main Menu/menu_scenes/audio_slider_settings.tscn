@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://74d5vwukuem2"]
 
 [ext_resource type="Script" uid="uid://dsd0qhidh28ke" path="res://Main Menu/menu_scripts/audio_slider_settings.gd" id="1_ncca1"]
-[ext_resource type="FontFile" uid="uid://dnxj807oj4r1x" path="res://Main Menu/Fonts/CarltineBold-BWxy8.ttf" id="2_qva87"]
+[ext_resource type="FontFile" uid="uid://dnxj807oj4r1x" path="res://Resources/Fonts/CarltineBold-BWxy8.ttf" id="2_qva87"]
 
 [node name="Audio_Slider_Settings" type="Control"]
 layout_mode = 3
