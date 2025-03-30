@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://br5l58hi6kvfl"]
+[gd_scene load_steps=3 format=3 uid="uid://br5l58hi6kvfl"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/characters/player/player.tscn" id="1_exwmm"]
+[ext_resource type="PackedScene" uid="uid://bgk1jhsw5ns6v" path="res://scenes/interactable objects/chest.tscn" id="2_apaxm"]
 
 [node name="Template" type="Node3D"]
 
@@ -19,4 +20,7 @@ use_collision = true
 size = Vector3(6.05072, 1, 3.93359)
 
 [node name="Player" parent="." instance=ExtResource("1_exwmm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022872, 1.91677, 1.34084)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022872, 1.03185, 1.34084)
+
+[node name="chest" parent="." instance=ExtResource("2_apaxm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0540246, 1.25523, -1.07614)

@@ -5425,7 +5425,7 @@ bones/226/rotation = Quaternion(0.821076, 6.6397e-09, 0.105084, 0.561063)
 bones/226/scale = Vector3(1, 1, 1)
 
 [node name="Bat" type="BoneAttachment3D" parent="Head/Camera3D/UncleFPSHands/rig/Skeleton3D"]
-transform = Transform3D(0.00319686, -0.0416285, 0.0806988, -0.0136888, 0.079605, 0.0416066, -0.0897655, -0.0136219, -0.00347083, -0.179323, 1.78551, 0.560427)
+transform = Transform3D(0.00319685, -0.0416285, 0.0806988, -0.0136888, 0.079605, 0.0416066, -0.0897655, -0.0136219, -0.00347084, -0.179323, 1.78551, 0.560427)
 bone_name = "Bat"
 bone_idx = 224
 
@@ -5443,6 +5443,12 @@ libraries = {
 "": SubResource("AnimationLibrary_nab3q")
 }
 speed_scale = 1.976
+
+[node name="RayCast3D" type="RayCast3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.134512, 0)
+target_position = Vector3(0, 0, -4)
+hit_back_faces = false
+collide_with_areas = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

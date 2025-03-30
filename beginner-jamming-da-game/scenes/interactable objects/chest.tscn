@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgk1jhsw5ns6v"]
+
+[ext_resource type="Script" path="res://scripts/interactable objects/chest.gd" id="1_8qmka"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_y0164"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x0324"]
+
+[node name="chest" type="CharacterBody3D"]
+script = ExtResource("1_8qmka")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["interactable"]]
+mesh = SubResource("BoxMesh_y0164")
+
+[node name="Area3D" type="Area3D" parent="." groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_x0324")
