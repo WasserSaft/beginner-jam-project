@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://i0ecb66y3qkr"]
 
-[ext_resource type="Script" uid="uid://b5r2y61oo35fv" path="res://Main Menu/menu_scripts/window_mode_button.gd" id="1_7cjv5"]
+[ext_resource type="Script" path="res://Main Menu/menu_scripts/window_mode_button.gd" id="1_7cjv5"]
 [ext_resource type="FontFile" uid="uid://dnxj807oj4r1x" path="res://Resources/Fonts/CarltineBold-BWxy8.ttf" id="1_olpt3"]
 [ext_resource type="FontFile" uid="uid://cbx217xlme7nl" path="res://Resources/Fonts/CarltineMedium-MVnzn.ttf" id="3_6buwx"]
 
