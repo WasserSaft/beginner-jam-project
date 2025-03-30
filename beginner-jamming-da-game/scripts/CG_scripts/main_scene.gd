@@ -1,11 +1,14 @@
 extends Node2D
 
+#gets references from dialogUI node 
 @onready var dialog_ui: Control = $CanvasLayer2/DialogUI
 @onready var speaker_name: Label = dialog_ui.get_node("VBoxContainer2/SpeakerBox/MarginContainer2/SpeakerName")
 @onready var dialog_line: RichTextLabel = dialog_ui.get_node("MarginContainer/DialogBox/MarginContainer/DialogLine")
 
+#keeps track of which line in the dialog we're on
 var dialog_index : int = 0
 
+#array of dialog lines with speaker names and text
 const dialog_lines = [
 	{ "speaker": "Snake", "text": "This Uncle Detective Private Investigations?" },
 	{ "speaker": "Nephew", "text": "Yeah, you have the right number." },
@@ -53,20 +56,20 @@ const dialog_lines = [
 ]
 
 
-
-
-
 func _ready():
-	dialog_index = 0
-	display_line(dialog_lines[dialog_index])
+	dialog_index = 0  #start from the first line in the array
+	display_line(dialog_lines[dialog_index])  #show the first dialog line
 
 func _input(event):
+	#checks if triggered "next_line" input (pressing left click)
 	if event.is_action_pressed("next_line"):
+		#go to next dialog line if not at the end (when this whole thing is finished, need to connect end of this scene to the 3d part)
 		if dialog_index < dialog_lines.size() - 1:
 			dialog_index += 1
 			display_line(dialog_lines[dialog_index])
 
+#displays dialog lines on screen
 func display_line(line_data: Dictionary):
-	var speaker = line_data.get("speaker", "")
-	var text = line_data.get("text", "")
-	dialog_ui.change_line(speaker, text)
+	var speaker = line_data.get("speaker", "")  #get speaker name 
+	var text = line_data.get("text", "")        #get dialog text
+	dialog_ui.change_line(speaker, text)        #actually updates the ui with the text/speakername

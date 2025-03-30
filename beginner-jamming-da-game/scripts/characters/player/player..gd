@@ -19,7 +19,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-
 func _input(event):
 	#camera movment
 	if event is InputEventMouseMotion:
@@ -66,7 +65,7 @@ func apply_gravity():
 func movement():
 	var movement_direction = Vector3.ZERO
 	movement_direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
-	movement_direction.z = Input.get_action_strength("move_back") - Input.get_action_strength("move_up")
+	movement_direction.z = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 # Get camera's basis to rotate movement direction
 	var camera_basis = camera.global_transform.basis
 # Convert movement direction to match the camera's rotation
