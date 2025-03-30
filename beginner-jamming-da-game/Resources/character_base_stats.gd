@@ -6,3 +6,4 @@ class_name CharacterStats
 @export var sensitivity: float
 @export var friction: float
 @export var hp: int
+@export var damage: float

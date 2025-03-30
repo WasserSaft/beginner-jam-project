@@ -3,15 +3,24 @@ extends CharacterBody3D
 @export var inventory: Inventory
 @export var stats: Resource
 @export var death_screen: PackedScene
+
 @onready var hud: Control = $CanvasLayer/Hud
+@onready var camera: Camera3D = $Head/Camera3D
+@onready var animation_player: AnimationPlayer = $Head/Camera3D/UncleFPSHands/AnimationPlayer
+@onready var cooldown_timer: Timer = $cooldown_timer
+@onready var hitbox: Area3D = $hitbox
+
 const DEATH_SCREEN = preload("res://scenes/important scenes/death_screen.tscn")
+
+var cooldown_time = 1
+
 enum states {
 	GROUNDED, 
 	LAUNCH,
 	FALL,
 }
 var current_state = states.FALL
-@onready var camera: Camera3D = $Head/Camera3D
+
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -33,6 +42,9 @@ func _input(event):
 		take_damage(1)
 	if Input.is_action_just_pressed("interact"):
 		interact()
+	if Input.is_action_just_pressed("attack"):
+		if cooldown_timer.is_stopped():
+			attack()
 		
 
 func switch_state(old_state, new_state):
@@ -48,6 +60,7 @@ func enter_state(state):
 func state_logic(state):
 	match state:
 		states.GROUNDED:
+			apply_gravity()
 			if Input.is_action_just_pressed("jump"):
 				switch_state(states.GROUNDED, states.LAUNCH)
 		states.LAUNCH:
@@ -99,3 +112,15 @@ func interact():
 		if collider.is_in_group("interactable"):
 			collider.get_parent().interact(self)
 			hud.update_inventory()
+			
+func attack():
+	animation_player.play("Swing")
+	cooldown_timer.start(cooldown_time)
+	var enemies = hitbox.get_overlapping_bodies()
+	print(enemies)
+	for enemy in enemies:
+		if enemy.is_in_group("enemies") and enemy.has_method("take_damage"):
+			enemy.take_damage(stats.damage)
+	
+	
+	

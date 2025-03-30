@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://br5l58hi6kvfl"]
+[gd_scene load_steps=4 format=3 uid="uid://br5l58hi6kvfl"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/characters/player/player.tscn" id="1_exwmm"]
 [ext_resource type="PackedScene" uid="uid://bgk1jhsw5ns6v" path="res://scenes/interactable objects/chest.tscn" id="2_apaxm"]
+[ext_resource type="PackedScene" uid="uid://dnyvf1fcepmef" path="res://scenes/characters/enemies/template_enemy.tscn" id="3_aitjd"]
 
 [node name="Template" type="Node3D"]
 
@@ -24,3 +25,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022872, 1.03185, 1.34084)
 
 [node name="chest" parent="." instance=ExtResource("2_apaxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0540246, 1.25523, -1.07614)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("3_aitjd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51129, 1.24063, 0)
