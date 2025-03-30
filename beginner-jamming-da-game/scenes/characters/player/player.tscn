@@ -1,10 +1,10 @@
 [gd_scene load_steps=20 format=4 uid="uid://bs72ogkvdd7d6"]
 
-[ext_resource type="Script" path="res://scripts/characters/player/player..gd" id="1_2w2fw"]
+[ext_resource type="Script" uid="uid://l1x3oq08iasu" path="res://scripts/characters/player/player..gd" id="1_2w2fw"]
 [ext_resource type="Resource" uid="uid://caat3hlelfvhr" path="res://Resources/player_stats.tres" id="2_7lxbb"]
 [ext_resource type="Texture2D" uid="uid://d3kxo4b37s8xi" path="res://Resources/Models/FPSView/UncleFPSHands_ColorPalette.jpg" id="3_hss88"]
 [ext_resource type="Texture2D" uid="uid://bauja2ixb7f2k" path="res://Resources/Models/FPSView/UncleFPSHands_ColorPalette_1.jpg" id="4_qd3e3"]
-[ext_resource type="PackedScene" uid="uid://ksm5338r2sd8" path="res://scenes/ui/hud/hud.tscn" id="5_35au1"]
+[ext_resource type="PackedScene" uid="uid://ksm5338r2sd8" path="res://Scenes/ui/hud/hud.tscn" id="5_35au1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -3803,9 +3803,9 @@ tracks/142/keys = PackedFloat32Array(0, 1, -0.0897041, -0.879225, 0.0271249, 0.4
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nab3q"]
 _data = {
-"Swing": SubResource("Animation_4bk1x"),
-"Wave": SubResource("Animation_2f5qf"),
-"idle": SubResource("Animation_fqhqp")
+&"Swing": SubResource("Animation_4bk1x"),
+&"Wave": SubResource("Animation_2f5qf"),
+&"idle": SubResource("Animation_fqhqp")
 }
 
 [node name="Player" type="CharacterBody3D"]

@@ -21,7 +21,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-
 func _input(event):
 	#camera movment
 	if event is InputEventMouseMotion:
