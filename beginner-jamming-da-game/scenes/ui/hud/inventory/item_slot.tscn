@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://sy2mijafc7kj"]
+
+[node name="slot 1" type="Container"]
+custom_minimum_size = Vector2(128, 128)
+offset_right = 128.0
+offset_bottom = 128.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64, 64)

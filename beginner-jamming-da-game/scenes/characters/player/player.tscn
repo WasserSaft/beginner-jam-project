@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=4 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=21 format=4 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" uid="uid://l1x3oq08iasu" path="res://scripts/characters/player/player..gd" id="1_2w2fw"]
+[ext_resource type="Resource" uid="uid://d0f5jbhabl0wu" path="res://Resources/inventory stuff/player_inventory.tres" id="2_6avc5"]
 [ext_resource type="Resource" uid="uid://caat3hlelfvhr" path="res://Resources/player_stats.tres" id="2_7lxbb"]
 [ext_resource type="Texture2D" uid="uid://d3kxo4b37s8xi" path="res://Resources/Models/FPSView/UncleFPSHands_ColorPalette.jpg" id="3_hss88"]
 [ext_resource type="Texture2D" uid="uid://bauja2ixb7f2k" path="res://Resources/Models/FPSView/UncleFPSHands_ColorPalette_1.jpg" id="4_qd3e3"]
-[ext_resource type="PackedScene" uid="uid://ksm5338r2sd8" path="res://Scenes/ui/hud/hud.tscn" id="5_35au1"]
+[ext_resource type="PackedScene" uid="uid://ksm5338r2sd8" path="res://scenes/ui/hud/hud.tscn" id="5_35au1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -3810,6 +3811,7 @@ _data = {
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_2w2fw")
+inventory = ExtResource("2_6avc5")
 stats = ExtResource("2_7lxbb")
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
@@ -5440,7 +5442,7 @@ skin = SubResource("Skin_xuses")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Head/Camera3D/UncleFPSHands"]
 libraries = {
-"": SubResource("AnimationLibrary_nab3q")
+&"": SubResource("AnimationLibrary_nab3q")
 }
 speed_scale = 1.976
 

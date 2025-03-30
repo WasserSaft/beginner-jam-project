@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ksm5338r2sd8"]
+[gd_scene load_steps=4 format=3 uid="uid://ksm5338r2sd8"]
 
-[ext_resource type="Script" path="res://scripts/ui/hud/hud.gd" id="1_nmknc"]
+[ext_resource type="Script" uid="uid://kpjvfhbh36ry" path="res://scripts/ui/hud/hud.gd" id="1_nmknc"]
 [ext_resource type="Texture2D" uid="uid://byx41s5ll08m0" path="res://icon.svg" id="2_hmicl"]
+[ext_resource type="PackedScene" uid="uid://sy2mijafc7kj" path="res://scenes/ui/hud/inventory/item_slot.tscn" id="3_as3gr"]
 
 [node name="Hud" type="Control"]
 layout_mode = 3
@@ -16,13 +17,8 @@ script = ExtResource("1_nmknc")
 custom_minimum_size = Vector2(128, 128)
 layout_direction = 2
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -64.0
-offset_right = 64.0
+offset_right = 128.0
 offset_bottom = 128.0
-grow_horizontal = 2
 mouse_filter = 2
 alignment = 1
 
@@ -42,3 +38,29 @@ grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Container"]
 texture = ExtResource("2_hmicl")
+
+[node name="inventory" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -328.0
+offset_right = 128.0
+offset_bottom = 328.0
+grow_vertical = 2
+
+[node name="slot 1" parent="inventory" instance=ExtResource("3_as3gr")]
+layout_mode = 2
+
+[node name="slot 2" parent="inventory" instance=ExtResource("3_as3gr")]
+layout_mode = 2
+
+[node name="slot 3" parent="inventory" instance=ExtResource("3_as3gr")]
+layout_mode = 2
+
+[node name="slot 4" parent="inventory" instance=ExtResource("3_as3gr")]
+layout_mode = 2
+
+[node name="slot 5" parent="inventory" instance=ExtResource("3_as3gr")]
+layout_mode = 2

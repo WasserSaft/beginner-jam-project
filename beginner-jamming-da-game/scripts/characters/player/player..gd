@@ -1,5 +1,6 @@
 extends CharacterBody3D
 @onready var ray_cast_3d: RayCast3D = $Head/RayCast3D
+@export var inventory: Inventory
 @export var stats: Resource
 @export var death_screen: PackedScene
 @onready var hud: Control = $CanvasLayer/Hud
@@ -96,4 +97,5 @@ func interact():
 	var collider = ray_cast_3d.get_collider()
 	if collider != null:
 		if collider.is_in_group("interactable"):
-			collider.get_parent().interact()
+			collider.get_parent().interact(self)
+			hud.update_inventory()
