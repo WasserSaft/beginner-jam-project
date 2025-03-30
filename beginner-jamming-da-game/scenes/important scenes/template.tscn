@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://br5l58hi6kvfl"]
 
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/characters/player/player.tscn" id="1_exwmm"]
-[ext_resource type="PackedScene" uid="uid://bgk1jhsw5ns6v" path="res://scenes/interactable objects/chest.tscn" id="2_apaxm"]
-[ext_resource type="PackedScene" uid="uid://dnyvf1fcepmef" path="res://scenes/characters/enemies/template_enemy.tscn" id="3_aitjd"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Scenes/characters/player/player.tscn" id="1_exwmm"]
+[ext_resource type="PackedScene" uid="uid://bgk1jhsw5ns6v" path="res://Scenes/ui/hud/chest.tscn" id="2_apaxm"]
+[ext_resource type="PackedScene" uid="uid://dnyvf1fcepmef" path="res://Scenes/characters/enemies/template_enemy.tscn" id="3_aitjd"]
 
 [node name="Template" type="Node3D"]
 
