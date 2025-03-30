@@ -7,3 +7,4 @@ func interact(player):
 	else:
 		player.inventory.items[first_empty_slot] = inventory_item
 		print(first_empty_slot)
+		queue_free()
