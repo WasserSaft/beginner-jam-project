@@ -26,6 +26,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta: float) -> void:
+	var _unused = delta
 	state_logic(current_state)
 	movement()
 	move_and_slide()
