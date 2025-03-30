@@ -10,13 +10,13 @@ var dialog_index : int = 0
 
 #array of dialog lines with speaker names and text
 const dialog_lines = [
-	{ "speaker": "Snake", "text": "This Uncle Detective Private Investigations?" },
+	{ "speaker": "???", "text": "This Uncle Detective Private Investigations?" },
 	{ "speaker": "Nephew", "text": "Yeah, you have the right number." },
-	{ "speaker": "Snake", "text": "Great. Route 9. Steel mill. Tent town full’a travelin’ beasts. Folks goin’ missin’. No flesh. No bones. Just... poof." },
-	{ "speaker": "Snake", "text": "Cops can’t get near it without catchin’ elbows from clowns with crowbars." },
-	{ "speaker": "Snake", "text": "...Figured it’s the kind of place that reels in types like your lead investigator. One way or another." },
+	{ "speaker": "???", "text": "Great. Route 9. Steel mill. Tent town full’a travelin’ beasts. Folks goin’ missin’. No flesh. No bones. Just... poof." },
+	{ "speaker": "???", "text": "Cops can’t get near it without catchin’ elbows from clowns with crowbars." },
+	{ "speaker": "???", "text": "...Figured it’s the kind of place that reels in types like your lead investigator. One way or another." },
 	{ "speaker": "Nephew", "text": "Okay, thanks. Uh, we’ll let him know." },
-	{ "speaker": "Snake", "text": "Knew you would. ‘Cause once Uncle Detective comes knockin’... nobody leaves on their own termsss." },
+	{ "speaker": "???", "text": "Knew you would. ‘Cause once Uncle Detective comes knockin’... nobody leaves on their own termsss." },
 	{ "speaker": "", "text": "Click" },
 	{ "speaker": "Nephew", "text": "Huh…" },
 	{ "speaker": "Uncle", "text": "Ahem." },
