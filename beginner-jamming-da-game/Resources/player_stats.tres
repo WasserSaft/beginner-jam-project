@@ -6,7 +6,7 @@
 script = ExtResource("1_81i3v")
 gravity = 9.81
 move_speed = 50.0
-jump_strength = 8.0
+jump_strength = 6.0
 sensitivity = 0.005
 friction = 0.1
 hp = 3

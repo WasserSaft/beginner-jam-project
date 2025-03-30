@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ksm5338r2sd8"]
 
 [ext_resource type="Script" uid="uid://kpjvfhbh36ry" path="res://scripts/ui/hud/hud.gd" id="1_nmknc"]
-[ext_resource type="Texture2D" uid="uid://byx41s5ll08m0" path="res://icon.svg" id="2_hmicl"]
+[ext_resource type="Texture2D" uid="uid://cl46grhbh5jeo" path="res://Resources/PNGS/crosshair.png" id="2_as3gr"]
 [ext_resource type="PackedScene" uid="uid://sy2mijafc7kj" path="res://scenes/ui/hud/inventory/item_slot.tscn" id="3_as3gr"]
 
 [node name="Hud" type="Control"]
@@ -37,7 +37,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Container"]
-texture = ExtResource("2_hmicl")
+texture = ExtResource("2_as3gr")
 
 [node name="inventory" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(128, 128)
