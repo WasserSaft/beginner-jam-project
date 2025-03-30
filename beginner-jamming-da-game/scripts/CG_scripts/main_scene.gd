@@ -4,6 +4,7 @@ extends Node2D
 @onready var dialog_ui: Control = $CanvasLayer2/DialogUI
 @onready var speaker_name: Label = dialog_ui.get_node("VBoxContainer2/SpeakerBox/MarginContainer2/SpeakerName")
 @onready var dialog_line: RichTextLabel = dialog_ui.get_node("MarginContainer/DialogBox/MarginContainer/DialogLine")
+@onready var background: TextureRect = $CanvasLayer/Background
 
 #keeps track of which line in the dialog we're on
 var dialog_index : int = 0
@@ -54,7 +55,10 @@ const dialog_lines = [
 	{ "speaker": "Uncle", "text": "Exaactly!" },
 	{ "speaker": "Nephew", "text": "Hope they’ve got candied apples. I think better after eating some sweets." }
 ]
-
+var background_changes = {
+	0: preload("res://Resources/PNGS/Scene1.png"),
+	8: preload("res://Resources/PNGS/CGplaceholder.png"),
+	}
 
 func _ready():
 	dialog_index = 0  #start from the first line in the array
@@ -70,6 +74,8 @@ func _input(event):
 
 #displays dialog lines on screen
 func display_line(line_data: Dictionary):
-	var speaker = line_data.get("speaker", "")  #get speaker name 
-	var text = line_data.get("text", "")        #get dialog text
-	dialog_ui.change_line(speaker, text)        #actually updates the ui with the text/speakername
+	var speaker = line_data.get("speaker", "")
+	var text = line_data.get("text", "")
+	dialog_ui.change_line(speaker, text)
+	if background_changes.has(dialog_index):
+		$CanvasLayer/Background.texture = background_changes[dialog_index]
