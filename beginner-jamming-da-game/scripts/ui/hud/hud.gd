@@ -17,11 +17,23 @@ func display_hp():
 		var hp_icon= HEALTH_ICON.instantiate()
 		hp_container.add_child(hp_icon)
 
+#invetory
+@onready var inventory_container = $VBoxContainer
+@onready var player_node = $"../.."
+
+const ITEM_SLOT_SCENE = preload("res://scenes/ui/hud/inventory/item_slot.tscn")
+
 func update_inventory():
-	var slots = inventory.get_children()
-	for slot_index in slots.size():
-		if player.inventory.items[slot_index] != null:
-			slots[slot_index].get_child(0).texture = player.inventory.items[slot_index].sprite
+	#clear existing icons
+	for child in inventory_container.get_children():
+		child.queue_free()
+
+	#add new slots for each item
+	for item in player.inventory.items:
+		if item != null:
+			var item_slot = ITEM_SLOT_SCENE.instantiate()
+			item_slot.set_icon(item.sprite)
+			inventory_container.add_child(item_slot)
 
 func show_dialogue(speaker: String, line: String):
 	dialog_ui.visible = true

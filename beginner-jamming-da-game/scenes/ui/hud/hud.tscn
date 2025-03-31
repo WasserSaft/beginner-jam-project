@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cl46grhbh5jeo" path="res://Resources/PNGS/crosshair.png" id="2_as3gr"]
 [ext_resource type="PackedScene" uid="uid://sy2mijafc7kj" path="res://Scenes/ui/hud/inventory/item_slot.tscn" id="3_as3gr"]
 
-[node name="Hud" type="Control"]
+[node name="Hud" type="Control" groups=["hud"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -1,9 +1,15 @@
-[gd_scene format=3 uid="uid://sy2mijafc7kj"]
+[gd_scene load_steps=3 format=3 uid="uid://sy2mijafc7kj"]
 
-[node name="slot 1" type="Container"]
-custom_minimum_size = Vector2(128, 128)
-offset_right = 128.0
-offset_bottom = 128.0
+[ext_resource type="Script" uid="uid://bfkswt1vaogab" path="res://Scenes/ui/hud/inventory/item_slot.gd" id="1_l6l8r"]
+[ext_resource type="Texture2D" uid="uid://df4xuhr2ohqm7" path="res://Resources/PNGS/healthicon.png" id="2_1iwpi"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(64, 64)
+[node name="item_slot" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_l6l8r")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_1iwpi")
