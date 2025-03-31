@@ -1,9 +1,10 @@
 extends CharacterBody3D
-@onready var ray_cast_3d: RayCast3D = $Head/RayCast3D
-@export var inventory: Inventory
+
+@export var inventory_template: Inventory
 @export var stats: Resource
 @export var death_screen: PackedScene
 
+@onready var ray_cast_3d: RayCast3D = $Head/RayCast3D
 @onready var hud: Control = $CanvasLayer/Hud
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var animation_player: AnimationPlayer = $Head/Camera3D/UncleFPSHands/AnimationPlayer
@@ -17,6 +18,7 @@ var bobbing_time := 0.0
 var bobbing_amplitude := 0.08 #how high the bobbing goes
 var bobbing_frequency := 10.0 #how fast the bobbing happens
 var head_original_position: Vector3
+var inventory: Inventory 
 
 enum states { GROUNDED, LAUNCH, FALL, }
 var current_state = states.FALL
@@ -25,6 +27,7 @@ var current_state = states.FALL
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	head_original_position = $Head.position
+	inventory = inventory_template.duplicate(true)
 
 func _input(event):
 	#camera movment

@@ -65,12 +65,12 @@ func _ready():
 	display_line(dialog_lines[dialog_index])  #show the first dialog line
 
 func _input(event):
-	#checks if triggered "next_line" input (pressing left click)
 	if event.is_action_pressed("next_line"):
-		#go to next dialog line if not at the end (when this whole thing is finished, need to connect end of this scene to the 3d part)
-		if dialog_index < dialog_lines.size() - 1:
+		#respond if DialogUI has finished typing
+		if dialog_ui.type_timer.is_stopped():
 			dialog_index += 1
-			display_line(dialog_lines[dialog_index])
+			if dialog_index < dialog_lines.size():
+				display_line(dialog_lines[dialog_index])
 
 #displays dialog lines on screen
 func display_line(line_data: Dictionary):

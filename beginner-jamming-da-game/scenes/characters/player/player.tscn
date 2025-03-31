@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=23 format=4 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" uid="uid://l1x3oq08iasu" path="res://scripts/characters/player/player..gd" id="1_2w2fw"]
 [ext_resource type="Resource" uid="uid://d0f5jbhabl0wu" path="res://Resources/inventory stuff/player_inventory.tres" id="2_6avc5"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://d3kxo4b37s8xi" path="res://Resources/Models/FPSView/UncleFPSHands_ColorPalette.jpg" id="3_hss88"]
 [ext_resource type="Texture2D" uid="uid://bauja2ixb7f2k" path="res://Resources/Models/FPSView/UncleFPSHands_ColorPalette_1.jpg" id="4_qd3e3"]
 [ext_resource type="PackedScene" uid="uid://ksm5338r2sd8" path="res://Scenes/ui/hud/hud.tscn" id="5_35au1"]
-[ext_resource type="Script" uid="uid://kpjvfhbh36ry" path="res://scripts/ui/hud/hud.gd" id="7_kewe2"]
 [ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://Scenes/CG_scenes/dialog_ui.tscn" id="7_ycnf8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
@@ -3815,7 +3814,7 @@ size = Vector3(1, 1, 0.464722)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_2w2fw")
-inventory = ExtResource("2_6avc5")
+inventory_template = ExtResource("2_6avc5")
 stats = ExtResource("2_7lxbb")
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
@@ -5458,14 +5457,7 @@ collide_with_areas = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Hud" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("player") groups=["hud"] instance=ExtResource("5_35au1")]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("7_kewe2")
+[node name="Hud" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("5_35au1")]
 player = NodePath("../..")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Hud"]
@@ -5475,6 +5467,61 @@ offset_top = 230.0
 offset_right = 120.0
 offset_bottom = 430.0
 theme_override_constants/separation = 70
+
+[node name="slot1" type="Control" parent="CanvasLayer/Hud/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Hud/VBoxContainer/slot1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="slot2" type="Control" parent="CanvasLayer/Hud/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Hud/VBoxContainer/slot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="slot3" type="Control" parent="CanvasLayer/Hud/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Hud/VBoxContainer/slot3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="slot4" type="Control" parent="CanvasLayer/Hud/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Hud/VBoxContainer/slot4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="slot5" type="Control" parent="CanvasLayer/Hud/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Hud/VBoxContainer/slot5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="DialogUI" parent="CanvasLayer/Hud" instance=ExtResource("7_ycnf8")]
 layout_mode = 1

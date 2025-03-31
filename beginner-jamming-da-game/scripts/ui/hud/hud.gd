@@ -1,5 +1,6 @@
 extends Control
 
+@export var inventory: Inventory
 @export var player: Node
 @onready var inventory_container = $VBoxContainer
 @onready var hp_container: HBoxContainer = $"hp container"
@@ -7,8 +8,10 @@ extends Control
 
 const HEALTH_ICON = preload("res://scenes/ui/hud/health_icon.tscn")
 
+
 func _ready() -> void:
 	display_hp()
+	await get_tree().process_frame
 	update_inventory()
 	dialog_ui.visible = false
 
@@ -23,12 +26,10 @@ func update_inventory():
 	var slots = inventory_container.get_children()
 
 	for i in range(slots.size()):
-		var item = null
-		if i < player.inventory.items.size():
-			item = player.inventory.items[i]
-
+		var item = player.inventory.items[i]  
 		var slot = slots[i]
 		var texture = item.sprite if item != null else null
+
 		var icon_node = slot.get_node("TextureRect")
 		icon_node.texture = texture
 

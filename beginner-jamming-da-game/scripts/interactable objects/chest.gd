@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export var inventory_item: Inventory_item 
-
+"res://Resources/inventory stuff/inventory item.gd"
 var dialog_ui: Node
 var player_ref: Node
 

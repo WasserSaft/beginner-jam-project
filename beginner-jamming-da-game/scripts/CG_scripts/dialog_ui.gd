@@ -7,6 +7,7 @@ extends Control
 #full_text is entire sentence set to be typed, char_index tracks the character that is getting typed
 var full_text: String = ""
 var char_index: int = 0 
+var is_sequence_playing := false
 
 func _ready():
 #connects the timer signal that runs every time it "ticks" for the animated effect
@@ -52,14 +53,33 @@ func play_sequence(lines: Array, finished_callback: Callable):
 	dialog_line.text = ""
 	speaker_name.text = ""
 	visible = true
-	set_process_input(true)  
+	is_sequence_playing = true  
+	set_process_input(true)
 	_next_line()
 
 func _next_line():
 	if dialog_queue.size() > 0:
 		var entry = dialog_queue.pop_front()
-		change_line(entry[0], entry[1])
-	else:
-		visible = false  # <-- hide the box when done
+
+		var speaker := ""
+		var text := ""
+
+		if typeof(entry) == TYPE_DICTIONARY:
+			speaker = entry.get("speaker", "")
+			text = entry.get("text", "")
+		elif typeof(entry) == TYPE_ARRAY and entry.size() >= 2:
+			speaker = entry[0]
+			text = entry[1]
+		else:
+			push_error("Invalid dialog entry format: " + str(entry))
+			return
+
+		change_line(speaker, text)
+
+	elif is_sequence_playing:
+		#only hide if this was a full sequence
+		visible = false
+		is_sequence_playing = false
+
 		if current_callback != null:
 			current_callback.call()
