@@ -21,7 +21,7 @@ buses/default_bus_layout="uid://ovlouoiwfk4h"
 
 [autoload]
 
-SignalBus="*res://scripts/globals/signal bus.gd"
+SignalBus="res://scripts/globals/signal bus.gd"
 
 [display]
 
