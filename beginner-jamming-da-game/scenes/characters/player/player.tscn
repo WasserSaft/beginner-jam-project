@@ -3810,7 +3810,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6avc5"]
-size = Vector3(1, 1, 0.464722)
+size = Vector3(1.74072, 1, 1.96483)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_2w2fw")
@@ -5430,7 +5430,7 @@ bones/226/rotation = Quaternion(0.821076, 6.6397e-09, 0.105084, 0.561063)
 bones/226/scale = Vector3(1, 1, 1)
 
 [node name="Bat" type="BoneAttachment3D" parent="Head/Camera3D/UncleFPSHands/rig/Skeleton3D"]
-transform = Transform3D(0.00319686, -0.0416285, 0.0806988, -0.0136888, 0.079605, 0.0416066, -0.0897655, -0.0136219, -0.00347083, -0.179323, 1.78551, 0.560427)
+transform = Transform3D(0.00319685, -0.0416285, 0.0806988, -0.0136888, 0.079605, 0.0416066, -0.0897655, -0.0136219, -0.00347084, -0.179323, 1.78551, 0.560427)
 bone_name = "Bat"
 bone_idx = 224
 
@@ -5533,7 +5533,7 @@ one_shot = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.983263, -1.24489)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hitbox"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00319624, 0, 0.447056)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0590596, 0, -0.302997)
 shape = SubResource("BoxShape3D_6avc5")
 
 [node name="damage_delay" type="Timer" parent="."]
