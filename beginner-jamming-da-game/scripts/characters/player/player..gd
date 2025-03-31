@@ -124,12 +124,15 @@ func take_damage(damage):
 		hud.display_hp()
 
 func interact():
+	var dialog_ui = get_tree().get_first_node_in_group("dialog_ui")
+	if dialog_ui and dialog_ui.visible:
+		return  #dialogue is active, block interaction
+
 	var collider = ray_cast_3d.get_collider()
 	if collider and collider.is_in_group("interactable"):
 		var target = collider.get_parent()
 		if target.has_method("interact"):
 			target.interact(self)
-		hud.update_inventory()
 
 func attack():
 	animation_player.play("Swing")
