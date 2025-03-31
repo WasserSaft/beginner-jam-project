@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr5vncx2s7tua"]
+
+[ext_resource type="PackedScene" uid="uid://5eb57gouqtnp" path="res://Resources/Models/Props/Clues/JuggleStix.glb" id="1_rqaup"]
+
+[node name="JuggleStix" instance=ExtResource("1_rqaup")]
+
+[node name="Rack Yellow-Blue" parent="." index="5"]
+transform = Transform3D(0.950025, 0, 0, 0, 0.950025, 0, 0, 0, 0.950025, 0, 0, 0)
