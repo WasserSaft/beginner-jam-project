@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://br5l58hi6kvfl"]
+[gd_scene load_steps=7 format=3 uid="uid://br5l58hi6kvfl"]
 
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Scenes/characters/player/player.tscn" id="1_exwmm"]
-[ext_resource type="PackedScene" uid="uid://bgk1jhsw5ns6v" path="res://Scenes/interactable objects/Juggling_Pins.tscn" id="2_apaxm"]
-[ext_resource type="PackedScene" uid="uid://dnyvf1fcepmef" path="res://Scenes/characters/enemies/template_enemy.tscn" id="3_aitjd"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/characters/player/player.tscn" id="1_exwmm"]
+[ext_resource type="PackedScene" uid="uid://bgk1jhsw5ns6v" path="res://scenes/interactable objects/Juggling_Pins.tscn" id="2_apaxm"]
+[ext_resource type="PackedScene" uid="uid://dnyvf1fcepmef" path="res://scenes/characters/enemies/enemy class.tscn" id="3_aitjd"]
+[ext_resource type="PackedScene" uid="uid://bafyywysamrsj" path="res://scenes/interactable objects/Candied_Apple.tscn" id="3_qxofe"]
+[ext_resource type="PackedScene" uid="uid://casjwaj8gc11j" path="res://scenes/interactable objects/Empty_Soda_Can.tscn" id="4_x1sns"]
+[ext_resource type="PackedScene" uid="uid://cs76y5xd7884n" path="res://scenes/interactable objects/Mirror.tscn" id="6_b4py0"]
 
 [node name="Template" type="Node3D"]
 
@@ -11,20 +14,30 @@ transform = Transform3D(-0.866024, -0.433016, 0.250001, 0.460273, -0.495079, 0.7
 shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.144575, -1.19972, 0.638969)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29431, -3.76085, 6.58404)
 use_collision = true
-size = Vector3(6.05072, 1, 3.93359)
+size = Vector3(22.8946, 6.12225, 15.8237)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.0895896, -0.995979, 0, 0.995979, -0.0895896, 0.714445, 0.204748, -2.30769)
+transform = Transform3D(1, 0, 0, 0, -0.0895896, -0.995979, 0, 0.995979, -0.0895896, 1.15597, 0.204748, -2.30769)
 use_collision = true
-size = Vector3(6.05072, 1, 3.93359)
+size = Vector3(22.7766, 1, 3.93359)
 
 [node name="Player" parent="." instance=ExtResource("1_exwmm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022872, 1.03185, 1.34084)
-
-[node name="chest" parent="." instance=ExtResource("2_apaxm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0540246, 1.25523, -1.07614)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29913, -0.712335, 1.63221)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("3_aitjd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51129, 1.24063, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.51547, 1.24063, 4.34562)
+hp = 4
+friction = 0.1
+
+[node name="Candied_Apple" parent="." instance=ExtResource("3_qxofe")]
+
+[node name="Empty_Soda_Can" parent="." instance=ExtResource("4_x1sns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.32536)
+
+[node name="Juggling_Pins" parent="." instance=ExtResource("2_apaxm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.07693)
+
+[node name="Mirror" parent="." instance=ExtResource("6_b4py0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.46244)

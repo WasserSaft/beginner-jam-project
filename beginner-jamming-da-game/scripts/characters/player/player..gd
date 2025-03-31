@@ -10,6 +10,7 @@ extends CharacterBody3D
 @onready var animation_player: AnimationPlayer = $Head/Camera3D/UncleFPSHands/AnimationPlayer
 @onready var cooldown_timer: Timer = $cooldown_timer
 @onready var hitbox: Area3D = $hitbox
+@onready var damage_delay: Timer = $damage_delay
 
 const DEATH_SCREEN = preload("res://scenes/important scenes/death_screen.tscn")
 
@@ -42,8 +43,11 @@ func _input(event):
 		interact()
 	if Input.is_action_just_pressed("attack"):
 		if cooldown_timer.is_stopped():
+			animation_player.play("Swing")
+			cooldown_timer.start(cooldown_time)
+			damage_delay.start(2.25/4)
+			await damage_delay.timeout
 			attack()
-		
 
 func _physics_process(delta: float) -> void:
 	var _unused = delta
@@ -138,13 +142,11 @@ func interact():
 			target.interact(self)
 
 func attack():
-	animation_player.play("Swing")
 	cooldown_timer.start(cooldown_time)
 	var enemies = hitbox.get_overlapping_bodies()
-	print(enemies)
 	for enemy in enemies:
 		if enemy.is_in_group("enemies") and enemy.has_method("take_damage"):
-			enemy.take_damage(stats.damage)
+			enemy.take_damage(stats.damage, stats.sideway_knockback_strength, stats.upward_knockback_strength, self)
 	
 	
 	

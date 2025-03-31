@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CharacterStats" load_steps=2 format=3 uid="uid://caat3hlelfvhr"]
 
-[ext_resource type="Script" uid="uid://bt2gsourj3lvw" path="res://Scenes/characters/player/character_base_stats.gd" id="1_81i3v"]
+[ext_resource type="Script" uid="uid://bt2gsourj3lvw" path="res://scenes/characters/player/character_base_stats.gd" id="1_81i3v"]
 
 [resource]
 script = ExtResource("1_81i3v")
@@ -9,5 +9,7 @@ move_speed = 50.0
 jump_strength = 6.0
 sensitivity = 0.005
 friction = 0.1
+sideway_knockback_strength = 40.0
+upward_knockback_strength = 8.0
 hp = 3
-damage = 1.079
+damage = 1.0
