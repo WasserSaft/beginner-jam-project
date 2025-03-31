@@ -1,8 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://cr5vncx2s7tua"]
+[gd_scene load_steps=3 format=3 uid="uid://caymbuhb6npe2"]
 
-[ext_resource type="PackedScene" uid="uid://5eb57gouqtnp" path="res://Resources/Models/Props/Clues/JuggleStix.glb" id="1_rqaup"]
+[ext_resource type="PackedScene" uid="uid://dhtitltxheute" path="res://Resources/Models/Props/Clues/JuggleStix.glb" id="1_rqaup"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rqaup"]
+size = Vector3(1.65167, 6.36218, 1.71057)
 
 [node name="JuggleStix" instance=ExtResource("1_rqaup")]
 
-[node name="Rack Yellow-Blue" parent="." index="5"]
-transform = Transform3D(0.950025, 0, 0, 0, 0.950025, 0, 0, 0, 0.950025, 0, 0, 0)
+[node name="StaticBody3D" type="StaticBody3D" parent="Juggling Stick Green" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Juggling Stick Green/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0156555, 2.68109, 0.0669556)
+shape = SubResource("BoxShape3D_rqaup")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Juggling Stick Red" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.02818, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Juggling Stick Red/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0156555, 2.68109, 0)
+shape = SubResource("BoxShape3D_rqaup")
