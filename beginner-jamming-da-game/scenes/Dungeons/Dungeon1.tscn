@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=4 uid="uid://dgk7sns23ggyu"]
 
-[ext_resource type="MeshLibrary" uid="uid://c1uhyyw3nvlx5" path="res://scenes/Dungeons/Dungeon1Tileset.tres" id="1_ar7sb"]
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/characters/player/player.tscn" id="2_qeupc"]
+[ext_resource type="MeshLibrary" uid="uid://c1uhyyw3nvlx5" path="res://Scenes/Dungeons/Dungeon1Tileset.tres" id="1_ar7sb"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Scenes/characters/player/player.tscn" id="2_qeupc"]
 [ext_resource type="Texture2D" uid="uid://bd3xiqfsu3iys" path="res://Resources/Models/Props/Clues/JuggleStix_ColorPalette.jpg" id="3_x5q4k"]
 [ext_resource type="Texture2D" uid="uid://cajvj458w6bx5" path="res://Resources/Models/Props/Clues/JuggleStix_ColorPalette_1.jpg" id="4_droba"]
 
@@ -226,7 +226,6 @@ mesh = SubResource("BoxMesh_droba")
 shape = SubResource("ConcavePolygonShape3D_x5q4k")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_qeupc")
 
 [node name="Player" parent="." instance=ExtResource("2_qeupc")]

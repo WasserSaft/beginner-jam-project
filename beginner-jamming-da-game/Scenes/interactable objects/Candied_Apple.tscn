@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://bafyywysamrsj"]
+
+[ext_resource type="Script" uid="uid://dpm3h6ujih2gb" path="res://scripts/interactable objects/candied_apple.gd" id="1_5dkuq"]
+[ext_resource type="Resource" uid="uid://b8kstbnuurvhi" path="res://Scenes/interactable objects/candied_apple.tres" id="2_cw1hv"]
+[ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://Scenes/CG_scenes/dialog_ui.tscn" id="2_ghb7o"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_y0164"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x0324"]
+
+[node name="Candied_Apple" type="CharacterBody3D"]
+script = ExtResource("1_5dkuq")
+inventory_item = ExtResource("2_cw1hv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["interactable"]]
+mesh = SubResource("BoxMesh_y0164")
+
+[node name="Area3D" type="Area3D" parent="." groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_x0324")
+
+[node name="DialogUI" parent="." groups=["dialog_ui"] instance=ExtResource("2_ghb7o")]
+visible = false

@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://casjwaj8gc11j"]
+
+[ext_resource type="Script" uid="uid://ctep2waqdi83a" path="res://Scenes/interactable objects/empty_soda_can.gd" id="1_kh32l"]
+[ext_resource type="Resource" uid="uid://csu2gpk00qtjo" path="res://Scenes/interactable objects/empty_soda_can.tres" id="2_r46tf"]
+[ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://Scenes/CG_scenes/dialog_ui.tscn" id="2_tsmbc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_y0164"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x0324"]
+
+[node name="Empty_Soda_Can" type="CharacterBody3D"]
+script = ExtResource("1_kh32l")
+inventory_item = ExtResource("2_r46tf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["interactable"]]
+mesh = SubResource("BoxMesh_y0164")
+
+[node name="Area3D" type="Area3D" parent="." groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_x0324")
+
+[node name="DialogUI" parent="." groups=["dialog_ui"] instance=ExtResource("2_tsmbc")]
+visible = false

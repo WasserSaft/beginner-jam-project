@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Inventory_item" load_steps=3 format=3 uid="uid://b8kstbnuurvhi"]
+
+[ext_resource type="Script" uid="uid://bjtv2mle06fgr" path="res://Resources/inventory stuff/inventory item.gd" id="1_sf6jn"]
+[ext_resource type="Texture2D" uid="uid://df4xuhr2ohqm7" path="res://Resources/PNGS/healthicon.png" id="2_3nr3v"]
+
+[resource]
+script = ExtResource("1_sf6jn")
+name = "Candied Apple"
+sprite = ExtResource("2_3nr3v")
+metadata/_custom_type_script = "uid://bjtv2mle06fgr"
