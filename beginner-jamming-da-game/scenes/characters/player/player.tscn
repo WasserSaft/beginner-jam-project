@@ -5468,10 +5468,10 @@ offset_right = 120.0
 offset_bottom = 430.0
 theme_override_constants/separation = 70
 
-[node name="slot1" type="Control" parent="CanvasLayer/Hud/VBoxContainer"]
+[node name="slot" type="Control" parent="CanvasLayer/Hud/VBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Hud/VBoxContainer/slot1"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Hud/VBoxContainer/slot"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

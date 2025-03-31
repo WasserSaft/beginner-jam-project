@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgk1jhsw5ns6v"]
+[gd_scene load_steps=6 format=3 uid="uid://bgk1jhsw5ns6v"]
 
 [ext_resource type="Script" uid="uid://bcgxbp8wj8v0b" path="res://scripts/interactable objects/chest.gd" id="1_5qq4p"]
+[ext_resource type="Resource" uid="uid://nhlw3bkh42lq" path="res://Resources/inventory stuff/test_inventory_item.tres" id="2_5qq4p"]
 [ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://Scenes/CG_scenes/dialog_ui.tscn" id="3_0eu27"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_y0164"]
@@ -9,6 +10,7 @@
 
 [node name="Juggling_Pins" type="CharacterBody3D"]
 script = ExtResource("1_5qq4p")
+inventory_item = ExtResource("2_5qq4p")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["interactable"]]
 mesh = SubResource("BoxMesh_y0164")

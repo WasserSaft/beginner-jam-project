@@ -1,17 +1,15 @@
 extends Control
 
-@export var inventory: Inventory
-@export var player: Node
+@export var player: Node  
 @onready var inventory_container = $VBoxContainer
 @onready var hp_container: HBoxContainer = $"hp container"
 @onready var dialog_ui: Control = $DialogUI
 
 const HEALTH_ICON = preload("res://scenes/ui/hud/health_icon.tscn")
 
-
 func _ready() -> void:
 	display_hp()
-	await get_tree().process_frame
+	await get_tree().process_frame  
 	update_inventory()
 	dialog_ui.visible = false
 
@@ -24,14 +22,13 @@ func display_hp():
 
 func update_inventory():
 	var slots = inventory_container.get_children()
+	var items = player.inventory.items
 
-	for i in range(slots.size()):
-		var item = player.inventory.items[i]  
+	for i in range(min(slots.size(), items.size())):
+		var item = items[i]
 		var slot = slots[i]
-		var texture = item.sprite if item != null else null
-
 		var icon_node = slot.get_node("TextureRect")
-		icon_node.texture = texture
+		icon_node.texture = item.sprite if item != null else null
 
 func show_dialogue(speaker: String, line: String):
 	dialog_ui.visible = true
