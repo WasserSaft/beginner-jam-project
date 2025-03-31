@@ -27,3 +27,4 @@ expand_mode = 2
 stream = ExtResource("4_ve4km")
 volume_db = -10.0
 autoplay = true
+bus = &"Music"
