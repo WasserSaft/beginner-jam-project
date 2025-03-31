@@ -13,24 +13,18 @@ extends CharacterBody3D
 const DEATH_SCREEN = preload("res://scenes/important scenes/death_screen.tscn")
 
 var cooldown_time = 1
+var bobbing_time := 0.0
+var bobbing_amplitude := 0.08 #how high the bobbing goes
+var bobbing_frequency := 10.0 #how fast the bobbing happens
+var head_original_position: Vector3
 
-enum states {
-	GROUNDED, 
-	LAUNCH,
-	FALL,
-}
+enum states { GROUNDED, LAUNCH, FALL, }
 var current_state = states.FALL
 
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-func _physics_process(delta: float) -> void:
-	var _unused = delta
-	state_logic(current_state)
-	movement()
-	move_and_slide()
-
+	head_original_position = $Head.position
 
 func _input(event):
 	#camera movment
@@ -48,11 +42,19 @@ func _input(event):
 			attack()
 		
 
+func _physics_process(delta: float) -> void:
+	var _unused = delta
+	state_logic(current_state)
+	movement()
+	move_and_slide()
+	apply_head_bobbing(delta)
+
+#------state functions
 func switch_state(old_state, new_state):
 	exit_state(old_state)
 	enter_state(new_state)
 	current_state = new_state
-	
+
 func enter_state(state):
 	match state:
 		states.LAUNCH:
@@ -78,27 +80,41 @@ func exit_state(state):
 	match state:
 		pass
 		
+#------end of state functions
+#------beginning of movement functions
 func apply_gravity():
 	velocity.y -= stats.gravity * get_process_delta_time()
 
 func movement():
-	
 	var movement_direction = Vector3.ZERO
 	movement_direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	movement_direction.z = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
-# Get camera's basis to rotate movement direction
+#get camera's basis to rotate movement direction
 	var camera_basis = camera.global_transform.basis
-# Convert movement direction to match the camera's rotation
+#converts movement direction to match the camera's rotation
 	var move_vec = (camera_basis * movement_direction).normalized()
-# Ensure movement only affects horizontal plane (no unwanted vertical movement)
+#movement that affects horizontal plane (no vertical movement)
 	move_vec.y = 0
 	move_vec = move_vec.normalized()
-# Apply movement velocity
-	velocity.x += move_vec.x * stats.move_speed * get_process_delta_time()
+#movement velocity
+	velocity.x += move_vec.x * (stats.move_speed * 0.4) * get_process_delta_time()
 	velocity.x -= velocity.x * stats.friction
-	velocity.z += move_vec.z * stats.move_speed * get_process_delta_time()
+	velocity.z += move_vec.z * (stats.move_speed * 0.4) * get_process_delta_time()
 	velocity.z -= velocity.z * stats.friction
 
+func apply_head_bobbing(delta):
+	var is_moving = Input.get_action_strength("move_up") > 0 or Input.get_action_strength("move_down") > 0 or \
+	Input.get_action_strength("move_left") > 0 or Input.get_action_strength("move_right") > 0
+
+	if is_on_floor() and is_moving:
+		bobbing_time += delta * bobbing_frequency
+		var bob_offset = sin(bobbing_time) * bobbing_amplitude
+		$Head.position.y = head_original_position.y + bob_offset
+	else:
+		#reset head position when not moving
+		bobbing_time = 0.0
+		$Head.position.y = lerp($Head.position.y, head_original_position.y, 10 * delta)
+#-----end of movement
 func take_damage(damage):
 	stats.hp -= damage
 	if stats.hp <= 0:
@@ -109,11 +125,12 @@ func take_damage(damage):
 
 func interact():
 	var collider = ray_cast_3d.get_collider()
-	if collider != null:
-		if collider.is_in_group("interactable"):
-			collider.get_parent().interact(self)
-			hud.update_inventory()
-			
+	if collider and collider.is_in_group("interactable"):
+		var target = collider.get_parent()
+		if target.has_method("interact"):
+			target.interact(self)
+		hud.update_inventory()
+
 func attack():
 	animation_player.play("Swing")
 	cooldown_timer.start(cooldown_time)

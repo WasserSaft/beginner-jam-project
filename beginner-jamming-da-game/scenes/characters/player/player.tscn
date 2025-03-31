@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=23 format=4 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" uid="uid://l1x3oq08iasu" path="res://scripts/characters/player/player..gd" id="1_2w2fw"]
 [ext_resource type="Resource" uid="uid://d0f5jbhabl0wu" path="res://Resources/inventory stuff/player_inventory.tres" id="2_6avc5"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d3kxo4b37s8xi" path="res://Resources/Models/FPSView/UncleFPSHands_ColorPalette.jpg" id="3_hss88"]
 [ext_resource type="Texture2D" uid="uid://bauja2ixb7f2k" path="res://Resources/Models/FPSView/UncleFPSHands_ColorPalette_1.jpg" id="4_qd3e3"]
 [ext_resource type="PackedScene" uid="uid://ksm5338r2sd8" path="res://Scenes/ui/hud/hud.tscn" id="5_35au1"]
+[ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://Scenes/CG_scenes/dialog_ui.tscn" id="7_ycnf8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -5429,7 +5430,7 @@ bones/226/rotation = Quaternion(0.821076, 6.6397e-09, 0.105084, 0.561063)
 bones/226/scale = Vector3(1, 1, 1)
 
 [node name="Bat" type="BoneAttachment3D" parent="Head/Camera3D/UncleFPSHands/rig/Skeleton3D"]
-transform = Transform3D(0.00319686, -0.0416285, 0.0806988, -0.0136888, 0.079605, 0.0416066, -0.0897655, -0.0136219, -0.00347083, -0.179323, 1.78551, 0.560427)
+transform = Transform3D(0.00319685, -0.0416285, 0.0806988, -0.0136888, 0.079605, 0.0416066, -0.0897655, -0.0136219, -0.00347084, -0.179323, 1.78551, 0.560427)
 bone_name = "Bat"
 bone_idx = 224
 
@@ -5458,6 +5459,9 @@ collide_with_areas = true
 
 [node name="Hud" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("5_35au1")]
 player = NodePath("../..")
+
+[node name="DialogUI" parent="CanvasLayer/Hud" instance=ExtResource("7_ycnf8")]
+layout_mode = 1
 
 [node name="cooldown_timer" type="Timer" parent="."]
 one_shot = true
