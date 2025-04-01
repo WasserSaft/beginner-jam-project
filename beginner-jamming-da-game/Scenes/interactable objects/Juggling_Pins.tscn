@@ -1,10 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bgk1jhsw5ns6v"]
 
 [ext_resource type="Script" uid="uid://bcgxbp8wj8v0b" path="res://scripts/interactable objects/juggling_pins.gd" id="1_g6m1n"]
-[ext_resource type="Resource" uid="uid://nhlw3bkh42lq" path="res://scenes/interactable objects/juggling_pins.tres" id="2_ojk07"]
-[ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://scenes/CG_scenes/dialog_ui.tscn" id="3_oa2l3"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_y0164"]
+[ext_resource type="Resource" uid="uid://nhlw3bkh42lq" path="res://Scenes/interactable objects/juggling_pins.tres" id="2_ojk07"]
+[ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://Scenes/CG_scenes/dialog_ui.tscn" id="3_oa2l3"]
+[ext_resource type="ArrayMesh" uid="uid://diqg1yhl4ytp3" path="res://Resources/Models/Props/Clues/JuggleStixTogehter.tres" id="3_ojk07"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x0324"]
 
@@ -13,7 +12,8 @@ script = ExtResource("1_g6m1n")
 inventory_item = ExtResource("2_ojk07")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["interactable"]]
-mesh = SubResource("BoxMesh_y0164")
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+mesh = ExtResource("3_ojk07")
 
 [node name="Area3D" type="Area3D" parent="." groups=["interactable"]]
 

@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_3ia5e")
-name = "Juggling Pins"
+name = "Soda Can"
 sprite = ExtResource("2_tq13u")
 metadata/_custom_type_script = "uid://bjtv2mle06fgr"

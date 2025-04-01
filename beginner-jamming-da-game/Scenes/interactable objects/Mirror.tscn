@@ -2,9 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cjd5srec16y53" path="res://Scenes/interactable objects/mirror.gd" id="1_vnytu"]
 [ext_resource type="Resource" uid="uid://cw1fca1q4a8lf" path="res://Scenes/interactable objects/mirror.tres" id="2_odgij"]
+[ext_resource type="ArrayMesh" uid="uid://ds6qjvmslfk0d" path="res://Resources/Models/Props/Clues/MirrorClue.tres" id="3_eh3li"]
 [ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://Scenes/CG_scenes/dialog_ui.tscn" id="3_k3w0t"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_y0164"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x0324"]
 
@@ -13,7 +12,7 @@ script = ExtResource("1_vnytu")
 inventory_item = ExtResource("2_odgij")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["interactable"]]
-mesh = SubResource("BoxMesh_y0164")
+mesh = ExtResource("3_eh3li")
 
 [node name="Area3D" type="Area3D" parent="." groups=["interactable"]]
 

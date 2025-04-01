@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://caymbuhb6npe2"]
+[gd_scene load_steps=4 format=3 uid="uid://caymbuhb6npe2"]
 
 [ext_resource type="PackedScene" uid="uid://dhtitltxheute" path="res://Resources/Models/Props/Clues/JuggleStix.glb" id="1_rqaup"]
+[ext_resource type="ArrayMesh" uid="uid://diqg1yhl4ytp3" path="res://Resources/Models/Props/Clues/JuggleStixTogehter.tres" id="2_m135q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rqaup"]
 size = Vector3(1.65167, 6.36218, 1.71057)
@@ -47,3 +48,4 @@ transform = Transform3D(0.999999, -0.00106091, 0.000703876, 0.00106094, 0.999999
 
 [node name="Juggling Sticks Together" parent="." index="10"]
 transform = Transform3D(0.0537491, -0.997709, -0.0410695, 0.914777, 0.0327073, 0.402633, -0.400367, -0.0592105, 0.91444, -7.47219, 1.17674, 2.73774)
+mesh = ExtResource("2_m135q")
