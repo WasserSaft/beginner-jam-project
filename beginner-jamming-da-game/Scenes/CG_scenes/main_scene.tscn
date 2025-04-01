@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bca63odsu3xyy" path="res://scripts/CG_scripts/main_scene.gd" id="1_5adcb"]
 [ext_resource type="Texture2D" uid="uid://b0sv08pi0851j" path="res://Resources/PNGS/Scene1.png" id="2_8gsly"]
 [ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://Scenes/CG_scenes/dialog_ui.tscn" id="3_cgvo5"]
-[ext_resource type="AudioStream" uid="uid://xjkedf6ow117" path="res://Resources/Sounds/placeholdertrack.mp3" id="4_ve4km"]
+[ext_resource type="AudioStream" uid="uid://kkgdwdrhi1fs" path="res://Resources/Sounds/begintrack.mp3" id="4_ve4km"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_5adcb")

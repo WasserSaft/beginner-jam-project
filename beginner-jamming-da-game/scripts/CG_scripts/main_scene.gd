@@ -13,11 +13,14 @@ var dialog_index : int = 0
 const dialog_lines = [
 	{ "speaker": "???", "text": "This Uncle Detective Private Investigations?" },
 	{ "speaker": "Nephew", "text": "Yeah, you have the right number." },
-	{ "speaker": "???", "text": "Great. Route 9. Steel mill. Tent town full’a travelin’ beasts. Folks goin’ missin’. No flesh. No bones. Just... poof." },
+	{ "speaker": "???", "text": "'Kay then. Route 9. Steel mill. Tent town full’a travelin’ beasts. Folks goin’ missin’. No flesh. No bones. Just... poof." },
 	{ "speaker": "???", "text": "Cops can’t get near it without catchin’ elbows from clowns with crowbars." },
-	{ "speaker": "???", "text": "...Figured it’s the kind of place that reels in types like your lead investigator. One way or another." },
+	{ "speaker": "???", "text": "...Figured it’s the kind of place that reels in types like your lead guy. One way or another." },
 	{ "speaker": "Nephew", "text": "Okay, thanks. Uh, we’ll let him know." },
-	{ "speaker": "???", "text": "Knew you would. ‘Cause once Uncle Detective comes knockin’... nobody leaves on their own termsss." },
+	{ "speaker": "???", "text": "Knew you would. ‘Cause once Uncle Detective comes knockin’..." },
+	{ "speaker": "???", "text": "Itsss" },
+	{ "speaker": "???", "text": "game" },
+	{ "speaker": "???", "text": "over." },
 	{ "speaker": "", "text": "Click" },
 	{ "speaker": "Nephew", "text": "Huh…" },
 	{ "speaker": "Uncle", "text": "Ahem." },
@@ -30,7 +33,7 @@ const dialog_lines = [
 	{ "speaker": "Uncle", "text": "Looks right…" },
 	{ "speaker": "Nephew", "text": "What the hell are you doing?" },
 	{ "speaker": "Uncle", "text": "Trying to boil an egg." },
-	{ "speaker": "Nephew", "text": "On a hot plate we use for drying out wet case files?! …And your- ugh, your sweaty socks?" },
+	{ "speaker": "Nephew", "text": "On the hot plate we use for drying out wet case files?! …And your- ugh, your sweaty socks?" },
 	{ "speaker": "Uncle", "text": "Boiling eggs and case files are similar in composition my friend…" },
 	{ "speaker": "Nephew", "text": "Uncle…every time I think I start understanding your process, you start doing stuff like this. Insurance isn’t going to cover the sickness you’ll get from eating that." },
 	{ "speaker": "Uncle", "text": "Insurance? Don’t make me laugh... Anyway, sure, circuses. Let’s talk about that." },
@@ -57,7 +60,9 @@ const dialog_lines = [
 ]
 var background_changes = {
 	0: preload("res://Resources/PNGS/Scene1.png"),
-	8: preload("res://Resources/PNGS/CGplaceholder.png"),
+	11: preload("res://Resources/PNGS/Scene2.png"),
+	21: preload("res://Resources/PNGS/Scene3.png"),
+	26: preload("res://Resources/PNGS/CGplaceholder.png")
 	}
 
 func _ready():
