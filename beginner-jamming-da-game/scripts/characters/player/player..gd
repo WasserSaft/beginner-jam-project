@@ -4,7 +4,8 @@ extends CharacterBody3D
 @export var stats: Resource
 @export var death_screen: PackedScene
 
-@onready var ray_cast_3d: RayCast3D = $Head/RayCast3D
+@onready var ray_cast_3d: RayCast3D = $Head/Camera3D/RayCast3D
+
 @onready var hud: Control = $CanvasLayer/Hud
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var animation_player: AnimationPlayer = $Head/Camera3D/UncleFPSHands/AnimationPlayer

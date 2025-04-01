@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cs76y5xd7884n" path="res://scenes/interactable objects/Mirror.tscn" id="6_b4py0"]
 
 [node name="Template" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.843865, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0.460273, -0.495079, 0.736917, -0.195327, 0.753256, 0.628055, 0, 5.15098, 5.64979)
@@ -34,10 +35,10 @@ friction = 0.1
 [node name="Candied_Apple" parent="." instance=ExtResource("3_qxofe")]
 
 [node name="Empty_Soda_Can" parent="." instance=ExtResource("4_x1sns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.32536)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.23365)
 
 [node name="Juggling_Pins" parent="." instance=ExtResource("2_apaxm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.07693)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.03249)
 
 [node name="Mirror" parent="." instance=ExtResource("6_b4py0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.46244)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.1544)

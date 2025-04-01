@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://l1x3oq08iasu" path="res://scripts/characters/player/player..gd" id="1_2w2fw"]
 [ext_resource type="Resource" uid="uid://d0f5jbhabl0wu" path="res://Resources/inventory stuff/player_inventory.tres" id="2_6avc5"]
-[ext_resource type="Resource" uid="uid://caat3hlelfvhr" path="res://Scenes/characters/player/player_stats.tres" id="2_7lxbb"]
+[ext_resource type="Resource" uid="uid://caat3hlelfvhr" path="res://scenes/characters/player/player_stats.tres" id="2_7lxbb"]
 [ext_resource type="Texture2D" uid="uid://d3kxo4b37s8xi" path="res://Resources/Models/FPSView/UncleFPSHands_ColorPalette.jpg" id="3_hss88"]
 [ext_resource type="Texture2D" uid="uid://bauja2ixb7f2k" path="res://Resources/Models/FPSView/UncleFPSHands_ColorPalette_1.jpg" id="4_qd3e3"]
-[ext_resource type="PackedScene" uid="uid://ksm5338r2sd8" path="res://Scenes/ui/hud/hud.tscn" id="5_35au1"]
-[ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://Scenes/CG_scenes/dialog_ui.tscn" id="7_ycnf8"]
+[ext_resource type="PackedScene" uid="uid://ksm5338r2sd8" path="res://scenes/ui/hud/hud.tscn" id="5_35au1"]
+[ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://scenes/CG_scenes/dialog_ui.tscn" id="7_ycnf8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -5430,7 +5430,7 @@ bones/226/rotation = Quaternion(0.821076, 6.6397e-09, 0.105084, 0.561063)
 bones/226/scale = Vector3(1, 1, 1)
 
 [node name="Bat" type="BoneAttachment3D" parent="Head/Camera3D/UncleFPSHands/rig/Skeleton3D"]
-transform = Transform3D(0.00319685, -0.0416285, 0.0806988, -0.0136888, 0.079605, 0.0416066, -0.0897655, -0.0136219, -0.00347084, -0.179323, 1.78551, 0.560427)
+transform = Transform3D(0.00319686, -0.0416285, 0.0806988, -0.0136888, 0.079605, 0.0416066, -0.0897655, -0.0136219, -0.00347083, -0.179323, 1.78551, 0.560427)
 bone_name = "Bat"
 bone_idx = 224
 
@@ -5449,7 +5449,7 @@ libraries = {
 }
 speed_scale = 4.0
 
-[node name="RayCast3D" type="RayCast3D" parent="Head"]
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.134512, 0)
 target_position = Vector3(0, 0, -4)
 hit_back_faces = false
