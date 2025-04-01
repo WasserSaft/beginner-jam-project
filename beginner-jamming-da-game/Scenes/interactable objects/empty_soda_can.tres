@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Inventory_item" load_steps=3 format=3 uid="uid://csu2gpk00qtjo"]
 
 [ext_resource type="Script" uid="uid://bjtv2mle06fgr" path="res://Resources/inventory stuff/inventory item.gd" id="1_3ia5e"]
-[ext_resource type="Texture2D" uid="uid://df4xuhr2ohqm7" path="res://Resources/PNGS/healthicon.png" id="2_tq13u"]
+[ext_resource type="Texture2D" uid="uid://ngkpx4hnwbco" path="res://Resources/PNGS/empty_soda_can.png" id="2_3ia5e"]
 
 [resource]
 script = ExtResource("1_3ia5e")
 name = "Soda Can"
-sprite = ExtResource("2_tq13u")
+sprite = ExtResource("2_3ia5e")
 metadata/_custom_type_script = "uid://bjtv2mle06fgr"
