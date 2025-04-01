@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://dgk7sns23ggyu"]
+[gd_scene load_steps=49 format=4 uid="uid://dgk7sns23ggyu"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Scenes/characters/player/player.tscn" id="2_qeupc"]
 [ext_resource type="Texture2D" uid="uid://ca48g8vyjnuuk" path="res://Resources/Models/Props/Props_MirrorTexture.png" id="3_awyhc"]
@@ -7,6 +7,7 @@
 [ext_resource type="MeshLibrary" uid="uid://bxa217w36mpcf" path="res://Resources/TileSets/Dungeon1/DUngeon1.tres" id="4_mssy2"]
 [ext_resource type="Texture2D" uid="uid://darpnvjehe3x7" path="res://Resources/Models/Props/Clues/JuggleStix_ColorPalette_1.jpg" id="5_wsw78"]
 [ext_resource type="Texture2D" uid="uid://dl6vg8o1nbe4v" path="res://Resources/Models/Props/Clues/JuggleStix_ColorPalette.jpg" id="6_e6gjh"]
+[ext_resource type="PackedScene" uid="uid://bgk1jhsw5ns6v" path="res://Scenes/interactable objects/Juggling_Pins.tscn" id="8_e6gjh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tga01"]
 resource_name = "Material.001"
@@ -862,3 +863,13 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Dumpsters/Cube/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34415, 0.579819, 0.201973)
 shape = SubResource("BoxShape3D_wsw78")
+
+[node name="Juggling_Pins" parent="." instance=ExtResource("8_e6gjh")]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -9.71056, 0.257074, 6.72057)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Juggling_Pins"]
+transform = Transform3D(0.588235, 0, 0, 0, 0.588235, 0, 0, 0, 0.588235, 0, 0.126571, -0.0857818)
+light_color = Color(0.938345, 0, 0.244565, 1)
+light_energy = 1.161
+light_specular = 0.0
+light_bake_mode = 1
