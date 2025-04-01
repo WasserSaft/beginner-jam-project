@@ -4,6 +4,9 @@ class_name enemy
 @export var friction: float
 
 func _physics_process(delta: float) -> void:
+	physics_process(delta)
+
+func physics_process(delta: float) -> void:
 	apply_friction()
 	apply_gravity()
 	move_and_slide()

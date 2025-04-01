@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnyvf1fcepmef"]
+
+[ext_resource type="Script" uid="uid://yhgo7hbw55tx" path="res://scripts/characters/enemies/chase_enemy.gd" id="1_8tuwq"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_33tbd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_33tbd"]
+radius = 0.520132
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8tuwq"]
+radius = 0.621093
+height = 2.1896
+
+[node name="chase_enemy" type="CharacterBody3D" groups=["enemies"]]
+script = ExtResource("1_8tuwq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127587, -0.887368, 0)
+mesh = SubResource("CapsuleMesh_33tbd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125749, -0.872627, 0)
+shape = SubResource("CapsuleShape3D_33tbd")
+debug_fill = false
+
+[node name="Hitbox" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125749, -0.872627, 0)
+shape = SubResource("CapsuleShape3D_8tuwq")
+debug_fill = false
