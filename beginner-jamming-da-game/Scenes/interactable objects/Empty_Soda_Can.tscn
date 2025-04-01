@@ -6,6 +6,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bd1f2d1d1l7ie" path="res://Resources/Models/Props/Clues/SodaCan.tres" id="3_r46tf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x0324"]
+size = Vector3(3.86209, 3.78592, 7.03784)
 
 [node name="Empty_Soda_Can" type="CharacterBody3D"]
 script = ExtResource("1_kh32l")
@@ -17,6 +18,7 @@ mesh = ExtResource("3_r46tf")
 [node name="Area3D" type="Area3D" parent="." groups=["interactable"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0891266, 0.0126495, -0.0762939)
 shape = SubResource("BoxShape3D_x0324")
 
 [node name="DialogUI" parent="." groups=["dialog_ui"] instance=ExtResource("2_tsmbc")]

@@ -16,7 +16,7 @@ extends CharacterBody3D
 
 const DEATH_SCREEN = preload("res://scenes/important scenes/death_screen.tscn")
 var invincible = false
-var cooldown_time = 1
+var cooldown_time = 0.75
 var bobbing_time := 0.0
 var bobbing_amplitude := 0.08 #how high the bobbing goes
 var bobbing_frequency := 10.0 #how fast the bobbing happens

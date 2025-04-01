@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://bgk1jhsw5ns6v"]
 
 [ext_resource type="Script" uid="uid://bcgxbp8wj8v0b" path="res://scripts/interactable objects/juggling_pins.gd" id="1_g6m1n"]
-[ext_resource type="Resource" uid="uid://nhlw3bkh42lq" path="res://Scenes/interactable objects/juggling_pins.tres" id="2_ojk07"]
-[ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://Scenes/CG_scenes/dialog_ui.tscn" id="3_oa2l3"]
+[ext_resource type="Resource" uid="uid://nhlw3bkh42lq" path="res://scenes/interactable objects/juggling_pins.tres" id="2_ojk07"]
+[ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://scenes/CG_scenes/dialog_ui.tscn" id="3_oa2l3"]
 [ext_resource type="ArrayMesh" uid="uid://diqg1yhl4ytp3" path="res://Resources/Models/Props/Clues/JuggleStixTogehter.tres" id="3_ojk07"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x0324"]
-size = Vector3(0.29422, 0.795898, 0.667603)
+size = Vector3(0.534004, 0.849121, 0.842255)
 
 [node name="Juggling_Pins" type="CharacterBody3D"]
 script = ExtResource("1_g6m1n")
@@ -19,7 +19,7 @@ mesh = ExtResource("3_ojk07")
 [node name="Area3D" type="Area3D" parent="." groups=["interactable"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00245667, -0.0219367, 0.0159302)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0253182, 0.0523621, 0.0236358)
 shape = SubResource("BoxShape3D_x0324")
 
 [node name="DialogUI" parent="." groups=["dialog_ui"] instance=ExtResource("3_oa2l3")]
