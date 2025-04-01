@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://caymbuhb6npe2"]
+[gd_scene load_steps=5 format=3 uid="uid://caymbuhb6npe2"]
 
 [ext_resource type="PackedScene" uid="uid://dhtitltxheute" path="res://Resources/Models/Props/Clues/JuggleStix.glb" id="1_rqaup"]
 [ext_resource type="ArrayMesh" uid="uid://diqg1yhl4ytp3" path="res://Resources/Models/Props/Clues/JuggleStixTogehter.tres" id="2_m135q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rqaup"]
 size = Vector3(1.65167, 6.36218, 1.71057)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m135q"]
+size = Vector3(7.13736, 11.5491, 5.78076)
 
 [node name="JuggleStix" instance=ExtResource("1_rqaup")]
 
@@ -45,6 +48,40 @@ shape = SubResource("BoxShape3D_rqaup")
 
 [node name="Rack Yellow-Blue" parent="." index="5"]
 transform = Transform3D(0.999999, -0.00106091, 0.000703876, 0.00106094, 0.999999, -4.79474e-05, -0.000703823, 4.87151e-05, 1, 20.5244, 7.16511, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Rack Yellow-Blue" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rack Yellow-Blue/StaticBody3D" index="0"]
+transform = Transform3D(1, 5.56248e-11, 0, -4.54818e-11, 1, 6.33008e-10, 1.01281e-08, 0, 1, -0.0943184, -2.24057, -1.75699)
+shape = SubResource("BoxShape3D_m135q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Rack Red-Purple" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0747299, 0, 0.0180855)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rack Red-Purple/StaticBody3D" index="0"]
+transform = Transform3D(1, 5.56248e-11, 0, -4.54818e-11, 1, 6.33008e-10, 1.01281e-08, 0, 1, -0.0943184, -2.24057, -1.75699)
+shape = SubResource("BoxShape3D_m135q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Rack-Yellow-Green" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0747299, 0, 0.0180855)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rack-Yellow-Green/StaticBody3D" index="0"]
+transform = Transform3D(1, 5.56248e-11, 0, -4.54818e-11, 1, 6.33008e-10, 1.01281e-08, 0, 1, -0.0943184, -2.24057, -1.75699)
+shape = SubResource("BoxShape3D_m135q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Rack-Naked" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0747299, 0, 0.0180855)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rack-Naked/StaticBody3D" index="0"]
+transform = Transform3D(1, 5.56248e-11, 0, -4.54818e-11, 1, 6.33008e-10, 1.01281e-08, 0, 1, -0.0943184, -2.24057, -0.33968)
+shape = SubResource("BoxShape3D_m135q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Rack-purple" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0747299, 0, 0.0180855)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rack-purple/StaticBody3D" index="0"]
+transform = Transform3D(1, 5.56248e-11, 0, -4.54818e-11, 1, 6.33008e-10, 1.01281e-08, 0, 1, -0.0943184, -2.98272, -1.75699)
+shape = SubResource("BoxShape3D_m135q")
 
 [node name="Juggling Sticks Together" parent="." index="10"]
 transform = Transform3D(0.0537491, -0.997709, -0.0410695, 0.914777, 0.0327073, 0.402633, -0.400367, -0.0592105, 0.91444, -7.47219, 1.17674, 2.73774)
