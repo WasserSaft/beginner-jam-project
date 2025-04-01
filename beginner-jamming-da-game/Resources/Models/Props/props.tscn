@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://dvmd1xycbwxf8"]
+
+[ext_resource type="PackedScene" uid="uid://c3a6n6um2klql" path="res://Resources/Models/Props/Props.glb" id="1_ov5iw"]
+[ext_resource type="ArrayMesh" uid="uid://bd1f2d1d1l7ie" path="res://Resources/Models/Props/Clues/SodaCan.tres" id="2_no8fu"]
+[ext_resource type="ArrayMesh" uid="uid://ds6qjvmslfk0d" path="res://Resources/Models/Props/Clues/MirrorClue.tres" id="3_phxpm"]
+[ext_resource type="ArrayMesh" uid="uid://2wa1dsmh2hyg" path="res://Resources/Models/Props/Clues/CandyAppleClue.tres" id="4_d1i3k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ov5iw"]
+size = Vector3(5.32184, 7.2229, 1.76257)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_no8fu"]
+size = Vector3(14.2726, 6.76514, 7.62378)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_506hb"]
+size = Vector3(6.15967, 12.9446, 6.98785)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_phxpm"]
+size = Vector3(5.19623, 2.90195, 2.40968)
+
+[node name="Props" instance=ExtResource("1_ov5iw")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+
+[node name="Mirror" parent="." index="0"]
+transform = Transform3D(2.09671, 0, 0, 0, 2.13106, 0, 0, 0, 1, -14.9637, 10.639, -1.67008)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mirror" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mirror/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.829779, 0.558093, 0, -0.558093, 0.829778, 0.052093, -1.65305, 0.74069)
+shape = SubResource("BoxShape3D_ov5iw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Desk" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Desk/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44172, -1.04272, 0.308715)
+shape = SubResource("BoxShape3D_no8fu")
+
+[node name="Soda Can" parent="." index="3"]
+mesh = ExtResource("2_no8fu")
+
+[node name="Mirror clue" parent="." index="4"]
+mesh = ExtResource("3_phxpm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Shitty chair" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Shitty chair/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0275879, 1.4884, -0.139313)
+shape = SubResource("BoxShape3D_506hb")
+
+[node name="Candy Apple" parent="." index="6"]
+mesh = ExtResource("4_d1i3k")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34415, 0.579819, 0.201973)
+shape = SubResource("BoxShape3D_phxpm")
