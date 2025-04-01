@@ -3,7 +3,7 @@ extends CharacterBody3D
 @export var inventory_template: Inventory
 @export var stats: Resource
 @export var death_screen: PackedScene
-
+@onready var hurtbox: Area3D = $hurtbox
 @onready var ray_cast_3d: RayCast3D = $Head/Camera3D/RayCast3D
 
 @onready var hud: Control = $CanvasLayer/Hud
@@ -12,9 +12,10 @@ extends CharacterBody3D
 @onready var cooldown_timer: Timer = $cooldown_timer
 @onready var hitbox: Area3D = $hitbox
 @onready var damage_delay: Timer = $damage_delay
+@onready var invincible_timer: Timer = $"invincible timer"
 
 const DEATH_SCREEN = preload("res://scenes/important scenes/death_screen.tscn")
-
+var invincible = false
 var cooldown_time = 1
 var bobbing_time := 0.0
 var bobbing_amplitude := 0.08 #how high the bobbing goes
@@ -39,7 +40,7 @@ func _input(event):
 		camera.rotation.x = clamp(camera.rotation.x, -1.5, 1.5)
 		# take damage
 	if Input.is_action_just_pressed("r"):
-		take_damage(1)
+		take_damage(1, 0.01)
 	if Input.is_action_just_pressed("interact"):
 		interact()
 	if Input.is_action_just_pressed("attack"):
@@ -123,13 +124,16 @@ func apply_head_bobbing(delta):
 		bobbing_time = 0.0
 		$Head.position.y = lerp($Head.position.y, head_original_position.y, 10 * delta)
 #-----end of movement
-func take_damage(damage):
-	stats.hp -= damage
-	if stats.hp <= 0:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		get_tree().change_scene_to_packed(DEATH_SCREEN)
-	else:
-		hud.display_hp()
+func take_damage(damage, invincible_time):
+	if invincible == false:
+		stats.hp -= damage
+		if stats.hp <= 0:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			get_tree().change_scene_to_packed(DEATH_SCREEN)
+		else:
+			hud.display_hp()
+			invincible = true
+			invincible_timer.start(invincible_time)
 
 func interact():
 	var dialog_ui = get_tree().get_first_node_in_group("dialog_ui")
@@ -151,3 +155,7 @@ func attack():
 	
 	
 	
+
+
+func _on_invincible_timer_timeout() -> void:
+	invincible = false
