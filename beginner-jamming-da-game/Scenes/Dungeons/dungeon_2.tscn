@@ -1,13 +1,14 @@
-[gd_scene load_steps=59 format=4 uid="uid://emkymxxg83s5"]
+[gd_scene load_steps=60 format=4 uid="uid://emkymxxg83s5"]
 
 [ext_resource type="Shader" uid="uid://du1cnvm7xp88l" path="res://Scenes/Dungeons/dungeon_2.gdshader" id="1_afm8w"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Scenes/characters/player/player.tscn" id="1_kmktw"]
 [ext_resource type="MeshLibrary" uid="uid://bxa217w36mpcf" path="res://Resources/TileSets/Dungeon1/DUngeon1.tres" id="2_ptied"]
 [ext_resource type="Texture2D" uid="uid://8o254sevuvsx" path="res://Resources/Models/Props/Props_ColorPalette.jpg" id="3_6d2fg"]
-[ext_resource type="Script" uid="uid://dp5dxunelnmor" path="res://Scenes/Dungeons/special_mirror.gd" id="3_30xgf"]
 [ext_resource type="Texture2D" uid="uid://ca48g8vyjnuuk" path="res://Resources/Models/Props/Props_MirrorTexture.png" id="4_2doli"]
+[ext_resource type="Script" uid="uid://b3jja7t6bpxcf" path="res://Scenes/Dungeons/inverted_mirror.gd" id="4_afm8w"]
 [ext_resource type="Texture2D" uid="uid://darpnvjehe3x7" path="res://Resources/Models/Props/Clues/JuggleStix_ColorPalette_1.jpg" id="5_krnea"]
 [ext_resource type="Texture2D" uid="uid://dl6vg8o1nbe4v" path="res://Resources/Models/Props/Clues/JuggleStix_ColorPalette.jpg" id="6_km6et"]
+[ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://Scenes/CG_scenes/dialog_ui.tscn" id="7_30dhu"]
 [ext_resource type="Texture2D" uid="uid://bm2mttn34x7mr" path="res://Resources/Models/Props/Props_ZWuzHere.png" id="10_1d68y"]
 [ext_resource type="AudioStream" uid="uid://crx4sujm7qhfe" path="res://Resources/Sounds/DungeonLoopReverseMaster.mp3" id="10_afm8w"]
 
@@ -783,20 +784,23 @@ shape = SubResource("ConcavePolygonShape3D_kmktw")
 [node name="RingMasterprops" type="Node3D" parent="GridMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97969, 0, 0)
 
-[node name="SpecialMirror" type="CharacterBody3D" parent="GridMap/RingMasterprops"]
-script = ExtResource("3_30xgf")
+[node name="InvertedMirror" type="CharacterBody3D" parent="GridMap/RingMasterprops" groups=["interactable"]]
+script = ExtResource("4_afm8w")
 
-[node name="Mirror" type="MeshInstance3D" parent="GridMap/RingMasterprops/SpecialMirror"]
+[node name="Mirror" type="MeshInstance3D" parent="GridMap/RingMasterprops/InvertedMirror" groups=["interactable"]]
 transform = Transform3D(0.308311, 0, -0.0888, 0, 0.366, 0, 0.18586, 0, 0.147304, -8.92651, 1.94846, -46.3901)
 mesh = SubResource("ArrayMesh_ptied")
 skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="GridMap/RingMasterprops/SpecialMirror"]
+[node name="Area3D" type="Area3D" parent="GridMap/RingMasterprops/InvertedMirror" groups=["interactable"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/RingMasterprops/SpecialMirror/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/RingMasterprops/InvertedMirror/Area3D"]
 transform = Transform3D(0.308311, 0.0495587, -0.0736843, 0, 0.303699, 0.204262, 0.18586, -0.0822093, 0.12223, -9.07319, 1.30332, -46.2227)
 shape = SubResource("BoxShape3D_6d2fg")
+
+[node name="DialogUI" parent="GridMap/RingMasterprops/InvertedMirror" groups=["dialog_ui", "interactable"] instance=ExtResource("7_30dhu")]
+visible = false
 
 [node name="Shitty chair" type="MeshInstance3D" parent="GridMap/RingMasterprops"]
 transform = Transform3D(0.141588, 0, 0.0495253, 0, 0.15, 0, -0.0495253, 0, 0.141588, -14.033, 0.459606, -46.1052)
