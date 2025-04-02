@@ -75,8 +75,12 @@ func _input(event):
 		#respond if DialogUI has finished typing
 		if dialog_ui.type_timer.is_stopped():
 			dialog_index += 1
+
 			if dialog_index < dialog_lines.size():
 				display_line(dialog_lines[dialog_index])
+			else:
+				#switch scene
+				_change_scene()
 
 #displays dialog lines on screen
 func display_line(line_data: Dictionary):
@@ -85,3 +89,8 @@ func display_line(line_data: Dictionary):
 	dialog_ui.change_line(speaker, text)
 	if background_changes.has(dialog_index):
 		$CanvasLayer/Background.texture = background_changes[dialog_index]
+
+
+func _change_scene():
+	var next_scene = "res://Scenes/Dungeons/Dungeon1.tscn"
+	get_tree().change_scene_to_file(next_scene)

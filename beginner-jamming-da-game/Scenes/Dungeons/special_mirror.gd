@@ -13,7 +13,7 @@ var player_ref: Node
 	["Uncle", "Yes! That’s why so many of the smaller ones were broken! They were getting rid of the ones that didn’t work."],
 	["Nephew", "I dunno… I figured they just broke a lot of mirrors. Clowns are clumsy."],
 	["Uncle", "Don’t be naive. It’s suspicious."],
-	["Narration", "[He reaches toward the mirror, his finger sinking slightly into the surface.]"],
+	["", "...He reaches toward the mirror, his finger sinking slightly into the surface..."],
 	["Uncle", "Aha! Yup. My pinky is phasing through the glass. Here we go."],
 	["Nephew", "Okay… this is weird, but fine. I’ll just set down our clues on the Ringmaster’s desk as we’re about to walk into a totally real magical mirror dimension."]
 ]
