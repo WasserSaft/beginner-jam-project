@@ -1,7 +1,8 @@
-[gd_scene load_steps=60 format=4 uid="uid://emkymxxg83s5"]
+[gd_scene load_steps=62 format=4 uid="uid://emkymxxg83s5"]
 
 [ext_resource type="Shader" uid="uid://du1cnvm7xp88l" path="res://Scenes/Dungeons/dungeon_2.gdshader" id="1_afm8w"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Scenes/characters/player/player.tscn" id="1_kmktw"]
+[ext_resource type="Script" uid="uid://blr0quv3qfmba" path="res://Scenes/Dungeons/area_3d.gd" id="2_kmktw"]
 [ext_resource type="MeshLibrary" uid="uid://bxa217w36mpcf" path="res://Resources/TileSets/Dungeon1/DUngeon1.tres" id="2_ptied"]
 [ext_resource type="Texture2D" uid="uid://8o254sevuvsx" path="res://Resources/Models/Props/Props_ColorPalette.jpg" id="3_6d2fg"]
 [ext_resource type="Texture2D" uid="uid://ca48g8vyjnuuk" path="res://Resources/Models/Props/Props_MirrorTexture.png" id="4_2doli"]
@@ -14,6 +15,9 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_30dhu"]
 shader = ExtResource("1_afm8w")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ptied"]
+size = Vector3(1, 4, 5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xnm0k"]
 albedo_color = Color(0, 0, 0, 1)
@@ -755,6 +759,19 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
+
+[node name="BossTrigger" type="Node3D" parent="."]
+
+[node name="Area3D" type="Area3D" parent="BossTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9842, 1, -24.8905)
+script = ExtResource("2_kmktw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossTrigger/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_ptied")
+
+[node name="DialogUI" parent="BossTrigger" instance=ExtResource("7_30dhu")]
+visible = false
 
 [node name="Player" parent="." instance=ExtResource("1_kmktw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.23546, -0.125995, -42.3055)
