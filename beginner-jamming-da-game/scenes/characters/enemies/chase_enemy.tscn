@@ -11,8 +11,12 @@ radius = 0.520132
 radius = 0.621093
 height = 2.1896
 
-[node name="chase_enemy" type="CharacterBody3D" groups=["enemies"]]
+[node name="chase_enemy" type="CharacterBody3D" node_paths=PackedStringArray("name_label") groups=["enemies"]]
 script = ExtResource("1_8tuwq")
+movement_speed = 100
+hp = 3
+friction = 0.2
+name_label = NodePath("Label3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127587, -0.887368, 0)
@@ -29,3 +33,7 @@ debug_fill = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125749, -0.872627, 0)
 shape = SubResource("CapsuleShape3D_8tuwq")
 debug_fill = false
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.438056, 0)
+billboard = 1

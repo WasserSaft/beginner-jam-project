@@ -4,7 +4,7 @@ class_name main_menu
 @onready var start_game: Button = $MarginContainer/VBoxContainer/Start_Game
 @onready var options_button: Button = $MarginContainer/VBoxContainer/Options_Button
 @onready var exit_game: Button = $MarginContainer/VBoxContainer/Exit_Game
-@export var start_level = PackedScene
+const start_level = preload("res://scenes/Dungeons/Dungeon1.tscn")
 @onready var options_menu = $Options_Menu as OptionsMenu
 @onready var margin_container = $MarginContainer as MarginContainer
 @onready var hoversfx: AudioStreamPlayer = $Hoversfx

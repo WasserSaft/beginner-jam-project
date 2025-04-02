@@ -5433,7 +5433,7 @@ bones/226/rotation = Quaternion(0.821076, 6.6397e-09, 0.105084, 0.561063)
 bones/226/scale = Vector3(1, 1, 1)
 
 [node name="Bat" type="BoneAttachment3D" parent="Head/Camera3D/UncleFPSHands/rig/Skeleton3D"]
-transform = Transform3D(0.00319686, -0.0416285, 0.0806988, -0.0136888, 0.079605, 0.0416066, -0.0897655, -0.0136219, -0.00347083, -0.179323, 1.78551, 0.560427)
+transform = Transform3D(0.00319685, -0.0416285, 0.0806988, -0.0136888, 0.079605, 0.0416066, -0.0897655, -0.0136219, -0.00347084, -0.179323, 1.78551, 0.560427)
 bone_name = "Bat"
 bone_idx = 224
 

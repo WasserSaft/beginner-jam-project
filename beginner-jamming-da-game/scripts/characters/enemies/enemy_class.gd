@@ -2,6 +2,13 @@ extends CharacterBody3D
 class_name enemy
 @export var hp: int = 0.2
 @export var friction: float
+@export var name_label: Label3D
+func _ready() -> void:
+	ready()
+	
+func ready():
+	var name = ClownNames.possible_names.pick_random()
+	name_label.text = name
 
 func _physics_process(delta: float) -> void:
 	physics_process(delta)
