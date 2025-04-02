@@ -1,6 +1,6 @@
 [gd_scene load_steps=48 format=4 uid="uid://bv6nwy0opkoqr"]
 
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Scenes/characters/player/player.tscn" id="1_k2pb7"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/characters/player/player.tscn" id="1_k2pb7"]
 [ext_resource type="MeshLibrary" uid="uid://bxa217w36mpcf" path="res://Resources/TileSets/Dungeon1/DUngeon1.tres" id="2_axtet"]
 [ext_resource type="Texture2D" uid="uid://8o254sevuvsx" path="res://Resources/Models/Props/Props_ColorPalette.jpg" id="3_hjqul"]
 [ext_resource type="Texture2D" uid="uid://ca48g8vyjnuuk" path="res://Resources/Models/Props/Props_MirrorTexture.png" id="4_jf5nn"]
