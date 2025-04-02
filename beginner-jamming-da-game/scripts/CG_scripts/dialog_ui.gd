@@ -5,8 +5,8 @@ extends Control
 @onready var type_timer: Timer = $TypeTimer
 @onready var type_sfx: AudioStreamPlayer = $TypeSFX
 @export var chars_per_sfx := 2
-
 @export var advance_on_input := true
+
 #full_text is entire sentence set to be typed, char_index tracks the character that is getting typed
 var full_text: String = ""
 var char_index: int = 0 

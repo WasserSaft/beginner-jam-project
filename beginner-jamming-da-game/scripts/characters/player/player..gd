@@ -5,7 +5,7 @@ extends CharacterBody3D
 @export var death_screen: PackedScene
 @onready var hurtbox: Area3D = $hurtbox
 @onready var ray_cast_3d: RayCast3D = $Head/Camera3D/RayCast3D
-@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
+@onready var audio_stream_player_3d: AudioStreamPlayer = $"../AudioStreamPlayer"
 
 @onready var hud: Control = $CanvasLayer/Hud
 @onready var camera: Camera3D = $Head/Camera3D

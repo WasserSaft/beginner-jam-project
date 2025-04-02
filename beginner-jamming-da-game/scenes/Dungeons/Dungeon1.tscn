@@ -1037,8 +1037,8 @@ transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -9.52563, 0.257066, 6.7
 
 [node name="OmniLight3D" type="OmniLight3D" parent="GridMap/JuggleRoomProps/Juggling_Pins"]
 transform = Transform3D(0.588235, 0, 0, 0, 0.588235, 0, 0, 0, 0.588235, -0.0137472, 0.132604, -0.0830755)
-light_color = Color(0.938345, 0, 0.244565, 1)
-light_energy = 1.161
+light_color = Color(7.89344e-06, 0.72405, 0.951302, 1)
+light_energy = 0.782
 light_specular = 0.0
 light_bake_mode = 1
 
@@ -1049,8 +1049,8 @@ transform = Transform3D(2.62269e-08, 0, 0.2, 0, 0.2, 0, -0.2, 0, 2.62269e-08, -2
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="GridMap/MirrorArea/Mirror"]
 transform = Transform3D(-5, 0, -4.37115e-07, 0, 5, 0, 4.37115e-07, 0, -5, -1.33038, -3.5875, 2.10329)
-light_color = Color(0.938345, 0, 0.244565, 1)
-light_energy = 1.161
+light_color = Color(7.89344e-06, 0.72405, 0.951302, 1)
+light_energy = 0.782
 light_specular = 0.0
 light_bake_mode = 1
 
@@ -1126,8 +1126,8 @@ transform = Transform3D(-0.0707107, 0, 0.0707107, 0, 0.1, 0, -0.0707107, 0, -0.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="GridMap/SodaRoom/Empty_Soda_Can"]
 transform = Transform3D(-7.07107, 0, -7.07107, 0, 10, 0, 7.07107, 0, -7.07107, 8.16418, 12.825, -2.21518)
-light_color = Color(0.938345, 0, 0.244565, 1)
-light_energy = 1.161
+light_color = Color(7.89344e-06, 0.72405, 0.951302, 1)
+light_energy = 0.782
 light_specular = 0.0
 light_bake_mode = 1
 
@@ -1181,9 +1181,9 @@ shape = SubResource("BoxShape3D_6d4mf")
 transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 8.2, 1.2, -26)
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="GridMap/CandiedAppleSpot/Candied_Apple"]
-transform = Transform3D(11.1111, 0, 0, 0, 11.1111, 0, 0, 0, 11.1111, 2.95635, 3.1389, 6.43713)
-light_color = Color(0.938345, 0, 0.244565, 1)
-light_energy = 1.161
+transform = Transform3D(11.1111, 0, 0, 0, 11.1111, 0, 0, 0, 11.1111, -0.376991, 3.1389, -0.229523)
+light_color = Color(7.89344e-06, 0.72405, 0.951302, 1)
+light_energy = 0.782
 light_specular = 0.0
 light_bake_mode = 1
 

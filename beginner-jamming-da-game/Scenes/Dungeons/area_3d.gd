@@ -3,6 +3,7 @@ extends Area3D
 @onready var dialog_ui = $"../DialogUI"  
 var triggered := false
 
+#remeber to mention that uncle can reflect the projectiles
 var boss_dialogue := [
 	{ "speaker": "Ringmaster", "text": "Your done boy." },
 	{ "speaker": "Nephew", "text": "AHHHHHHHHHHHHH" },
@@ -23,4 +24,4 @@ func trigger_dialogue():
 		dialog_ui.play_sequence(boss_dialogue, _on_dialogue_finished)
 
 func _on_dialogue_finished():
-	pass #This is the spot to start the bossfight
+	pass 
