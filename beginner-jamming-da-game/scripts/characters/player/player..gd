@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var death_screen: PackedScene
 @onready var hurtbox: Area3D = $hurtbox
 @onready var ray_cast_3d: RayCast3D = $Head/Camera3D/RayCast3D
+@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 @onready var hud: Control = $CanvasLayer/Hud
 @onready var camera: Camera3D = $Head/Camera3D
@@ -52,13 +53,23 @@ func _input(event):
 			attack()
 
 func _physics_process(delta: float) -> void:
+	var moving = false	
 	var _unused = delta
 	state_logic(current_state)
 	movement()
 	move_and_slide()
 	apply_head_bobbing(delta)
+	var movement_directionX = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	var movement_directionZ = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+	if movement_directionX != 0 or movement_directionZ != 0:
+		moving = true
+	if moving == true and is_on_floor() and audio_stream_player_3d.is_playing() == false:
+		audio_stream_player_3d.play()
+	elif moving != true or is_on_floor() == false:
+		audio_stream_player_3d.stop()
 
-#------state functions
+
+#------state functionss
 func switch_state(old_state, new_state):
 	exit_state(old_state)
 	enter_state(new_state)
@@ -68,6 +79,7 @@ func enter_state(state):
 	match state:
 		states.LAUNCH:
 			velocity.y += stats.jump_strength
+
 	
 func state_logic(state):
 	match state:
@@ -96,6 +108,9 @@ func apply_gravity():
 
 func movement():
 	var movement_direction = Vector3.ZERO
+	var movement_multiplier = 1
+	if Input.is_action_pressed("sprint"):
+		movement_multiplier = 1.5
 	movement_direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	movement_direction.z = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 #get camera's basis to rotate movement direction
@@ -106,10 +121,10 @@ func movement():
 	move_vec.y = 0
 	move_vec = move_vec.normalized()
 #movement velocity
-	velocity.x += move_vec.x * (stats.move_speed * 0.4) * get_process_delta_time()
-	velocity.x -= velocity.x * stats.friction
-	velocity.z += move_vec.z * (stats.move_speed * 0.4) * get_process_delta_time()
-	velocity.z -= velocity.z * stats.friction
+	velocity.x += move_vec.x * (stats.move_speed * 0.4) * get_process_delta_time() * movement_multiplier
+	velocity.x -= velocity.x * stats.friction 
+	velocity.z += move_vec.z * (stats.move_speed * 0.4) * get_process_delta_time() * movement_multiplier
+	velocity.z -= velocity.z * stats.friction 
 
 func apply_head_bobbing(delta):
 	var is_moving = Input.get_action_strength("move_up") > 0 or Input.get_action_strength("move_down") > 0 or \

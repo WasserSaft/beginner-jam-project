@@ -26,4 +26,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0599, -0.712335, 12.9276)
 [node name="chase_enemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_aitjd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57407, 1.71986, 0)
 player = NodePath("../Player")
-movement_speed = 100
