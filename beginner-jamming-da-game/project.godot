@@ -10,10 +10,12 @@ config_version=5
 
 [application]
 
-config/name="beginner jamming da game"
+config/name="Uncle Detective: Clown Files"
 run/main_scene="res://titlescreen.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/image="uid://j4c1c0v5sb7j"
+config/icon="uid://4ahui4rtikoa"
 
 [audio]
 
