@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://Scenes/CG_scenes/dialog_ui.tscn" id="3_k3w0t"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x0324"]
+size = Vector3(4.72974, 8.7561, 1)
 
 [node name="Mirror" type="CharacterBody3D"]
 script = ExtResource("1_vnytu")
@@ -17,6 +18,7 @@ mesh = ExtResource("3_eh3li")
 [node name="Area3D" type="Area3D" parent="." groups=["interactable"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.163618, -0.442017, 0)
 shape = SubResource("BoxShape3D_x0324")
 
 [node name="DialogUI" parent="." groups=["dialog_ui"] instance=ExtResource("3_k3w0t")]

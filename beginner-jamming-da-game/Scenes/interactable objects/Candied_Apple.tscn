@@ -6,6 +6,7 @@
 [ext_resource type="ArrayMesh" uid="uid://2wa1dsmh2hyg" path="res://Resources/Models/Props/Clues/CandyAppleClue.tres" id="3_cw1hv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x0324"]
+size = Vector3(6.45624, 4.6586, 6.49032)
 
 [node name="Candied_Apple" type="CharacterBody3D"]
 script = ExtResource("1_5dkuq")
@@ -17,6 +18,7 @@ mesh = ExtResource("3_cw1hv")
 [node name="Area3D" type="Area3D" parent="." groups=["interactable"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.236627, 0.807235, 0.148077)
 shape = SubResource("BoxShape3D_x0324")
 
 [node name="DialogUI" parent="." groups=["dialog_ui"] instance=ExtResource("2_ghb7o")]

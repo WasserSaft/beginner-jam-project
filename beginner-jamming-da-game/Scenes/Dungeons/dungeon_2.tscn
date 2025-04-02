@@ -1,34 +1,34 @@
-[gd_scene load_steps=60 format=4 uid="uid://dgk7sns23ggyu"]
+[gd_scene load_steps=60 format=4 uid="uid://emkymxxg83s5"]
 
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Scenes/characters/player/player.tscn" id="2_qeupc"]
-[ext_resource type="Texture2D" uid="uid://ca48g8vyjnuuk" path="res://Resources/Models/Props/Props_MirrorTexture.png" id="3_awyhc"]
-[ext_resource type="Texture2D" uid="uid://8o254sevuvsx" path="res://Resources/Models/Props/Props_ColorPalette.jpg" id="3_wy8ks"]
-[ext_resource type="Texture2D" uid="uid://bm2mttn34x7mr" path="res://Resources/Models/Props/Props_ZWuzHere.png" id="4_awyhc"]
-[ext_resource type="MeshLibrary" uid="uid://bxa217w36mpcf" path="res://Resources/TileSets/Dungeon1/DUngeon1.tres" id="4_mssy2"]
-[ext_resource type="Texture2D" uid="uid://darpnvjehe3x7" path="res://Resources/Models/Props/Clues/JuggleStix_ColorPalette_1.jpg" id="5_wsw78"]
-[ext_resource type="Texture2D" uid="uid://dl6vg8o1nbe4v" path="res://Resources/Models/Props/Clues/JuggleStix_ColorPalette.jpg" id="6_e6gjh"]
-[ext_resource type="PackedScene" uid="uid://casjwaj8gc11j" path="res://Scenes/interactable objects/Empty_Soda_Can.tscn" id="7_6ffhb"]
-[ext_resource type="PackedScene" uid="uid://bgk1jhsw5ns6v" path="res://Scenes/interactable objects/Juggling_Pins.tscn" id="8_e6gjh"]
-[ext_resource type="AudioStream" uid="uid://gp6w7w7xcp42" path="res://Resources/Sounds/DungeonLoopMaster.mp3" id="9_7powc"]
-[ext_resource type="PackedScene" uid="uid://bafyywysamrsj" path="res://Scenes/interactable objects/Candied_Apple.tscn" id="10_a0yyx"]
-[ext_resource type="PackedScene" uid="uid://cs76y5xd7884n" path="res://Scenes/interactable objects/Mirror.tscn" id="11_vfcvh"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Scenes/characters/player/player.tscn" id="1_kmktw"]
+[ext_resource type="MeshLibrary" uid="uid://bxa217w36mpcf" path="res://Resources/TileSets/Dungeon1/DUngeon1.tres" id="2_ptied"]
+[ext_resource type="Texture2D" uid="uid://8o254sevuvsx" path="res://Resources/Models/Props/Props_ColorPalette.jpg" id="3_6d2fg"]
+[ext_resource type="Texture2D" uid="uid://ca48g8vyjnuuk" path="res://Resources/Models/Props/Props_MirrorTexture.png" id="4_2doli"]
+[ext_resource type="Texture2D" uid="uid://darpnvjehe3x7" path="res://Resources/Models/Props/Clues/JuggleStix_ColorPalette_1.jpg" id="5_krnea"]
+[ext_resource type="Texture2D" uid="uid://dl6vg8o1nbe4v" path="res://Resources/Models/Props/Clues/JuggleStix_ColorPalette.jpg" id="6_km6et"]
+[ext_resource type="PackedScene" uid="uid://bgk1jhsw5ns6v" path="res://Scenes/interactable objects/Juggling_Pins.tscn" id="7_5cuf7"]
+[ext_resource type="PackedScene" uid="uid://cs76y5xd7884n" path="res://Scenes/interactable objects/Mirror.tscn" id="8_ippm3"]
+[ext_resource type="PackedScene" uid="uid://casjwaj8gc11j" path="res://Scenes/interactable objects/Empty_Soda_Can.tscn" id="9_ubg73"]
+[ext_resource type="Texture2D" uid="uid://bm2mttn34x7mr" path="res://Resources/Models/Props/Props_ZWuzHere.png" id="10_1d68y"]
+[ext_resource type="PackedScene" uid="uid://bafyywysamrsj" path="res://Scenes/interactable objects/Candied_Apple.tscn" id="11_rdh6n"]
+[ext_resource type="AudioStream" uid="uid://gp6w7w7xcp42" path="res://Resources/Sounds/DungeonLoopMaster.mp3" id="12_cekmm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xnm0k"]
 albedo_color = Color(0, 0, 0, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_droba"]
+[sub_resource type="BoxMesh" id="BoxMesh_3777g"]
 material = SubResource("StandardMaterial3D_xnm0k")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_x5q4k"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_efjxh"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qeupc"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7fpnq"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tga01"]
 resource_name = "Material.001"
 cull_mode = 2
-albedo_texture = ExtResource("3_wy8ks")
+albedo_texture = ExtResource("3_6d2fg")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_0dhwm"]
 _surfaces = [{
@@ -44,7 +44,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_awyhc"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ybjar"]
 resource_name = "Props_Cube"
 _surfaces = [{
 "aabb": AABB(-3.0141, -4.83717, -2.5903, 6.06364, 12.3689, 6.06365),
@@ -62,13 +62,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0dhwm")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_mssy2"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_67rl5"]
 size = Vector3(6.15967, 12.9446, 6.98785)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_grecg"]
 resource_name = "Material.002"
 cull_mode = 2
-albedo_texture = ExtResource("3_awyhc")
+albedo_texture = ExtResource("4_2doli")
 roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_mo6mn"]
@@ -96,7 +96,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_wsw78"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_wqqlw"]
 resource_name = "Props_Cube_001"
 _surfaces = [{
 "aabb": AABB(-1.80895, -3.89251, -0.778552, 3.4469, 4.91126, 3.42132),
@@ -127,13 +127,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_mo6mn")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_e6gjh"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_imsbf"]
 size = Vector3(5.32184, 7.2229, 1.76257)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0yyx"]
 resource_name = "Material.001"
 cull_mode = 2
-albedo_texture = ExtResource("3_wy8ks")
+albedo_texture = ExtResource("3_6d2fg")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vwyud"]
 _surfaces = [{
@@ -150,7 +150,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_xnm0k"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_orjp2"]
 resource_name = "Props_Cube_004"
 _surfaces = [{
 "aabb": AABB(-6.65882, -4.79583, -3.04145, 14.4713, 6.75861, 6.80486),
@@ -169,19 +169,19 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vwyud")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_6d4mf"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_4mwg5"]
 size = Vector3(14.2726, 6.76514, 7.62378)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vmwn"]
 resource_name = "Material.002"
 cull_mode = 2
-albedo_texture = ExtResource("5_wsw78")
+albedo_texture = ExtResource("5_krnea")
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rhsk"]
 resource_name = "Material.001"
 cull_mode = 2
-albedo_texture = ExtResource("6_e6gjh")
+albedo_texture = ExtResource("6_km6et")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_pnohh"]
 _surfaces = [{
@@ -208,7 +208,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_7powc"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ofy15"]
 resource_name = "JuggleStix_Cube_002"
 _surfaces = [{
 "aabb": AABB(-2.71937, -7.99741, -4.30121, 5.64506, 11.4087, 5.26238),
@@ -239,7 +239,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_pnohh")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_6ffhb"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_7cgpl"]
 size = Vector3(7.13736, 11.5491, 5.78076)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_mqkq3"]
@@ -267,7 +267,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_34yuu"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_mksbg"]
 resource_name = "JuggleStix_Cube_001"
 _surfaces = [{
 "aabb": AABB(-2.48351, -8.02915, -4.47722, 5.64506, 11.4087, 5.26238),
@@ -323,7 +323,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_a0yyx"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_rg51h"]
 resource_name = "JuggleStix_Cube_003"
 _surfaces = [{
 "aabb": AABB(-2.58552, -8.04343, -4.5533, 5.64506, 11.4087, 5.26238),
@@ -368,7 +368,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_vfcvh"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_w1unb"]
 resource_name = "JuggleStix_Cube_004"
 _surfaces = [{
 "aabb": AABB(-2.82253, -6.51088, -3.04585, 5.64506, 11.4087, 5.26238),
@@ -411,7 +411,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_16m06"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_unowc"]
 resource_name = "JuggleStix_Cube_005"
 _surfaces = [{
 "aabb": AABB(-2.4284, -9.58735, -4.68239, 5.64506, 11.4087, 5.26238),
@@ -457,7 +457,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_e6gjh"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_x3b78"]
 resource_name = "JuggleStix_Sphere"
 _surfaces = [{
 "aabb": AABB(-0.878772, -3.11086, -0.878773, 1.75754, 6.25729, 1.75755),
@@ -476,7 +476,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_swq8g")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_7powc"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_8tq5q"]
 size = Vector3(1.65167, 6.36218, 1.71057)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ym20p"]
@@ -494,7 +494,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_6ffhb"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_x6umc"]
 resource_name = "JuggleStix_Sphere_001"
 _surfaces = [{
 "aabb": AABB(-0.878772, -3.11086, -0.878773, 1.75754, 6.25729, 1.75755),
@@ -528,7 +528,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_6jhuj"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_avuta"]
 resource_name = "JuggleStix_Sphere_002"
 _surfaces = [{
 "aabb": AABB(-0.878771, -3.11086, -0.878773, 1.75754, 6.25729, 1.75755),
@@ -562,7 +562,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_rp71f"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_2jd1p"]
 resource_name = "JuggleStix_Sphere_003"
 _surfaces = [{
 "aabb": AABB(-0.878768, -3.11086, -0.878773, 1.75754, 6.25729, 1.75755),
@@ -596,7 +596,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_x14sj"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ibrfx"]
 resource_name = "JuggleStix_Sphere_004"
 _surfaces = [{
 "aabb": AABB(-0.878778, -3.11086, -0.878773, 1.75754, 6.25729, 1.75755),
@@ -618,7 +618,7 @@ shadow_mesh = SubResource("ArrayMesh_7hx7x")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vfcvh"]
 resource_name = "Material.002"
 cull_mode = 2
-albedo_texture = ExtResource("3_awyhc")
+albedo_texture = ExtResource("4_2doli")
 roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_h77bo"]
@@ -646,7 +646,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_wom5j"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_0p2uk"]
 resource_name = "Props_Cube_002"
 _surfaces = [{
 "aabb": AABB(-2.69384, -5.51452, -0.600871, 5.15245, 9.44949, 0.821157),
@@ -680,7 +680,7 @@ shadow_mesh = SubResource("ArrayMesh_h77bo")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l1yxd"]
 resource_name = "Material"
 cull_mode = 2
-albedo_texture = ExtResource("4_awyhc")
+albedo_texture = ExtResource("10_1d68y")
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6d4mf"]
@@ -708,7 +708,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_mssy2"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_5jslw"]
 resource_name = "Props_Cube_003"
 _surfaces = [{
 "aabb": AABB(-1.26273, -1, -1, 5.09989, 3.00886, 2.36627),
@@ -739,88 +739,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6d4mf")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wsw78"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_gsrk3"]
 size = Vector3(5.19623, 2.90195, 2.40968)
 
-[node name="Dungeon1" type="Node3D"]
+[node name="Dungeon2" type="Node3D"]
 
-[node name="Lighting" type="Node3D" parent="."]
-
-[node name="White light" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -9.57934, 1.5825, -2.13392)
-light_color = Color(0.999998, 0.93462, 0.932136, 1)
-light_energy = 1.161
-light_specular = 0.0
-light_bake_mode = 1
-
-[node name="White light8" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -21.5793, 1.5825, -6.13392)
-light_color = Color(0.999998, 0.93462, 0.932136, 1)
-light_energy = 1.161
-light_specular = 0.0
-light_bake_mode = 1
-
-[node name="White light9" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -9.57934, 1.5825, -13.1339)
-light_color = Color(0.999998, 0.93462, 0.932136, 1)
-light_energy = 1.161
-light_specular = 0.0
-light_bake_mode = 1
-
-[node name="White light10" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -6.57934, 1.5825, -44.1339)
-light_color = Color(0.999998, 0.93462, 0.932136, 1)
-light_energy = 1.161
-light_specular = 0.0
-light_bake_mode = 1
-
-[node name="White light2" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 3.42066, 1.5825, 1.86608)
-light_color = Color(0.999998, 0.93462, 0.932136, 1)
-light_energy = 1.161
-light_specular = 0.0
-light_bake_mode = 1
-
-[node name="White light3" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 3.42066, 1.5825, -9.13392)
-light_color = Color(0.999998, 0.93462, 0.932136, 1)
-light_energy = 1.161
-light_specular = 0.0
-light_bake_mode = 1
-
-[node name="White light4" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 3.42066, 1.5825, -17.1339)
-light_color = Color(0.999998, 0.93462, 0.932136, 1)
-light_energy = 1.161
-light_specular = 0.0
-light_bake_mode = 1
-
-[node name="White light5" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 3.42066, 1.5825, -26.1339)
-light_color = Color(0.999998, 0.93462, 0.932136, 1)
-light_energy = 1.161
-light_specular = 0.0
-light_bake_mode = 1
-
-[node name="White light6" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 3.42066, 1.5825, -35.1339)
-light_color = Color(0.999998, 0.93462, 0.932136, 1)
-light_energy = 1.161
-light_specular = 0.0
-light_bake_mode = 1
-
-[node name="White light7" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -7.57934, 1.5825, -35.1339)
-light_color = Color(0.999998, 0.93462, 0.932136, 1)
-light_energy = 1.161
-light_specular = 0.0
-light_bake_mode = 1
-
-[node name="Player" parent="." instance=ExtResource("2_qeupc")]
+[node name="Player" parent="." instance=ExtResource("1_kmktw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76454, -0.125995, 5.69446)
 
 [node name="GridMap" type="GridMap" parent="."]
-mesh_library = ExtResource("4_mssy2")
+mesh_library = ExtResource("2_ptied")
 cell_size = Vector3(1, 1, 1)
 cell_center_y = false
 data = {
@@ -830,70 +758,70 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="DoorBlock" type="MeshInstance3D" parent="GridMap"]
 transform = Transform3D(4.69074, 0, 0, 0, 6.13594, 0, 0, 0, 0.814129, 3.44428, 0.0819016, 7.41667)
-mesh = SubResource("BoxMesh_droba")
+mesh = SubResource("BoxMesh_3777g")
 skeleton = NodePath("../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/DoorBlock"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/DoorBlock/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_x5q4k")
+shape = SubResource("ConcavePolygonShape3D_efjxh")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="GridMap/DoorBlock/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_qeupc")
+shape = SubResource("ConcavePolygonShape3D_7fpnq")
 
 [node name="RingMasterprops" type="Node3D" parent="GridMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97969, 0, 0)
 
 [node name="Shitty chair" type="MeshInstance3D" parent="GridMap/RingMasterprops"]
 transform = Transform3D(0.141588, 0, 0.0495253, 0, 0.15, 0, -0.0495253, 0, 0.141588, -14.033, 0.459606, -46.1052)
-mesh = SubResource("ArrayMesh_awyhc")
+mesh = SubResource("ArrayMesh_ybjar")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/RingMasterprops/Shitty chair"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/RingMasterprops/Shitty chair/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0275879, 1.4884, -0.139313)
-shape = SubResource("BoxShape3D_mssy2")
+shape = SubResource("BoxShape3D_67rl5")
 
 [node name="Mirror" type="MeshInstance3D" parent="GridMap/RingMasterprops"]
 transform = Transform3D(0.308311, 0, -0.0888, 0, 0.366, 0, 0.18586, 0, 0.147304, -8.92651, 1.94846, -46.3901)
-mesh = SubResource("ArrayMesh_wsw78")
+mesh = SubResource("ArrayMesh_wqqlw")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/RingMasterprops/Mirror"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/RingMasterprops/Mirror/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 0.829779, 0.558093, 0, -0.558093, 0.829778, 0.052093, -1.65305, 0.74069)
-shape = SubResource("BoxShape3D_e6gjh")
+shape = SubResource("BoxShape3D_imsbf")
 
 [node name="Desk" type="MeshInstance3D" parent="GridMap/RingMasterprops"]
 transform = Transform3D(0.143189, 0, 0.0713916, 0, 0.16, 0, -0.0713916, 0, 0.143189, -13.419, 0.8, -44.574)
-mesh = SubResource("ArrayMesh_xnm0k")
+mesh = SubResource("ArrayMesh_orjp2")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/RingMasterprops/Desk"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/RingMasterprops/Desk/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44172, -1.04272, 0.308715)
-shape = SubResource("BoxShape3D_6d4mf")
+shape = SubResource("BoxShape3D_4mwg5")
 
 [node name="JuggleRoomProps" type="Node3D" parent="GridMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.184929, 7.62939e-06, -0.0464516)
 
 [node name="Rack Yellow-Blue" type="MeshInstance3D" parent="GridMap/JuggleRoomProps"]
 transform = Transform3D(-0.00204021, 9.35913e-06, 0.149986, 0.000159141, 0.15, -7.19526e-06, -0.149986, 0.000159028, -0.00204021, -11.157, 1.13506, 8.34997)
-mesh = SubResource("ArrayMesh_7powc")
+mesh = SubResource("ArrayMesh_ofy15")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/JuggleRoomProps/Rack Yellow-Blue"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/JuggleRoomProps/Rack Yellow-Blue/StaticBody3D"]
 transform = Transform3D(1, 5.56248e-11, 0, -4.54818e-11, 1, 6.33008e-10, 1.01281e-08, 0, 1, -0.0943184, -2.24057, -1.75699)
-shape = SubResource("BoxShape3D_6ffhb")
+shape = SubResource("BoxShape3D_7cgpl")
 
 [node name="Rack Red-Purple" type="MeshInstance3D" parent="GridMap/JuggleRoomProps"]
 transform = Transform3D(-0.15, 0, -0.000201582, 0, 0.15, 0, 0.000201582, 0, -0.15, -8.43532, 1.20436, 8.38295)
-mesh = SubResource("ArrayMesh_34yuu")
+mesh = SubResource("ArrayMesh_mksbg")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/JuggleRoomProps/Rack Red-Purple"]
@@ -901,11 +829,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0747299, 0, 0.0180855)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/JuggleRoomProps/Rack Red-Purple/StaticBody3D"]
 transform = Transform3D(1, 5.56248e-11, 0, -4.54818e-11, 1, 6.33008e-10, 1.01281e-08, 0, 1, -0.0943184, -2.24057, -1.75699)
-shape = SubResource("BoxShape3D_6ffhb")
+shape = SubResource("BoxShape3D_7cgpl")
 
 [node name="Rack-Yellow-Green" type="MeshInstance3D" parent="GridMap/JuggleRoomProps"]
 transform = Transform3D(-0.149978, 0, 0.00257074, 0, 0.15, 0, -0.00257074, 0, -0.149978, -7.39038, 1.23, 8.32472)
-mesh = SubResource("ArrayMesh_a0yyx")
+mesh = SubResource("ArrayMesh_rg51h")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/JuggleRoomProps/Rack-Yellow-Green"]
@@ -913,11 +841,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0747299, 0, 0.0180855)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/JuggleRoomProps/Rack-Yellow-Green/StaticBody3D"]
 transform = Transform3D(1, 5.56248e-11, 0, -4.54818e-11, 1, 6.33008e-10, 1.01281e-08, 0, 1, -0.0943184, -2.24057, -1.75699)
-shape = SubResource("BoxShape3D_6ffhb")
+shape = SubResource("BoxShape3D_7cgpl")
 
 [node name="Rack-Naked2" type="MeshInstance3D" parent="GridMap/JuggleRoomProps"]
 transform = Transform3D(-0.000573328, 0, 0.149999, 0, 0.15, 0, -0.149999, 0, -0.000573328, -11.332, 1.0032, 7.03414)
-mesh = SubResource("ArrayMesh_vfcvh")
+mesh = SubResource("ArrayMesh_w1unb")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/JuggleRoomProps/Rack-Naked2"]
@@ -925,11 +853,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0747299, 0, 0.0180855)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/JuggleRoomProps/Rack-Naked2/StaticBody3D"]
 transform = Transform3D(1, 5.56248e-11, 0, -4.54818e-11, 1, 6.33008e-10, 1.01281e-08, 0, 1, -0.0943184, -2.24057, -0.33968)
-shape = SubResource("BoxShape3D_6ffhb")
+shape = SubResource("BoxShape3D_7cgpl")
 
 [node name="Rack-Naked" type="MeshInstance3D" parent="GridMap/JuggleRoomProps"]
 transform = Transform3D(0.00319109, 0, 0.149966, 0, 0.15, 0, -0.149966, 0, 0.00319109, -11.2799, 1.01378, 5.92158)
-mesh = SubResource("ArrayMesh_vfcvh")
+mesh = SubResource("ArrayMesh_w1unb")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/JuggleRoomProps/Rack-Naked"]
@@ -937,11 +865,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0747299, 0, 0.0180855)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/JuggleRoomProps/Rack-Naked/StaticBody3D"]
 transform = Transform3D(1, 5.56248e-11, 0, -4.54818e-11, 1, 6.33008e-10, 1.01281e-08, 0, 1, -0.0943184, -2.24057, -0.33968)
-shape = SubResource("BoxShape3D_6ffhb")
+shape = SubResource("BoxShape3D_7cgpl")
 
 [node name="Rack-purple" type="MeshInstance3D" parent="GridMap/JuggleRoomProps"]
 transform = Transform3D(0.000850839, 0, -0.149998, 0, 0.15, 0, 0.149998, 0, 0.000850839, -7.56114, 1.38827, 4.12005)
-mesh = SubResource("ArrayMesh_16m06")
+mesh = SubResource("ArrayMesh_unowc")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/JuggleRoomProps/Rack-purple"]
@@ -949,11 +877,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0747299, 0, 0.0180855)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/JuggleRoomProps/Rack-purple/StaticBody3D"]
 transform = Transform3D(1, 5.56248e-11, 0, -4.54818e-11, 1, 6.33008e-10, 1.01281e-08, 0, 1, -0.0943184, -2.98272, -1.75699)
-shape = SubResource("BoxShape3D_6ffhb")
+shape = SubResource("BoxShape3D_7cgpl")
 
 [node name="Rack-purple" type="MeshInstance3D" parent="GridMap/JuggleRoomProps/Rack-purple"]
 transform = Transform3D(0.999998, 0, 0.00216413, 0, 1, 0, -0.00216413, 0, 0.999998, 9.14253, 0.248256, 0.240326)
-mesh = SubResource("ArrayMesh_16m06")
+mesh = SubResource("ArrayMesh_unowc")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/JuggleRoomProps/Rack-purple/Rack-purple"]
@@ -961,11 +889,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0747299, 0, 0.0180855)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/JuggleRoomProps/Rack-purple/Rack-purple/StaticBody3D"]
 transform = Transform3D(1, 5.56248e-11, 0, -4.54818e-11, 1, 6.33008e-10, 1.01281e-08, 0, 1, -0.0943184, -2.98272, -1.75699)
-shape = SubResource("BoxShape3D_6ffhb")
+shape = SubResource("BoxShape3D_7cgpl")
 
 [node name="Juggling Stick Green" type="MeshInstance3D" parent="GridMap/JuggleRoomProps/Rack-purple"]
 transform = Transform3D(0.89479, -0.446487, -0.000596787, 0.446487, 0.894786, 0.00253263, -0.000596792, -0.00253263, 0.999997, -5.54392, -6.24439, 22.7491)
-mesh = SubResource("ArrayMesh_e6gjh")
+mesh = SubResource("ArrayMesh_x3b78")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/JuggleRoomProps/Rack-purple/Juggling Stick Green"]
@@ -973,11 +901,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.38567, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/JuggleRoomProps/Rack-purple/Juggling Stick Green/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0156555, 2.68109, 0.0669556)
-shape = SubResource("BoxShape3D_7powc")
+shape = SubResource("BoxShape3D_8tq5q")
 
 [node name="Juggling Stick Red" type="MeshInstance3D" parent="GridMap/JuggleRoomProps/Rack-purple"]
 transform = Transform3D(0.784296, -0.620385, -0.00122354, 0.620385, 0.784289, 0.00351904, -0.00122355, -0.00351904, 0.999993, -4.94524, -6.42495, 19.9705)
-mesh = SubResource("ArrayMesh_6ffhb")
+mesh = SubResource("ArrayMesh_x6umc")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/JuggleRoomProps/Rack-purple/Juggling Stick Red"]
@@ -985,11 +913,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.235636, -2.12929, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/JuggleRoomProps/Rack-purple/Juggling Stick Red/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0156555, 2.68109, 0)
-shape = SubResource("BoxShape3D_7powc")
+shape = SubResource("BoxShape3D_8tq5q")
 
 [node name="Juggling Stick Purple" type="MeshInstance3D" parent="GridMap/JuggleRoomProps/Rack-purple"]
 transform = Transform3D(0.999991, -0.00400101, 0.00165148, 0.00400101, 0.708845, -0.705353, 0.00165148, 0.705353, 0.708854, 5.95534, -6.53417, 25.1081)
-mesh = SubResource("ArrayMesh_6jhuj")
+mesh = SubResource("ArrayMesh_avuta")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/JuggleRoomProps/Rack-purple/Juggling Stick Purple"]
@@ -997,11 +925,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14396, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/JuggleRoomProps/Rack-purple/Juggling Stick Purple/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0156555, 0.274328, 0)
-shape = SubResource("BoxShape3D_7powc")
+shape = SubResource("BoxShape3D_8tq5q")
 
 [node name="Juggling Stick Yellow" type="MeshInstance3D" parent="GridMap/JuggleRoomProps/Rack-purple"]
 transform = Transform3D(-0.05197, -0.905148, -0.421907, 0.998185, -0.059951, 0.00566206, -0.0304188, -0.420847, 0.906621, 28.3682, -7.97241, 14.0344)
-mesh = SubResource("ArrayMesh_rp71f")
+mesh = SubResource("ArrayMesh_2jd1p")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/JuggleRoomProps/Rack-purple/Juggling Stick Yellow"]
@@ -1009,11 +937,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.104338, -2.47459, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/JuggleRoomProps/Rack-purple/Juggling Stick Yellow/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0156555, 2.68109, 0)
-shape = SubResource("BoxShape3D_7powc")
+shape = SubResource("BoxShape3D_8tq5q")
 
 [node name="Juggling Stick Blue" type="MeshInstance3D" parent="GridMap/JuggleRoomProps/Rack-purple"]
 transform = Transform3D(0.710096, 0.366271, 0.60134, 0.00296518, 0.852485, -0.522743, -0.704099, 0.372981, 0.60426, 11.8634, -5.86889, 22.4123)
-mesh = SubResource("ArrayMesh_x14sj")
+mesh = SubResource("ArrayMesh_ibrfx")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/JuggleRoomProps/Rack-purple/Juggling Stick Blue"]
@@ -1021,9 +949,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0354748, -2.46862, -0.08676
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/JuggleRoomProps/Rack-purple/Juggling Stick Blue/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0156555, 2.68109, 0)
-shape = SubResource("BoxShape3D_7powc")
+shape = SubResource("BoxShape3D_8tq5q")
 
-[node name="Juggling_Pins" parent="GridMap/JuggleRoomProps" instance=ExtResource("8_e6gjh")]
+[node name="Juggling_Pins" parent="GridMap/JuggleRoomProps" instance=ExtResource("7_5cuf7")]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -9.52563, 0.257066, 6.76702)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="GridMap/JuggleRoomProps/Juggling_Pins"]
@@ -1035,7 +963,7 @@ light_bake_mode = 1
 
 [node name="MirrorArea" type="Node3D" parent="GridMap"]
 
-[node name="Mirror" parent="GridMap/MirrorArea" instance=ExtResource("11_vfcvh")]
+[node name="Mirror" parent="GridMap/MirrorArea" instance=ExtResource("8_ippm3")]
 transform = Transform3D(2.62269e-08, 0, 0.2, 0, 0.2, 0, -0.2, 0, 2.62269e-08, -23, 1.2, -2)
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="GridMap/MirrorArea/Mirror"]
@@ -1047,39 +975,39 @@ light_bake_mode = 1
 
 [node name="Broken Mirror" type="MeshInstance3D" parent="GridMap/MirrorArea"]
 transform = Transform3D(-0.156304, 0, 0.124776, 0, 0.2, 0, -0.124776, 0, -0.156304, -22.309, 1.1, -0.539)
-mesh = SubResource("ArrayMesh_wom5j")
+mesh = SubResource("ArrayMesh_0p2uk")
 skeleton = NodePath("")
 
 [node name="Broken Mirror2" type="MeshInstance3D" parent="GridMap/MirrorArea"]
 transform = Transform3D(0.148862, 0, 0.133567, 0, 0.2, 0, -0.133567, 0, 0.148862, -22.309, 1.1, -3.539)
-mesh = SubResource("ArrayMesh_wom5j")
+mesh = SubResource("ArrayMesh_0p2uk")
 skeleton = NodePath("")
 
 [node name="Broken Mirror3" type="MeshInstance3D" parent="GridMap/MirrorArea"]
 transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, -22.309, 1.1, 5.461)
-mesh = SubResource("ArrayMesh_wom5j")
+mesh = SubResource("ArrayMesh_0p2uk")
 skeleton = NodePath("")
 
 [node name="Broken Mirror4" type="MeshInstance3D" parent="GridMap/MirrorArea"]
 transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, -19.309, 1.1, 5.461)
-mesh = SubResource("ArrayMesh_wom5j")
+mesh = SubResource("ArrayMesh_0p2uk")
 skeleton = NodePath("")
 
 [node name="Broken Mirror5" type="MeshInstance3D" parent="GridMap/MirrorArea"]
 transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, -17.309, 1.1, 2.461)
-mesh = SubResource("ArrayMesh_wom5j")
+mesh = SubResource("ArrayMesh_0p2uk")
 skeleton = NodePath("")
 
 [node name="Desk" type="MeshInstance3D" parent="GridMap/MirrorArea"]
 transform = Transform3D(1.90798e-09, 0, 0.16, 0, 0.16, 0, -0.16, 0, 1.90798e-09, -23.319, 0.8, 1.926)
-mesh = SubResource("ArrayMesh_xnm0k")
+mesh = SubResource("ArrayMesh_orjp2")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/MirrorArea/Desk"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/MirrorArea/Desk/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44172, -1.04272, 0.308715)
-shape = SubResource("BoxShape3D_6d4mf")
+shape = SubResource("BoxShape3D_4mwg5")
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="GridMap/MirrorArea/Desk"]
 transform = Transform3D(-6.25, 0, 1.98666e-07, 0, 6.25, 0, -1.98666e-07, 0, -6.25, 0.374522, 3.64063, 2.74788)
@@ -1090,29 +1018,29 @@ light_bake_mode = 1
 
 [node name="Shitty chair" type="MeshInstance3D" parent="GridMap/MirrorArea"]
 transform = Transform3D(-6.5567e-09, 0, -0.15, 0, 0.15, 0, 0.15, 0, -6.5567e-09, -22.033, 0.459606, 2.4948)
-mesh = SubResource("ArrayMesh_awyhc")
+mesh = SubResource("ArrayMesh_ybjar")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/MirrorArea/Shitty chair"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/MirrorArea/Shitty chair/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0275879, 1.4884, -0.139313)
-shape = SubResource("BoxShape3D_mssy2")
+shape = SubResource("BoxShape3D_67rl5")
 
 [node name="Shitty chair2" type="MeshInstance3D" parent="GridMap/MirrorArea"]
 transform = Transform3D(-6.5567e-09, 0, -0.15, 0, 0.15, 0, 0.15, 0, -6.5567e-09, -22.033, 0.459606, 1.4948)
-mesh = SubResource("ArrayMesh_awyhc")
+mesh = SubResource("ArrayMesh_ybjar")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/MirrorArea/Shitty chair2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/MirrorArea/Shitty chair2/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0275879, 1.4884, -0.139313)
-shape = SubResource("BoxShape3D_mssy2")
+shape = SubResource("BoxShape3D_67rl5")
 
 [node name="SodaRoom" type="Node3D" parent="GridMap"]
 
-[node name="Empty_Soda_Can" parent="GridMap/SodaRoom" instance=ExtResource("7_6ffhb")]
+[node name="Empty_Soda_Can" parent="GridMap/SodaRoom" instance=ExtResource("9_ubg73")]
 transform = Transform3D(-0.0707107, 0, 0.0707107, 0, 0.1, 0, -0.0707107, 0, -0.0707107, -7, 0.2, -9)
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="GridMap/SodaRoom/Empty_Soda_Can"]
@@ -1124,51 +1052,51 @@ light_bake_mode = 1
 
 [node name="Dumpsters" type="MeshInstance3D" parent="GridMap/SodaRoom"]
 transform = Transform3D(-0.58667, 0, 0.125771, 0, 0.6, 0, -0.125771, 0, -0.58667, -12.6571, 0.551873, -9.90376)
-mesh = SubResource("ArrayMesh_mssy2")
+mesh = SubResource("ArrayMesh_5jslw")
 skeleton = NodePath("")
 
 [node name="Cube2" type="MeshInstance3D" parent="GridMap/SodaRoom/Dumpsters"]
 transform = Transform3D(-0.944601, 0, -0.328224, 0, 0.999999, 0, 0.328224, 0, -0.944601, 3.75429, 0.145417, 6.29693)
-mesh = SubResource("ArrayMesh_mssy2")
+mesh = SubResource("ArrayMesh_5jslw")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/SodaRoom/Dumpsters/Cube2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/SodaRoom/Dumpsters/Cube2/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34415, 0.579819, 0.201973)
-shape = SubResource("BoxShape3D_wsw78")
+shape = SubResource("BoxShape3D_gsrk3")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/SodaRoom/Dumpsters"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/SodaRoom/Dumpsters/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34415, 0.579819, 0.201973)
-shape = SubResource("BoxShape3D_wsw78")
+shape = SubResource("BoxShape3D_gsrk3")
 
 [node name="Cube" type="MeshInstance3D" parent="GridMap/SodaRoom/Dumpsters"]
 transform = Transform3D(-0.997679, 0, -0.0681025, 0, 1, 0, 0.0681025, 0, -0.997679, -5.50504, 0.0727087, 8.49279)
-mesh = SubResource("ArrayMesh_mssy2")
+mesh = SubResource("ArrayMesh_5jslw")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/SodaRoom/Dumpsters/Cube"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/SodaRoom/Dumpsters/Cube/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34415, 0.579819, 0.201973)
-shape = SubResource("BoxShape3D_wsw78")
+shape = SubResource("BoxShape3D_gsrk3")
 
 [node name="CandiedAppleSpot" type="Node3D" parent="GridMap"]
 
 [node name="Desk" type="MeshInstance3D" parent="GridMap/CandiedAppleSpot"]
 transform = Transform3D(-6.99382e-09, 0, -0.16, 0, 0.16, 0, 0.16, 0, -6.99382e-09, 8.681, 0.8, -27.074)
-mesh = SubResource("ArrayMesh_xnm0k")
+mesh = SubResource("ArrayMesh_orjp2")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/CandiedAppleSpot/Desk"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/CandiedAppleSpot/Desk/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44172, -1.04272, 0.308715)
-shape = SubResource("BoxShape3D_6d4mf")
+shape = SubResource("BoxShape3D_4mwg5")
 
-[node name="Candied_Apple" parent="GridMap/CandiedAppleSpot" instance=ExtResource("10_a0yyx")]
+[node name="Candied_Apple" parent="GridMap/CandiedAppleSpot" instance=ExtResource("11_rdh6n")]
 transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 8.2, 1.2, -26)
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="GridMap/CandiedAppleSpot/Candied_Apple"]
@@ -1179,7 +1107,7 @@ light_specular = 0.0
 light_bake_mode = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_7powc")
+stream = ExtResource("12_cekmm")
 volume_db = -10.0
 autoplay = true
 bus = &"Music"

@@ -62,7 +62,8 @@ var background_changes = {
 	0: preload("res://Resources/PNGS/Scene1.png"),
 	11: preload("res://Resources/PNGS/Scene2.png"),
 	21: preload("res://Resources/PNGS/Scene3.png"),
-	26: preload("res://Resources/PNGS/CGplaceholder.png")
+	26: preload("res://Resources/PNGS/Scene4.png"),
+	30: preload("res://Resources/PNGS/CGplaceholder.png")
 	}
 
 func _ready():
