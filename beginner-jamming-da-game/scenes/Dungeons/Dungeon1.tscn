@@ -130,7 +130,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_mo6mn")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mssy2"]
-size = Vector3(6.15967, 12.9446, 6.98785)
+size = Vector3(6, 7, 6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0yyx"]
 resource_name = "Material.001"
@@ -172,7 +172,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_pnohh")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6d4mf"]
-size = Vector3(14.2726, 6.76514, 7.62378)
+size = Vector3(14, 6, 7)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vmwn"]
 resource_name = "Material.002"
@@ -846,23 +846,23 @@ shape = SubResource("ConcavePolygonShape3D_qeupc")
 [node name="RingMasterprops" type="Node3D" parent="GridMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97969, 0, 0)
 
-[node name="SpecialMirror" type="CharacterBody3D" parent="GridMap/RingMasterprops"]
+[node name="SpecialMirror" type="CharacterBody3D" parent="GridMap/RingMasterprops" groups=["interactable"]]
 script = ExtResource("3_vfcvh")
 
-[node name="Mirror" type="MeshInstance3D" parent="GridMap/RingMasterprops/SpecialMirror"]
+[node name="Mirror" type="MeshInstance3D" parent="GridMap/RingMasterprops/SpecialMirror" groups=["interactable"]]
 transform = Transform3D(0.308311, 0, -0.0888, 0, 0.366, 0, 0.18586, 0, 0.147304, -8.92651, 1.94846, -46.3901)
 mesh = SubResource("ArrayMesh_wsw78")
 skeleton = NodePath("")
 
-[node name="DialogUI" parent="GridMap/RingMasterprops/SpecialMirror" instance=ExtResource("6_16m06")]
-visible = false
-
-[node name="Area3D" type="Area3D" parent="GridMap/RingMasterprops/SpecialMirror"]
+[node name="Area3D" type="Area3D" parent="GridMap/RingMasterprops/SpecialMirror" groups=["interactable"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/RingMasterprops/SpecialMirror/Area3D"]
 transform = Transform3D(0.308311, 0.0495587, -0.0736843, 0, 0.303699, 0.204262, 0.18586, -0.0822093, 0.12223, -9.23327, 1.30602, -45.9571)
 shape = SubResource("BoxShape3D_e6gjh")
+
+[node name="DialogUI" parent="GridMap/RingMasterprops/SpecialMirror/Area3D" groups=["interactable"] instance=ExtResource("6_16m06")]
+visible = false
 
 [node name="Shitty chair" type="MeshInstance3D" parent="GridMap/RingMasterprops"]
 transform = Transform3D(0.141588, 0, 0.0495253, 0, 0.15, 0, -0.0495253, 0, 0.141588, -14.033, 0.459606, -46.1052)
@@ -872,7 +872,7 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/RingMasterprops/Shitty chair"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/RingMasterprops/Shitty chair/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0275879, 1.4884, -0.139313)
+transform = Transform3D(1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, 1, 0.107399, -1.4839, 0.354675)
 shape = SubResource("BoxShape3D_mssy2")
 
 [node name="Desk" type="MeshInstance3D" parent="GridMap/RingMasterprops"]
@@ -883,7 +883,7 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/RingMasterprops/Desk"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/RingMasterprops/Desk/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44172, -1.04272, 0.308715)
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, 0.578011, -1.42529, 0.620605)
 shape = SubResource("BoxShape3D_6d4mf")
 
 [node name="JuggleRoomProps" type="Node3D" parent="GridMap"]
@@ -1105,7 +1105,7 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/MirrorArea/Shitty chair"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/MirrorArea/Shitty chair/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0275879, 1.4884, -0.139313)
+transform = Transform3D(1, 0, 8.81073e-13, 0, 1, 0, -8.81073e-13, 0, 1, 0.0275879, 1.4884, -0.139313)
 shape = SubResource("BoxShape3D_mssy2")
 
 [node name="Shitty chair2" type="MeshInstance3D" parent="GridMap/MirrorArea"]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=57 format=4 uid="uid://emkymxxg83s5"]
+[gd_scene load_steps=59 format=4 uid="uid://emkymxxg83s5"]
 
+[ext_resource type="Shader" uid="uid://du1cnvm7xp88l" path="res://Scenes/Dungeons/dungeon_2.gdshader" id="1_afm8w"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Scenes/characters/player/player.tscn" id="1_kmktw"]
 [ext_resource type="MeshLibrary" uid="uid://bxa217w36mpcf" path="res://Resources/TileSets/Dungeon1/DUngeon1.tres" id="2_ptied"]
 [ext_resource type="Texture2D" uid="uid://8o254sevuvsx" path="res://Resources/Models/Props/Props_ColorPalette.jpg" id="3_6d2fg"]
@@ -8,7 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://darpnvjehe3x7" path="res://Resources/Models/Props/Clues/JuggleStix_ColorPalette_1.jpg" id="5_krnea"]
 [ext_resource type="Texture2D" uid="uid://dl6vg8o1nbe4v" path="res://Resources/Models/Props/Clues/JuggleStix_ColorPalette.jpg" id="6_km6et"]
 [ext_resource type="Texture2D" uid="uid://bm2mttn34x7mr" path="res://Resources/Models/Props/Props_ZWuzHere.png" id="10_1d68y"]
-[ext_resource type="AudioStream" uid="uid://gp6w7w7xcp42" path="res://Resources/Sounds/DungeonLoopMaster.mp3" id="12_cekmm"]
+[ext_resource type="AudioStream" uid="uid://crx4sujm7qhfe" path="res://Resources/Sounds/DungeonLoopReverseMaster.mp3" id="10_afm8w"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_30dhu"]
+shader = ExtResource("1_afm8w")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xnm0k"]
 albedo_color = Color(0, 0, 0, 1)
@@ -125,7 +129,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0dhwm")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_krnea"]
-size = Vector3(6.15967, 12.9446, 6.98785)
+size = Vector3(6.15967, 7, 6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0yyx"]
 resource_name = "Material.001"
@@ -167,7 +171,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vwyud")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5cuf7"]
-size = Vector3(14.2726, 6.76514, 7.62378)
+size = Vector3(13, 6, 6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vmwn"]
 resource_name = "Material.002"
@@ -741,8 +745,18 @@ size = Vector3(5.19623, 2.90195, 2.40968)
 
 [node name="Dungeon2" type="Node3D"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_30dhu")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
 [node name="Player" parent="." instance=ExtResource("1_kmktw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76454, -0.125995, 5.69446)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.23546, -0.125995, -42.3055)
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("2_ptied")
@@ -777,10 +791,10 @@ transform = Transform3D(0.308311, 0, -0.0888, 0, 0.366, 0, 0.18586, 0, 0.147304,
 mesh = SubResource("ArrayMesh_ptied")
 skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="GridMap/RingMasterprops/SpecialMirror/Mirror"]
-transform = Transform3D(2.37895, 0, 1.43411, 0, 2.73224, 0, -3.00162, 0, 4.9792, 87.7643, -5.32366, 204.191)
+[node name="Area3D" type="Area3D" parent="GridMap/RingMasterprops/SpecialMirror"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/RingMasterprops/SpecialMirror/Mirror/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/RingMasterprops/SpecialMirror/Area3D"]
 transform = Transform3D(0.308311, 0.0495587, -0.0736843, 0, 0.303699, 0.204262, 0.18586, -0.0822093, 0.12223, -9.07319, 1.30332, -46.2227)
 shape = SubResource("BoxShape3D_6d2fg")
 
@@ -792,7 +806,7 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/RingMasterprops/Shitty chair"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/RingMasterprops/Shitty chair/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0275879, 1.4884, -0.139313)
+transform = Transform3D(1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, 1, 0.0275803, -1.4839, 0.354584)
 shape = SubResource("BoxShape3D_krnea")
 
 [node name="Desk" type="MeshInstance3D" parent="GridMap/RingMasterprops"]
@@ -803,7 +817,7 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/RingMasterprops/Desk"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/RingMasterprops/Desk/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44172, -1.04272, 0.308715)
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, 1.07802, -1.42529, 0.120605)
 shape = SubResource("BoxShape3D_5cuf7")
 
 [node name="JuggleRoomProps" type="Node3D" parent="GridMap"]
@@ -1068,7 +1082,195 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44172, -1.04272, 0.308715)
 shape = SubResource("BoxShape3D_5cuf7")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_cekmm")
+stream = ExtResource("10_afm8w")
 volume_db = -10.0
 autoplay = true
 bus = &"Music"
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="jug4" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -9.57934, 2.4825, -2.13392)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="jug3" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 3.42066, 2.4825, -2.13392)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="jug2" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -2.57934, 2.4825, -2.13392)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="jug" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -13.5793, 2.4825, -2.13392)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="jug5" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -9.57934, 2.4825, 2.86608)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="jug6" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -9.57934, 2.4825, 5.86608)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="jug7" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -19.5793, 2.4825, -2.13392)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="jug8" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -20.5793, 2.4825, 2.86608)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="jug9" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -21.5793, 2.4825, -6.13392)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="soda" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -7.57934, 2.4825, -11.8339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="soda2" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -10.5793, 2.4825, -13.8339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="soda3" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -10.5793, 2.4825, -11.8339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="ring" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -8.57934, 2.5825, -44.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="ring2" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -5.57934, 2.5825, -44.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="ring3" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -7.57934, 2.5825, -40.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="ring4" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 0.42066, 2.5825, -36.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="ring5" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -2.57934, 2.5825, -36.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="ring6" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -11.5793, 2.5825, -36.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="apple" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 3.42066, 1.5825, 1.86608)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="apple2" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 3.42066, 1.5825, -29.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="apple3" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -0.57934, 1.5825, -24.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="apple4" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 7.42066, 1.5825, -25.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="apple5" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 3.42066, 1.5825, -19.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="apple6" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 3.42066, 1.5825, -13.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="apple7" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -1.57934, 1.5825, -12.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="apple8" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -19.5793, 1.5825, -12.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="White light3" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 4.02066, 2.5825, -7.13392)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="White light4" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 3.42066, 2.5825, -15.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="White light5" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 3.42066, 2.5825, -26.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="White light6" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 3.42066, 2.5825, -35.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="White light7" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -7.57934, 2.5825, -35.1339)
+light_energy = 4.464
+light_specular = 0.0
+light_bake_mode = 1
