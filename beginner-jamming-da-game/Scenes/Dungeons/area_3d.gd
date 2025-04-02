@@ -1,5 +1,5 @@
 extends Area3D
-
+@export var boss: CharacterBody3D
 @onready var dialog_ui = $"../DialogUI"  
 var triggered := false
 var half_health_triggered := false
@@ -23,6 +23,7 @@ func _on_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		trigger_dialogue()
 
+
 func _input(event):
 	#press H to trigger the half-health dialogue 
 	if event.is_action_pressed("debug_half_health"):
@@ -41,7 +42,7 @@ func trigger_half_health_dialogue():
 		dialog_ui.play_sequence(half_health_dialogue, _on_half_health_dialogue_finished)
 
 func _on_dialogue_finished():
-	pass
+	boss.start_fight()
 
 func _on_half_health_dialogue_finished():
 	pass

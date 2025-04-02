@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://emkymxxg83s5"]
+[gd_scene load_steps=63 format=4 uid="uid://emkymxxg83s5"]
 
 [ext_resource type="Shader" uid="uid://du1cnvm7xp88l" path="res://scenes/Dungeons/dungeon_2.gdshader" id="1_afm8w"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/characters/player/player.tscn" id="1_kmktw"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://scenes/CG_scenes/dialog_ui.tscn" id="7_30dhu"]
 [ext_resource type="Texture2D" uid="uid://bm2mttn34x7mr" path="res://Resources/Models/Props/Props_ZWuzHere.png" id="10_1d68y"]
 [ext_resource type="AudioStream" uid="uid://crx4sujm7qhfe" path="res://Resources/Sounds/DungeonLoopReverseMaster.mp3" id="10_afm8w"]
+[ext_resource type="PackedScene" uid="uid://d1iqqvc5445mp" path="res://scenes/characters/enemies/boss.tscn" id="13_ydnu4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_30dhu"]
 shader = ExtResource("1_afm8w")
@@ -762,9 +763,10 @@ color = Color(1, 1, 1, 0)
 
 [node name="BossTrigger" type="Node3D" parent="."]
 
-[node name="Area3D" type="Area3D" parent="BossTrigger"]
+[node name="Area3D" type="Area3D" parent="BossTrigger" node_paths=PackedStringArray("boss")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9842, 1, -24.8905)
 script = ExtResource("2_kmktw")
+boss = NodePath("../../boss")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BossTrigger/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -1467,3 +1469,9 @@ stream = ExtResource("10_afm8w")
 volume_db = -10.0
 autoplay = true
 bus = &"Music"
+
+[node name="boss" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_ydnu4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.4623, 4.82751, -25.1186)
+player = NodePath("../Player")
+hp = 20
+friction = 0.4

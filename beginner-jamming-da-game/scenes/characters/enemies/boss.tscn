@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1iqqvc5445mp"]
+
+[ext_resource type="Script" uid="uid://n5pvy75rtl21" path="res://scripts/characters/enemies/boss.gd" id="1_irxnu"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_33tbd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_33tbd"]
+radius = 0.520132
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8tuwq"]
+radius = 0.621093
+height = 2.1896
+
+[node name="boss" type="CharacterBody3D" node_paths=PackedStringArray("name_label") groups=["enemies"]]
+script = ExtResource("1_irxnu")
+name_label = NodePath("Label3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127587, -0.887368, 0)
+mesh = SubResource("CapsuleMesh_33tbd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125749, -0.872627, 0)
+shape = SubResource("CapsuleShape3D_33tbd")
+debug_fill = false
+
+[node name="Hitbox" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125749, -0.872627, 0)
+shape = SubResource("CapsuleShape3D_8tuwq")
+debug_fill = false
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.438056, 0)
+billboard = 1
