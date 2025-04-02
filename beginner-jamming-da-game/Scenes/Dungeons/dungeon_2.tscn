@@ -1102,12 +1102,6 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44172, -1.04272, 0.308715)
 shape = SubResource("BoxShape3D_5cuf7")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_afm8w")
-volume_db = -10.0
-autoplay = true
-bus = &"Music"
-
 [node name="Lighting" type="Node3D" parent="."]
 
 [node name="jug4" type="OmniLight3D" parent="Lighting"]
@@ -1467,3 +1461,9 @@ omni_range = 5.42
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.53529, 2.33948, -29.3112)
 light_energy = 3.095
 omni_range = 5.42
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_afm8w")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"
