@@ -3,6 +3,9 @@ extends Control
 @onready var dialog_line: RichTextLabel = $MarginContainer/DialogBox/MarginContainer/DialogLine
 @onready var speaker_name: Label = $VBoxContainer2/SpeakerBox/MarginContainer2/SpeakerName
 @onready var type_timer: Timer = $TypeTimer
+@onready var type_sfx: AudioStreamPlayer = $TypeSFX
+@export var chars_per_sfx := 2
+
 @export var advance_on_input := true
 #full_text is entire sentence set to be typed, char_index tracks the character that is getting typed
 var full_text: String = ""
@@ -33,14 +36,19 @@ func _on_type_timer_timeout():
 	if char_index < full_text.length():
 		dialog_line.text += full_text[char_index]
 		char_index += 1
+
+		#play typewriter SFX
+		if char_index % chars_per_sfx == 1:
+			if type_sfx.playing:
+				type_sfx.pitch_scale = randf_range(0.89, 1.0)
+				type_sfx.stop()
+			type_sfx.play()
 	else:
 		type_timer.stop()
 
 		if advance_on_input:
-			#wait for player click to advance
 			set_process_input(true)
 		else:
-			#auto advance after short delay
 			await get_tree().create_timer(0.5).timeout
 			_next_line()
 

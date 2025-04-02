@@ -40,6 +40,10 @@ folder_colors={
 "res://scripts/": "pink"
 }
 
+[global_group]
+
+interactable=""
+
 [input]
 
 move_up={

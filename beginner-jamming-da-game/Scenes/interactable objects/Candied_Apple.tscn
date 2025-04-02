@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://bafyywysamrsj"]
 
 [ext_resource type="Script" uid="uid://dpm3h6ujih2gb" path="res://scripts/interactable objects/candied_apple.gd" id="1_5dkuq"]
-[ext_resource type="Resource" uid="uid://b8kstbnuurvhi" path="res://scenes/interactable objects/candied_apple.tres" id="2_cw1hv"]
-[ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://scenes/CG_scenes/dialog_ui.tscn" id="2_ghb7o"]
+[ext_resource type="Resource" uid="uid://b8kstbnuurvhi" path="res://Scenes/interactable objects/candied_apple.tres" id="2_cw1hv"]
+[ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://Scenes/CG_scenes/dialog_ui.tscn" id="2_ghb7o"]
 [ext_resource type="ArrayMesh" uid="uid://2wa1dsmh2hyg" path="res://Resources/Models/Props/Clues/CandyAppleClue.tres" id="3_cw1hv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x0324"]
-size = Vector3(5.99615, 5.40845, 5.69061)
+size = Vector3(6.45624, 4.6586, 6.49032)
 
 [node name="Candied_Apple" type="CharacterBody3D"]
 script = ExtResource("1_5dkuq")
@@ -18,7 +18,7 @@ mesh = ExtResource("3_cw1hv")
 [node name="Area3D" type="Area3D" parent="." groups=["interactable"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0586853, 1.1051, -0.0707703)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.236627, 0.807235, 0.148077)
 shape = SubResource("BoxShape3D_x0324")
 
 [node name="DialogUI" parent="." groups=["dialog_ui"] instance=ExtResource("2_ghb7o")]
