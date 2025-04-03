@@ -868,7 +868,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
 transform = Transform3D(0.308311, 0.0495587, -0.0736843, 0, 0.303699, 0.204262, 0.18586, -0.0822093, 0.12223, -9.04753, 1.237, -46.2652)
 shape = SubResource("BoxShape3D_e6gjh")
 
-[node name="DialogUI" parent="GridMap/RingMasterprops/SpecialMirror/Area3D" groups=["interactable"] instance=ExtResource("6_16m06")]
+[node name="DialogUI" parent="GridMap/RingMasterprops/SpecialMirror/Area3D" groups=["dialog_ui", "interactable"] instance=ExtResource("6_16m06")]
 visible = false
 
 [node name="Shitty chair" type="MeshInstance3D" parent="GridMap/RingMasterprops"]
@@ -1184,7 +1184,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44172, -1.04272, 0.308715)
 shape = SubResource("BoxShape3D_6d4mf")
 
-[node name="Candied_Apple" parent="GridMap/CandiedAppleSpot" instance=ExtResource("10_a0yyx")]
+[node name="Candied_Apple" parent="GridMap/CandiedAppleSpot" groups=["dialog_ui"] instance=ExtResource("10_a0yyx")]
 transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 8.2, 1.2, -26)
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="GridMap/CandiedAppleSpot/Candied_Apple"]

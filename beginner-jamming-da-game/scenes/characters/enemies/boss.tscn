@@ -23,7 +23,7 @@ height = 2.1896
 [node name="boss" type="CharacterBody3D" node_paths=PackedStringArray("name_label") groups=["enemies"]]
 script = ExtResource("1_irxnu")
 damage = 2.0
-hp = 12
+hp = 11
 name_label = NodePath("Label3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

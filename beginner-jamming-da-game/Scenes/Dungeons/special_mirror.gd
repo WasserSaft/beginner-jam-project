@@ -31,6 +31,7 @@ func interact(player):
 
 func _on_dialogue_finished():
 	if dialogue_finished:
+		return
 		dialogue_finished = true
 	if dialog_ui:
 		dialog_ui.visible = false
