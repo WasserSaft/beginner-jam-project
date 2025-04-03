@@ -762,6 +762,13 @@ light_energy = 1.161
 light_specular = 0.0
 light_bake_mode = 1
 
+[node name="White light11" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -5.2793, 0.4825, -46.1339)
+light_color = Color(0.0587472, 0.490578, 0.756919, 1)
+light_energy = 7.367
+light_specular = 0.0
+light_bake_mode = 1
+
 [node name="White light9" type="OmniLight3D" parent="Lighting"]
 transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -9.57934, 2.4825, -11.8339)
 light_color = Color(0.999997, 0.793639, 0.788173, 1)

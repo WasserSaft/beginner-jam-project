@@ -165,9 +165,7 @@ func attack():
 	for enemy in enemies:
 		if enemy.is_in_group("enemies") and enemy.has_method("take_damage"):
 			enemy.take_damage(stats.damage, stats.sideway_knockback_strength, stats.upward_knockback_strength, self)
-	
-	
-	
+
 
 
 func _on_invincible_timer_timeout() -> void:
