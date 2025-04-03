@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ulf8cer5xewu"]
+[gd_scene load_steps=3 format=3 uid="uid://ulf8cer5xewu"]
 
 [ext_resource type="PackedScene" uid="uid://dv1ifjoimgy6w" path="res://Main Menu/menu_scenes/main_menu.tscn" id="1_x6qfa"]
 [ext_resource type="AudioStream" uid="uid://bcw85ryx1hw4q" path="res://Resources/Sounds/MenuMaster.mp3" id="2_c2n7m"]
-[ext_resource type="AudioStream" uid="uid://dw54wc2hkgtcc" path="res://Resources/Sounds/ButtonSFX.mp3" id="4_ykfmg"]
 
 [node name="Main_Menu" instance=ExtResource("1_x6qfa")]
 
@@ -15,6 +14,5 @@ volume_db = 0.0
 bus = &"Music"
 
 [node name="Hoversfx" parent="." index="3"]
-stream = ExtResource("4_ykfmg")
 volume_db = -10.0
 bus = &"SFX"
