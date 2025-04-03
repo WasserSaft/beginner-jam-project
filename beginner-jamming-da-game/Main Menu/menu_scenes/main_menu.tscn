@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://dft0vo0v0pin5" path="res://Main Menu/menu_scripts/main_menu.gd" id="1_rc5jk"]
 [ext_resource type="Texture2D" uid="uid://ch6qdh4bge82a" path="res://Resources/PNGS/titlescreen.png" id="2_e4cqa"]
 [ext_resource type="FontFile" uid="uid://b8igig0eal0nx" path="res://Resources/Fonts/CarltineSemiBold-2O9Xe.ttf" id="3_mxnwx"]
-[ext_resource type="AudioStream" uid="uid://xjkedf6ow117" path="res://Resources/Sounds/placeholdertrack.mp3" id="4_j1wmk"]
-[ext_resource type="AudioStream" uid="uid://bohx7wnnjth0e" path="res://Resources/Sounds/166186__drminky__menu-screen-mouse-over.wav" id="5_i84hn"]
+[ext_resource type="AudioStream" uid="uid://ovlouoiwfk4h" path="res://Resources/Sounds/default_bus_layout.tres" id="4_j1wmk"]
+[ext_resource type="AudioStream" uid="uid://dw54wc2hkgtcc" path="res://Resources/Sounds/ButtonSFX.mp3" id="5_i84hn"]
 [ext_resource type="PackedScene" uid="uid://dq87r4vhinqqi" path="res://Main Menu/menu_scenes/options_menu.tscn" id="6_0xijq"]
 
 [sub_resource type="Theme" id="Theme_8ketd"]
