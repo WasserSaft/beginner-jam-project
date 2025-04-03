@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export var target_scene_path: String = "res://Scenes/Dungeons/dungeon_2.tscn"
-
+const DUNGEON_2 = preload("res://scenes/Dungeons/dungeon_2.tscn")
 var dialog_ui: Node
 var player_ref: Node
 var dialogue_finished := false 
@@ -36,4 +36,4 @@ func _on_dialogue_finished():
 	if dialog_ui:
 		dialog_ui.visible = false
 	if target_scene_path != "":
-		get_tree().change_scene_to_file(target_scene_path)
+		get_tree().change_scene_to_packed(DUNGEON_2)
