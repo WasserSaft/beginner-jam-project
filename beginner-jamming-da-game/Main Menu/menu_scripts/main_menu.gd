@@ -1,10 +1,9 @@
 extends Control
 class_name main_menu
-
+const MAIN_SCENE = preload("res://scenes/CG_scenes/main_scene.tscn")
 @onready var start_game: Button = $MarginContainer/VBoxContainer/Start_Game
 @onready var options_button: Button = $MarginContainer/VBoxContainer/Options_Button
 @onready var exit_game: Button = $MarginContainer/VBoxContainer/Exit_Game
-const start_level = preload("res://Scenes/CG_scenes/main_scene.tscn")
 @onready var options_menu = $Options_Menu as OptionsMenu
 @onready var margin_container = $MarginContainer as MarginContainer
 @onready var hoversfx: AudioStreamPlayer = $Hoversfx
@@ -24,8 +23,7 @@ func handle_connecting_signals():
 	options_menu.exit_options_menu.connect(on_exit_options_menu)
 
 func on_start_pressed() -> void:
-	get_tree().change_scene_to_packed(start_level)
-
+	get_tree().change_scene_to_packed(MAIN_SCENE)
 func on_options_pressed() -> void:
 	margin_container.visible = false
 	options_menu.set_process(true)

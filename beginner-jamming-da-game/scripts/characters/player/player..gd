@@ -140,6 +140,7 @@ func take_damage(damage, invincible_time):
 		stats.hp -= damage
 		if stats.hp <= 0:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			stats.hp = 3
 			get_tree().change_scene_to_packed(DEATH_SCREEN)
 		else:
 			hud.display_hp()

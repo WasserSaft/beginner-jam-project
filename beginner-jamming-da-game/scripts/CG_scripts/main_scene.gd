@@ -1,6 +1,7 @@
 extends Node2D
 
 #gets references from dialogUI node 
+const DUNGEON_1 = preload("res://scenes/Dungeons/Dungeon1.tscn")
 @onready var dialog_ui: Control = $CanvasLayer2/DialogUI
 @onready var speaker_name: Label = dialog_ui.get_node("VBoxContainer2/SpeakerBox/MarginContainer2/SpeakerName")
 @onready var dialog_line: RichTextLabel = dialog_ui.get_node("MarginContainer/DialogBox/MarginContainer/DialogLine")
@@ -92,5 +93,4 @@ func display_line(line_data: Dictionary):
 
 
 func _change_scene():
-	var next_scene = "res://Scenes/Dungeons/Dungeon1.tscn"
-	get_tree().change_scene_to_file(next_scene)
+	get_tree().change_scene_to_packed(DUNGEON_1)
