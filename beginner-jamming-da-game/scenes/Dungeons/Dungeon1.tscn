@@ -95,7 +95,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0dhwm")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e6gjh"]
-size = Vector3(7, 10, 8.35461)
+size = Vector3(7, 7.34058, 2.31827)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_mo6mn"]
 _surfaces = [{
@@ -865,7 +865,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/RingMasterprops/SpecialMirror/Area3D"]
-transform = Transform3D(0.308311, 0.0495587, -0.0736843, 0, 0.303699, 0.204262, 0.18586, -0.0822093, 0.12223, -9.32002, 1.5465, -45.8132)
+transform = Transform3D(0.308311, 0.0495587, -0.0736843, 0, 0.303699, 0.204262, 0.18586, -0.0822093, 0.12223, -9.04753, 1.237, -46.2652)
 shape = SubResource("BoxShape3D_e6gjh")
 
 [node name="DialogUI" parent="GridMap/RingMasterprops/SpecialMirror/Area3D" groups=["interactable"] instance=ExtResource("6_16m06")]

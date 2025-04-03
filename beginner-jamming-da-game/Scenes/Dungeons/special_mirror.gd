@@ -4,7 +4,7 @@ extends CharacterBody3D
 
 var dialog_ui: Node
 var player_ref: Node
-var dialogue_finished := false  # ✅ safety flag
+var dialogue_finished := false 
 
 @onready var dialog_lines := [
 	["Uncle", "Holy mackerel... That’s it. My hunch about the mirrors was right."],
@@ -34,6 +34,5 @@ func _on_dialogue_finished():
 		dialogue_finished = true
 	if dialog_ui:
 		dialog_ui.visible = false
-	await get_tree().create_timer(0.7).timeout
 	if target_scene_path != "":
 		get_tree().change_scene_to_file(target_scene_path)
