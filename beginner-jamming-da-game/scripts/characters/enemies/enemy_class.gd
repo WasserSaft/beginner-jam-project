@@ -27,7 +27,8 @@ func take_damage(damage, Sknockback_strength,Uknockback_strength, attacker):
 	var knockback = knockback_dir.normalized() * Sknockback_strength * Vector3(1, 0, 1)
 	velocity += knockback
 	velocity.y += Uknockback_strength
-		
+	
+
 func die():
 	queue_free()
 

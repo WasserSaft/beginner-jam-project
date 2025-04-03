@@ -40,8 +40,6 @@ func _input(event):
 		camera.rotate_x(-event.relative.y * stats.sensitivity)
 		camera.rotation.x = clamp(camera.rotation.x, -1.5, 1.5)
 		# take damage
-	if Input.is_action_just_pressed("r"):
-		take_damage(1, 0.01)
 	if Input.is_action_just_pressed("interact"):
 		interact()
 	if Input.is_action_just_pressed("attack"):

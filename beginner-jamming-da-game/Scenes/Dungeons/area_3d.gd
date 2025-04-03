@@ -24,10 +24,6 @@ func _on_body_entered(body: Node3D) -> void:
 		trigger_dialogue()
 
 
-func _input(event):
-	#press H to trigger the half-health dialogue 
-	if event.is_action_pressed("debug_half_health"):
-		trigger_half_health_dialogue()
 
 func trigger_dialogue():
 	triggered = true

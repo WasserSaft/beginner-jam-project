@@ -12,7 +12,7 @@ KNOCKBACK
 var current_state = states.IDLE
 func _physics_process(delta: float) -> void:
 	state_logic(current_state)
-	physics_process(delta)
+	move_and_slide()
 func switch_state(old_state, new_state):
 	exit_state(old_state)
 	enter_state(new_state)
@@ -31,7 +31,7 @@ func state_logic(state):
 		states.CHASE:
 			var player_pos = player.position
 			var move_dir = player_pos - position
-			velocity += move_dir.normalized() * movement_speed * get_physics_process_delta_time()
+			velocity = move_dir.normalized() * movement_speed
 			print(hitbox.get_overlapping_areas())
 			if hitbox.overlaps_area(player.hurtbox):
 				player.take_damage(damage, 0.3)

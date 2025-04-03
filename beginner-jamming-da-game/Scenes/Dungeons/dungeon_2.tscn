@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://emkymxxg83s5"]
+[gd_scene load_steps=64 format=4 uid="uid://emkymxxg83s5"]
 
 [ext_resource type="Shader" uid="uid://du1cnvm7xp88l" path="res://Scenes/Dungeons/dungeon_2.gdshader" id="1_afm8w"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Scenes/characters/player/player.tscn" id="1_kmktw"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bm2mttn34x7mr" path="res://Resources/Models/Props/Props_ZWuzHere.png" id="10_1d68y"]
 [ext_resource type="AudioStream" uid="uid://crx4sujm7qhfe" path="res://Resources/Sounds/DungeonLoopReverseMaster.mp3" id="10_afm8w"]
 [ext_resource type="PackedScene" uid="uid://d1iqqvc5445mp" path="res://Scenes/characters/enemies/boss.tscn" id="13_ydnu4"]
+[ext_resource type="PackedScene" uid="uid://dnyvf1fcepmef" path="res://Scenes/characters/enemies/chase_enemy.tscn" id="14_6d2fg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_30dhu"]
 shader = ExtResource("1_afm8w")
@@ -1473,5 +1474,20 @@ bus = &"Music"
 [node name="boss" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_ydnu4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.4623, 4.82751, -25.1186)
 player = NodePath("../Player")
-hp = 20
+hp = 0
 friction = 0.4
+
+[node name="chase_enemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("14_6d2fg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.64997, 1.88737, -23.3753)
+player = NodePath("../Player")
+hp = 0
+
+[node name="chase_enemy2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("14_6d2fg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4589, 1.88737, -23.3606)
+player = NodePath("../Player")
+hp = 0
+
+[node name="chase_enemy3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("14_6d2fg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.85398, 1.88737, -25.5313)
+player = NodePath("../Player")
+hp = 0

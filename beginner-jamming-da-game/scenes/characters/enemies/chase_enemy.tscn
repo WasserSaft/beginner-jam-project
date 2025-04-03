@@ -1,8 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnyvf1fcepmef"]
+[gd_scene load_steps=7 format=3 uid="uid://dnyvf1fcepmef"]
 
 [ext_resource type="Script" uid="uid://yhgo7hbw55tx" path="res://scripts/characters/enemies/chase_enemy.gd" id="1_8tuwq"]
+[ext_resource type="Texture2D" uid="uid://c0q7hx45no8et" path="res://Resources/PNGS/Clown1.png" id="2_gd83m"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_33tbd"]
+[sub_resource type="QuadMesh" id="QuadMesh_itg1b"]
+size = Vector2(1.9, 2.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wcnvb"]
+albedo_texture = ExtResource("2_gd83m")
+billboard_mode = 1
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_33tbd"]
 radius = 0.520132
@@ -20,7 +26,8 @@ name_label = NodePath("Label3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127587, -0.887368, 0)
-mesh = SubResource("CapsuleMesh_33tbd")
+mesh = SubResource("QuadMesh_itg1b")
+surface_material_override/0 = SubResource("StandardMaterial3D_wcnvb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125749, -0.872627, 0)
