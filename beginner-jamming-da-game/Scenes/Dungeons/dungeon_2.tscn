@@ -1474,20 +1474,35 @@ bus = &"Music"
 [node name="boss" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_ydnu4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.4623, 4.82751, -25.1186)
 player = NodePath("../Player")
-hp = 0
+hp = 20
 friction = 0.4
 
 [node name="chase_enemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("14_6d2fg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.64997, 1.88737, -23.3753)
 player = NodePath("../Player")
-hp = 0
+movement_speed = 4
 
 [node name="chase_enemy2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("14_6d2fg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4589, 1.88737, -23.3606)
 player = NodePath("../Player")
-hp = 0
+movement_speed = 4
 
 [node name="chase_enemy3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("14_6d2fg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.85398, 1.88737, -25.5313)
 player = NodePath("../Player")
-hp = 0
+movement_speed = 4
+
+[node name="chase_enemy4" parent="." node_paths=PackedStringArray("player") instance=ExtResource("14_6d2fg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.350306, 1.88737, -25.5313)
+player = NodePath("../Player")
+movement_speed = 4
+
+[node name="chase_enemy5" parent="." node_paths=PackedStringArray("player") instance=ExtResource("14_6d2fg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9398, 1.88737, -15.7494)
+player = NodePath("../Player")
+movement_speed = 4
+
+[node name="chase_enemy6" parent="." node_paths=PackedStringArray("player") instance=ExtResource("14_6d2fg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.16443, 1.88737, -22.2455)
+player = NodePath("../Player")
+movement_speed = 4
