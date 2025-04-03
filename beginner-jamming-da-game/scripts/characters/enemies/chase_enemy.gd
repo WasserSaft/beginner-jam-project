@@ -34,7 +34,7 @@ func state_logic(state):
 			velocity = move_dir.normalized() * movement_speed
 			print(hitbox.get_overlapping_areas())
 			if hitbox.overlaps_area(player.hurtbox):
-				player.take_damage(damage, 0.3)
+				player.take_damage(damage, 2)
 		states.KNOCKBACK:
 			if is_on_floor():
 				switch_state(states.KNOCKBACK, states.IDLE)

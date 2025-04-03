@@ -11,5 +11,5 @@ sensitivity = 0.005
 friction = 0.1
 sideway_knockback_strength = 80.0
 upward_knockback_strength = 10.0
-hp = 3
+hp = 13
 damage = 1.0
