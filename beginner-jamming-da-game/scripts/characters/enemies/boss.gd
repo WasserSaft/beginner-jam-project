@@ -3,6 +3,8 @@ extends enemy
 @export var damage: float = 1.0
 @export var player: CharacterBody3D
 @export var aggresion_distance: int = 18
+@onready var hpbar: TextureProgressBar = $CanvasLayer/hpbar
+
 var activated = false
 enum states {
 IDLE,
@@ -10,6 +12,12 @@ CHASE,
 KNOCKBACK
 }
 var current_state = states.IDLE
+
+func _ready() -> void:
+	ready()
+	hpbar.visible = false
+	name_label.text = "Ringmaster"
+
 func _physics_process(delta: float) -> void:
 	state_logic(current_state)
 	physics_process(delta)
@@ -55,6 +63,8 @@ func take_damage(damage, Sknockback_strength,Uknockback_strength, attacker):
 	velocity += knockback
 	velocity.y += Uknockback_strength
 	switch_state(current_state, states.KNOCKBACK)
+	hpbar.value = hp
 	
 func start_fight():
 	activated = true
+	hpbar.visible = true
