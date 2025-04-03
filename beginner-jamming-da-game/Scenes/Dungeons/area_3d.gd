@@ -8,8 +8,13 @@ var triggered := false
 
 
 var boss_dialogue := [
-	{ "speaker": "Ringmaster", "text": "You're done, boy." },
-	{ "speaker": "Nephew", "text": "AHHHHHHHHHHHHH" },
+	{ "speaker": "Uncle", "text": "Heh, clever contraption buddy… but you can’t fool me." },
+	{ "speaker": "Ringmaster", "text": "Ho? Didja get a backstage pass?" },
+	{ "speaker": "Uncle", "text": "Pah! We didn’t come for the circus. Where are those animals?!" },
+	{ "speaker": "Ringmaster", "text": "Oh… so you’re trespassing. An my boys didn’t kick ya out yet?" },
+	{ "speaker": "Nephew", "text": "Uncle… I have a bad feeling." },
+	{ "speaker": "Uncle", "text": "I’m getting old but I’ve still got some bite in me…" },
+	{ "speaker": "Ringmaster", "text": "Seems like I gotta kick you out myself..." }
 ]
 
 
