@@ -1,10 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://ck2ysh20xhede"]
 
-[ext_resource type="Texture2D" uid="uid://vgbosanmuuk5" path="res://Resources/PNGS/CGplaceholder.png" id="1_aixlu"]
+[ext_resource type="Script" uid="uid://cpr6ktsixvrxe" path="res://Scenes/important scenes/victory_screen.gd" id="1_aixlu"]
 [ext_resource type="PackedScene" uid="uid://cpfubyy2yei2p" path="res://Scenes/CG_scenes/dialog_ui.tscn" id="2_81l00"]
 [ext_resource type="AudioStream" uid="uid://c1mfr1l6x0g57" path="res://Resources/Sounds/VictoryJingle.wav" id="3_4ke18"]
 
 [node name="VictoryScreen" type="Node2D"]
+script = ExtResource("1_aixlu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -14,7 +15,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_aixlu")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 

@@ -48,7 +48,7 @@ const dialog_lines = [
 	{ "speaker": "Uncle", "text": "We go in quietly. No badges, no questions. Just two rabbits at a circus." },
 	{ "speaker": "Uncle", "text": "Blend in. Buy some popcorn. Break a lock or two. We slip inside, pick through their likely numerous belongings, and head to the Ringmasters office." },
 	{ "speaker": "Nephew", "text": "The Ringmaster is our lead then?" },
-	{ "speaker": "Uncle", "text": "Ringmasters know everything. You don’t run a tent full of sociopaths and acrobats without knowing what they’re hiding…" },
+	{ "speaker": "Uncle", "text": "Ringmasters know everything. You don’t run a tent full of sociopathic clowns without knowing what they’re hiding…" },
 	{ "speaker": "Nephew", "text": "You think we’ll find those missing animals, or just a bunch of sad graduates from clown school?" },
 	{ "speaker": "Uncle", "text": "Doesn’t matter… This is the trail, we need to follow it. It always leads us somewhere." },
 	{ "speaker": "Nephew", "text": "Yeah… that's the part that worries me." },
@@ -63,7 +63,7 @@ var background_changes = {
 	11: preload("res://Resources/PNGS/Scene2.png"),
 	21: preload("res://Resources/PNGS/Scene3.png"),
 	26: preload("res://Resources/PNGS/Scene4.png"),
-	30: preload("res://Resources/PNGS/CGplaceholder.png")
+	41: preload("res://Resources/PNGS/finalcg.png")
 	}
 
 func _ready():

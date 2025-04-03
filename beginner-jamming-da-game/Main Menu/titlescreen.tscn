@@ -6,6 +6,9 @@
 
 [node name="Main_Menu" instance=ExtResource("1_x6qfa")]
 
+[node name="Credits" parent="MarginContainer/VBoxContainer" index="3"]
+visible = false
+
 [node name="BGM" parent="." index="2"]
 stream = ExtResource("2_c2n7m")
 volume_db = 0.0
