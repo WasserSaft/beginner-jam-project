@@ -64,7 +64,6 @@ func take_damage(damage, Sknockback_strength, Uknockback_strength, attacker):
 	hpbar.value = hp
 
 func die():
-	print("Boss defeated!")
 	get_tree().change_scene_to_file("res://Scenes/important scenes/victory_screen.tscn")
 
 func start_fight():
