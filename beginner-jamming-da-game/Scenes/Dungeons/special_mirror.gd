@@ -4,6 +4,7 @@ extends CharacterBody3D
 
 var dialog_ui: Node
 var player_ref: Node
+var dialogue_finished := false  # ✅ safety flag
 
 @onready var dialog_lines := [
 	["Uncle", "Holy mackerel... That’s it. My hunch about the mirrors was right."],
@@ -18,22 +19,21 @@ var player_ref: Node
 	["Nephew", "Okay… this is weird, but fine. I’ll just set down our clues on the Ringmaster’s desk as we’re about to walk into a totally real magical mirror dimension."]
 ]
 
-
 func interact(player):
 	player_ref = player
 	dialog_ui = get_tree().get_first_node_in_group("dialog_ui")
 
-	if dialog_ui:
+	if dialog_ui and dialog_ui.has_method("play_sequence"):
 		dialog_ui.advance_on_input = true  
 		dialog_ui.play_sequence(dialog_lines, _on_dialogue_finished)
 	else:
 		_on_dialogue_finished()
 
 func _on_dialogue_finished():
+	if dialogue_finished:
+		dialogue_finished = true
 	if dialog_ui:
 		dialog_ui.visible = false
-
 	await get_tree().create_timer(0.7).timeout
-
 	if target_scene_path != "":
 		get_tree().change_scene_to_file(target_scene_path)
