@@ -23,8 +23,6 @@ func set_action_name() -> void:
 			label.text = "Move Left"
 		"move_right":
 			label.text = "Move Right"
-		"jump":
-			label.text = "Jump"
 
 
 func set_text_for_key() -> void:

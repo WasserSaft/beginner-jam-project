@@ -85,8 +85,6 @@ func state_logic(state):
 	match state:
 		states.GROUNDED:
 			apply_gravity()
-			if Input.is_action_just_pressed("jump"):
-				switch_state(states.GROUNDED, states.LAUNCH)
 		states.LAUNCH:
 			apply_gravity()
 			if velocity.y <= 0:

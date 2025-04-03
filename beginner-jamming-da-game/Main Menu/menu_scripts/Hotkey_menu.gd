@@ -3,7 +3,7 @@ extends MarginContainer
 @onready var hotkey_container = $ScrollContainer/VBoxContainer
 @export var hotkey_button_scene: PackedScene  
 
-var actions = ["move_up", "move_down", "move_left", "move_right", "jump"]
+var actions = ["move_up", "move_down", "move_left", "move_right"]
 
 func _ready():
 	for action in actions:
