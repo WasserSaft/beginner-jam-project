@@ -1479,6 +1479,7 @@ bus = &"Music"
 
 [node name="boss" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_ydnu4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.4623, 4.82751, -25.1186)
+damage = 1.0
 player = NodePath("../Player")
 hp = 14
 friction = 0.4

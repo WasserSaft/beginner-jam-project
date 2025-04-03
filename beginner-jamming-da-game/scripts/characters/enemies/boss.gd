@@ -4,7 +4,7 @@ extends enemy
 @export var player: CharacterBody3D
 @export var aggresion_distance: int = 18
 @onready var hpbar: TextureProgressBar = $CanvasLayer/hpbar
-
+const VICTORY_SCREEN = preload("res://scenes/important scenes/victory_screen.tscn")
 var activated = false
 enum states {
 	IDLE,
@@ -64,7 +64,7 @@ func take_damage(damage, Sknockback_strength, Uknockback_strength, attacker):
 	hpbar.value = hp
 
 func die():
-	get_tree().change_scene_to_file("res://Scenes/important scenes/victory_screen.tscn")
+	get_tree().change_scene_to_packed(VICTORY_SCREEN)
 
 func start_fight():
 	activated = true
