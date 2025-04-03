@@ -7,9 +7,9 @@ extends enemy
 
 var activated = false
 enum states {
-IDLE,
-CHASE,
-KNOCKBACK
+	IDLE,
+	CHASE,
+	KNOCKBACK
 }
 var current_state = states.IDLE
 
@@ -21,6 +21,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	state_logic(current_state)
 	physics_process(delta)
+
 func switch_state(old_state, new_state):
 	exit_state(old_state)
 	enter_state(new_state)
@@ -29,11 +30,10 @@ func switch_state(old_state, new_state):
 func enter_state(state):
 	match state:
 		pass
-	
+
 func state_logic(state):
 	match state:
 		states.IDLE:
-			
 			if activated == true:
 				switch_state(states.IDLE, states.CHASE)
 		states.CHASE:
@@ -43,18 +43,16 @@ func state_logic(state):
 			velocity += move_dir.normalized() * movement_speed * get_physics_process_delta_time()
 			print(hitbox.get_overlapping_areas())
 			if hitbox.overlaps_area(player.hurtbox):
-				
 				player.take_damage(damage, 0.3)
 		states.KNOCKBACK:
 			if is_on_floor():
 				switch_state(states.KNOCKBACK, states.IDLE)
-			
 
 func exit_state(state):
 	match state:
 		pass
 
-func take_damage(damage, Sknockback_strength,Uknockback_strength, attacker):
+func take_damage(damage, Sknockback_strength, Uknockback_strength, attacker):
 	hp -= damage
 	if hp <= 0:
 		die()
@@ -64,7 +62,11 @@ func take_damage(damage, Sknockback_strength,Uknockback_strength, attacker):
 	velocity.y += Uknockback_strength
 	switch_state(current_state, states.KNOCKBACK)
 	hpbar.value = hp
-	
+
+func die():
+	print("Boss defeated!")
+	get_tree().change_scene_to_file("res://Scenes/important scenes/victory_screen.tscn")
+
 func start_fight():
 	activated = true
 	hpbar.visible = true

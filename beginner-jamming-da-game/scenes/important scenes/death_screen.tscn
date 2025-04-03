@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://drh8qvoex8g6v"]
+[gd_scene load_steps=5 format=3 uid="uid://drh8qvoex8g6v"]
 
 [ext_resource type="Script" uid="uid://bxb8lgkjwhgyj" path="res://Scenes/ui/deatscreen_to_titlescreen.gd" id="1_jsflw"]
 [ext_resource type="Texture2D" uid="uid://digvkb7ks022r" path="res://Resources/PNGS/dead.png" id="2_atbbl"]
 [ext_resource type="FontFile" uid="uid://cbx217xlme7nl" path="res://Resources/Fonts/CarltineMedium-MVnzn.ttf" id="3_o7vku"]
+[ext_resource type="AudioStream" uid="uid://cc57cyqv570bg" path="res://Resources/Sounds/DeathJingle.wav" id="4_o7vku"]
 
 [node name="DeathScreen" type="Node2D"]
 script = ExtResource("1_jsflw")
@@ -29,5 +30,11 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_o7vku")
 theme_override_font_sizes/font_size = 50
 text = "Cmon, you need to get Nephew outta there!"
+
+[node name="deathsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_o7vku")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
