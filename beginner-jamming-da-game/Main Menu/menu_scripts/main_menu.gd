@@ -11,6 +11,7 @@ const MAIN_SCENE = preload("res://scenes/CG_scenes/main_scene.tscn")
 func _ready():
 	for button in get_tree().get_nodes_in_group("ui_button"):
 		button.mouse_entered.connect(_on_button_mouse_entered)
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	handle_connecting_signals()
 
 func _on_button_mouse_entered():
